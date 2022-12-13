@@ -1,52 +1,91 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>嘗試</title>
-    <url>/2022/12/11/%E5%98%97%E8%A9%A6/</url>
-    <content><![CDATA[<h1 id="我只是個過路人"><a href="#我只是個過路人" class="headerlink" title="我只是個過路人"></a>我只是個過路人</h1><h2 id="第一篇文章"><a href="#第一篇文章" class="headerlink" title="第一篇文章"></a>第一篇文章</h2><ul>
-<li>列表1</li>
-<li>列表2<br>  a 字列表哦<br>  b 字列表哈</li>
-<li>列表3<span id="more"></span></li>
+    <title>Markdown用法</title>
+    <url>/2022/12/13/%E6%95%99%E7%A8%8B/</url>
+    <content><![CDATA[<h1 id="使用Markdown不是梦"><a href="#使用Markdown不是梦" class="headerlink" title="使用Markdown不是梦"></a>使用Markdown不是梦</h1><span id="more"></span>
+
+<p>&#x3D;&#x3D;（1）标题&#x3D;&#x3D;</p>
+<h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><h4 id="四级标题"><a href="#四级标题" class="headerlink" title="四级标题"></a>四级标题</h4><h5 id="五级标题"><a href="#五级标题" class="headerlink" title="五级标题"></a>五级标题</h5><h6 id="六级标题"><a href="#六级标题" class="headerlink" title="六级标题"></a>六级标题</h6><p>&#x3D;&#x3D;（2）字体&#x3D;&#x3D;<br><strong>加粗</strong><br><em>斜体</em><br><em><strong>斜体加粗</strong></em><br><del>删除线</del><br>&#x3D;&#x3D;高亮&#x3D;&#x3D;<br>我是^上标^<br>我是<del>下标</del><br>&#x3D;&#x3D;（3）列表&#x3D;&#x3D;</p>
+<ul>
+<li>一二三四五<ul>
+<li>上山打老虎<ul>
+<li>老虎没打到<ul>
+<li>打到小松鼠</li>
 </ul>
-<hr>
-<p><a href="http://edwin0319.natapp1.cc/">natapp</a></p>
-<p><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e6dc7e7cae0402ea765142ab92f2c8a~tplv-k3u1fbpfcp-zoom-crop-mark:3024:3024:3024:1702.awebp" alt="natapp图"></p>
-<hr>
-<p>我的上下都是分割綫</p>
-<hr>
-<p><em>斜綫的字啊</em><br><strong>我粗字</strong></p>
-<p><code>&lt;html&gt;單行代碼塊&lt;/html&gt;</code></p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">    &lt;head&gt;</span><br><span class="line">        &lt;title&gt;標題&lt;/title&gt;</span><br><span class="line">    &lt;/head&gt;</span><br><span class="line">    &lt;body&gt;</span><br><span class="line">        &lt;i1&gt;多行代碼塊&lt;/i1&gt;</span><br><span class="line">    &lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<hr>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ol>
+<li><p>一二三四五</p>
+</li>
+<li><p>上山打老虎</p>
+</li>
+<li><p>老虎没打到</p>
+</li>
+<li><p>打到小松鼠<br> &#x3D;&#x3D;（4）表格&#x3D;&#x3D;</p>
+</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Mon</th>
+<th>TUE</th>
+<th>WED</th>
+<th>THU</th>
+<th>FRI</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>上山</td>
+<td>上山</td>
+<td>上山</td>
+<td>上山</td>
+<td>上山</td>
+</tr>
+<tr>
+<td>打老虎</td>
+<td>打老虎</td>
+<td>打老虎</td>
+<td>打老虎</td>
+<td>打老虎</td>
+</tr>
+<tr>
+<td>&#x3D;&#x3D;（5）引用&#x3D;&#x3D;</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
 <blockquote>
-<p>我的內容是引用的哦</p>
+<p>一二三四五</p>
+<blockquote>
+<p>上山打老虎</p>
+<blockquote>
+<p>老虎没打到</p>
+<blockquote>
+<p>打到小松鼠<br>&#x3D;&#x3D;（6）分割线&#x3D;&#x3D;</p>
 </blockquote>
+</blockquote>
+</blockquote>
+</blockquote>
+<hr>
+<p>&#x3D;&#x3D;（7）代码&#x3D;&#x3D;<br><code>我是代码</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">我是代码框</span><br></pre></td></tr></table></figure>
+
+<p>&#x3D;&#x3D;(8) 超链接&#x3D;&#x3D;<br><a href="">教程</a><br><img src="https://p9-juejin.byteimg.com/tos-cn-i-k3u1fbpfcp/1e6dc7e7cae0402ea765142ab92f2c8a~tplv-k3u1fbpfcp-zoom-crop-mark:3024:3024:3024:1702.awebp" alt="网图"></p>
+<p>&#x3D;&#x3D;(9)分割线&#x3D;&#x3D;</p>
+<hr>
+<hr>
+<p>+++</p>
+<p>+++++++</p>
 ]]></content>
-      <categories>
-        <category>分享</category>
-      </categories>
       <tags>
-        <tag>分享</tag>
-        <tag>心得</tag>
+        <tag>教程</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2022/12/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<span id="more"></span>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
