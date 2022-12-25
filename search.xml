@@ -72,6 +72,72 @@
       </tags>
   </entry>
   <entry>
+    <title>openjudge1.4(6~10)</title>
+    <url>/2022/12/25/openjudge1.4(6~10)/</url>
+    <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="# 1.4编程基础之逻辑表达式与条件分支"></a># 1.4编程基础之逻辑表达式与条件分支</h1><h2 id="6-判断是否为两位数"><a href="#6-判断是否为两位数" class="headerlink" title="6) 判断是否为两位数"></a>6)<a href="http://noi.openjudge.cn/ch0104/06/"> 判断是否为两位数</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>判断一个正整数是否是两位数（即大于等于10且小于等于99）。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>一个正整数，不超过1000。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>一行。若该正整数是两位数，输出1，否则输出0。</p>
+<hr>
+<p>用<code>and</code>去判斷</p>
+<blockquote>
+<p>重點:and</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a&gt;=<span class="number">10</span> <span class="keyword">and</span> a&lt;<span class="number">100</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">0</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-收集瓶盖赢大奖"><a href="#2-收集瓶盖赢大奖" class="headerlink" title="2) 收集瓶盖赢大奖"></a>2)<a href="http://noi.openjudge.cn/ch0104/07/"> 收集瓶盖赢大奖</a></h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>某饮料公司最近推出了一个“收集瓶盖赢大奖”的活动：如果你拥有10个印有“幸运”、或20个印有“鼓励”的瓶盖，就可以兑换一个神秘大奖。</p>
+<p>现分别给出你拥有的印有“幸运”和“鼓励”的瓶盖数，判断是否可以去兑换大奖。</p>
+<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><p>一行，包含两个整数，分别是印有“幸运”和“鼓励”的瓶盖数，用一个空格隔开。</p>
+<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><p>一行。若可以兑换大奖，输出1，否则输出0。</p>
+<hr>
+<p>用<code>or</code>去判斷</p>
+<blockquote>
+<p>重點:or</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="keyword">if</span> a&gt;=<span class="number">10</span> <span class="keyword">or</span> b&gt;=<span class="number">20</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="8-判断一个数能否同时被3和5整除"><a href="#8-判断一个数能否同时被3和5整除" class="headerlink" title="8) 判断一个数能否同时被3和5整除"></a>8)<a href="http://noi.openjudge.cn/ch0104/08/"> 判断一个数能否同时被3和5整除</a></h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>判断一个数n 能否同时被3和5整除</p>
+<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><p>输入一行，包含一个整数n。（ -1,000,000 &lt; n &lt; 1,000,000）</p>
+<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>输出一行，如果能同时被3和5整除输出YES，否则输出NO</p>
+<hr>
+<p>用<code>and</code>解決</p>
+<blockquote>
+<p>重點:and</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a%<span class="number">3</span>==<span class="number">0</span> <span class="keyword">and</span> a%<span class="number">5</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;YES&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="9-判断能否被3，5，7整除"><a href="#9-判断能否被3，5，7整除" class="headerlink" title="9)判断能否被3，5，7整除"></a>9)<a href="http://noi.openjudge.cn/ch0104/09/">判断能否被3，5，7整除</a></h2><h3 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h3><p>给定一个整数，判断它能否被3，5，7整除，并输出以下信息：<br>1、能同时被3，5，7整除（直接输出3 5 7，每个数中间一个空格）；<br>2、只能被其中两个数整除（输出两个数，小的在前，大的在后。例如：3 5或者 3 7或者5 7,中间用空格分隔）；<br>3、只能被其中一个数整除（输出这个除数）；<br>4、不能被任何数整除，输出小写字符‘n’,不包括单引号。</p>
+<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><p>输入一行，包括一个整数。</p>
+<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><p>输出一行，按照描述要求给出整数被3，5，7整除的情况。</p>
+<hr>
+<p>好似傻咁寫就係了</p>
+<blockquote>
+<p>重點:耐心</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a%<span class="number">105</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;3 5 7&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a%<span class="number">15</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;3 5&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a%<span class="number">21</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;3 7&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a%<span class="number">35</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;5 7&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a%<span class="number">3</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;3&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a%<span class="number">5</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;5&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a%<span class="number">7</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;7&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;n&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="10-有一门课不及格的学生"><a href="#10-有一门课不及格的学生" class="headerlink" title="10) 有一门课不及格的学生"></a>10)<a href="http://noi.openjudge.cn/ch0104/10/"> 有一门课不及格的学生</a></h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><p>给出一名学生的语文和数学成绩，判断他是否恰好有一门课不及格（成绩小于60分）。</p>
+<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><p>一行，包含两个在0到100之间的整数，分别是该生的语文成绩和数学成绩。</p>
+<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><p>若该生恰好有一门课不及格，输出1；否则输出0。</p>
+<hr>
+<p>恰好一科，所以只可以一科唔合格</p>
+<blockquote>
+<p>重點:多重羅輯關系</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="keyword">if</span> (a&lt;<span class="number">60</span> <span class="keyword">and</span> b&gt;=<span class="number">60</span>) <span class="keyword">or</span> (b&lt;<span class="number">60</span> <span class="keyword">and</span> a&gt;=<span class="number">60</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>openjudge</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Markdown用法(html版)</title>
     <url>/2022/12/13/%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<!doctype html>
