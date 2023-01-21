@@ -1,3 +1,4 @@
+http://example.com/2023/01/21/take%20the%20first%20step/
 http://example.com/2023/01/18/openjudge1.4(16-21)/
 http://example.com/2023/01/14/openjudge1.4(11-15)/
 http://example.com/2022/12/25/openjudge1.4(6~10)/
@@ -9,4 +10,7 @@ http://example.com/tags/index.html
 http://example.com/
 http://example.com/tags/%E5%B9%AB%E5%8A%A9/
 http://example.com/tags/openjudge/
+http://example.com/tags/%E5%BB%A2%E8%A9%B1/
+http://example.com/tags/%E6%84%9F%E5%8F%97/
 http://example.com/categories/%E6%95%99%E7%A8%8B/
+http://example.com/categories/%E6%83%B3%E8%AA%AA%E7%9A%84%E8%A9%B1/

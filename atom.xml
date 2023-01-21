@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-01-18T06:50:59.666Z</updated>
+  <updated>2023-01-21T09:06:05.952Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>take the first step</title>
+    <link href="http://example.com/2023/01/21/take%20the%20first%20step/"/>
+    <id>http://example.com/2023/01/21/take%20the%20first%20step/</id>
+    <published>2023-01-21T09:05:55.682Z</published>
+    <updated>2023-01-21T09:06:05.952Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="this-is-nonsense-article"><a href="#this-is-nonsense-article" class="headerlink" title="this is nonsense article"></a>this is nonsense article</h1><p>I think I should start to write something down in this blog, and also that can improve my speaking skill. I will use english to record, I need to take the first step.<br>I need to adapt use english to read and write,  this article just talk myself</p>]]></content>
+    
+    
+    <summary type="html">start to use english</summary>
+    
+    
+    
+    <category term="想說的話" scheme="http://example.com/categories/%E6%83%B3%E8%AA%AA%E7%9A%84%E8%A9%B1/"/>
+    
+    
+    <category term="廢話" scheme="http://example.com/tags/%E5%BB%A2%E8%A9%B1/"/>
+    
+    <category term="感受" scheme="http://example.com/tags/%E6%84%9F%E5%8F%97/"/>
+    
+  </entry>
   
   <entry>
     <title>openjudge1.4(16-21)</title>
