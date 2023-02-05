@@ -1,31 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>P1305 新二叉树</title>
-    <url>/2023/02/05/P1305%20%E6%96%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
-    <content><![CDATA[<h1 id="P1305-新二叉树"><a href="#P1305-新二叉树" class="headerlink" title="P1305 新二叉树"></a><a href="https://www.luogu.com.cn/problem/P1305">P1305 新二叉树</a></h1><hr>
-<p>I initialization a multidimensional <strong>map</strong> .<br>It is because the questions will give you a whole BinaryTree’s value,so that I can create a multidimensional map to stor these value one by one.<br>And then,I have written a recursion.It is not complexity.<br>I have saved the begin root.Create a recursion while can preoder traversal the BinaryTree.</p>
-<blockquote>
-<p>If you move <code>cout&lt;&lt;a;</code> to the end of the <code>dfs()</code> ,that will become a postorder traversal.It is a intersting point.</p>
-</blockquote>
-<p>In the<code>dfs()</code> have two <strong>super operate</strong> because the problem can divide into <strong>left and right</strong> road,then the subproblem also can divide into two subproblem.</p>
-<hr>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">map&lt;<span class="type">char</span>,pair&lt;<span class="type">char</span>,<span class="type">char</span>&gt; &gt;f;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">char</span> a,b,c,A;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">char</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;a;</span><br><span class="line">    <span class="keyword">if</span>(f[a].first!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].first);</span><br><span class="line">    <span class="keyword">if</span>(f[a].second!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].second);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    cin&gt;&gt;A&gt;&gt;b&gt;&gt;c;</span><br><span class="line">    f[A].first=b;</span><br><span class="line">    f[A].second=c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        f[a].first=b;</span><br><span class="line">        f[a].second=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs</span>(A);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>yeeee~ ~ ~</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>幫助</tag>
-        <tag>algorithm</tag>
-        <tag>BinaryTree</tag>
-        <tag>recursion</tag>
-        <tag>c++</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>openjudge1.4(11-15)</title>
     <url>/2023/01/14/openjudge1.4(11-15)/</url>
     <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="11-晶晶赴约会"><a href="#11-晶晶赴约会" class="headerlink" title="11) 晶晶赴约会"></a>11)<a href="http://noi.openjudge.cn/ch0104/11/"> 晶晶赴约会</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的1、3、5有课必须上课，请帮晶晶判断她能否接受贝贝的邀请，如果能输出YES；如果不能则输出NO。</p>
@@ -93,6 +68,31 @@
       <tags>
         <tag>幫助</tag>
         <tag>openjudge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>P1305 新二叉树</title>
+    <url>/2023/02/05/P1305%20%E6%96%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+    <content><![CDATA[<h1 id="P1305-新二叉树"><a href="#P1305-新二叉树" class="headerlink" title="P1305 新二叉树"></a><a href="https://www.luogu.com.cn/problem/P1305">P1305 新二叉树</a></h1><hr>
+<p>I initialization a multidimensional <strong>map</strong> .<br>It is because the questions will give you a whole BinaryTree’s value,so that I can create a multidimensional map to stor these value one by one.<br>And then,I have written a recursion.It is not complexity.<br>I have saved the begin root.Create a recursion while can preoder traversal the BinaryTree.</p>
+<blockquote>
+<p>If you move <code>cout&lt;&lt;a;</code> to the end of the <code>dfs()</code> ,that will become a postorder traversal.It is a intersting point.</p>
+</blockquote>
+<p>In the<code>dfs()</code> have two <strong>super operate</strong> because the problem can divide into <strong>left and right</strong> road,then the subproblem also can divide into two subproblem.</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">map&lt;<span class="type">char</span>,pair&lt;<span class="type">char</span>,<span class="type">char</span>&gt; &gt;f;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">char</span> a,b,c,A;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">char</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;a;</span><br><span class="line">    <span class="keyword">if</span>(f[a].first!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].first);</span><br><span class="line">    <span class="keyword">if</span>(f[a].second!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].second);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    cin&gt;&gt;A&gt;&gt;b&gt;&gt;c;</span><br><span class="line">    f[A].first=b;</span><br><span class="line">    f[A].second=c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        f[a].first=b;</span><br><span class="line">        f[a].second=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs</span>(A);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>yeeee~ ~ ~</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>algorithm</tag>
+        <tag>BinaryTree</tag>
+        <tag>recursion</tag>
+        <tag>c++</tag>
       </tags>
   </entry>
   <entry>
@@ -174,77 +174,6 @@
       </tags>
   </entry>
   <entry>
-    <title>openjudge1.4(1~5)</title>
-    <url>/2022/12/24/openjudge1.4(1~5)/</url>
-    <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="1-判断数正负"><a href="#1-判断数正负" class="headerlink" title="1) 判断数正负"></a>1)<a href="http://noi.openjudge.cn/ch0104/01/"> 判断数正负</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述:"></a>描述:</h3><p>给定一个整数N，判断其正负。</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入:"></a>输入:</h3><p>一个整数N(-109 &lt;&#x3D; N &lt;&#x3D; 109)</p>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出:"></a>输出:</h3><p>如果N &gt; 0, 输出positive;<br>如果N &#x3D; 0, 输出zero;<br>如果N &lt; 0, 输出negative</p>
-<hr>
-<p>先輸入一個整數，再判斷是大於 0 or 等於0 or小於0 就行了<br><del>so easy</del></p>
-<blockquote>
-<p>重點:判斷</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> n &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;positive&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;zero&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n &lt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;negative&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-输出绝对值"><a href="#2-输出绝对值" class="headerlink" title="2) 输出绝对值"></a>2)<a href="http://noi.openjudge.cn/ch0104/02/"> 输出绝对值</a></h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>输入一个浮点数，输出这个浮点数的绝对值。</p>
-<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><p>输入一个浮点数，其绝对值不超过10000。</p>
-<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><p>输出这个浮点数的绝对值，保留到小数点后两位。</p>
-<hr>
-<p>輸入一個浮點數，再保留兩位小數輸出絕對值就ok了</p>
-<blockquote>
-<p>重點:占位輸出和abs函數</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">float</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%.2f&quot;</span>%<span class="built_in">abs</span>(x))</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-奇偶数判断"><a href="#3-奇偶数判断" class="headerlink" title="3)奇偶数判断"></a>3)<a href="http://noi.openjudge.cn/ch0104/03/">奇偶数判断</a></h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>给定一个整数，判断该数是奇数还是偶数。</p>
-<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><p>输入仅一行，一个大于零的正整数n。</p>
-<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>输出仅一行，如果n是奇数，输出odd；如果n是偶数，输出even。</p>
-<hr>
-<p>先輸入一個整數，用%去取余數，判斷是否能被2除盡</p>
-<blockquote>
-<p>重點:利用%</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;even&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;odd&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="4-奇偶ASCII值判断"><a href="#4-奇偶ASCII值判断" class="headerlink" title="4) 奇偶ASCII值判断"></a>4)<a href="http://noi.openjudge.cn/ch0104/04/"> 奇偶ASCII值判断</a></h2><h3 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h3><p>任意输入一个字符，判断其ASCII是否是奇数，若是，输出YES，否则，输出NO<br>例如，字符A的ASCII值是65，则输出YES，若输入字符B(ASCII值是66)，则输出NO</p>
-<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><p>输入一个字符</p>
-<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><p>如果其ASCII值为奇数，则输出YES，否则，输出NO</p>
-<hr>
-<p><del>呢個用python做比較麻煩，差啲諗住用c++算了</del><br>主要係python嘅<code>input()</code>會收空氣，就係你直接<strong>回車</strong>，嗰變量c就變成<code>&quot;&quot;</code>空字符串了，長度為0，但係<code>ord()</code>要長度為1的字符，所以直接把c放入會報錯，要先判斷c的長度是否為0，才能進行下一步。</p>
-<blockquote>
-<p><code>ord()</code>是把裏面的字符轉為ASCII碼</p>
-</blockquote>
-<p>把字符c變為ASCII再和上題一樣的操作就ok了</p>
-<blockquote>
-<p>重點:判斷特殊情况，判斷ASCII碼的奇偶</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c=<span class="built_in">input</span>()</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(c)==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">ord</span>(c)%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;YES&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="5-整数大小比较"><a href="#5-整数大小比较" class="headerlink" title="5) 整数大小比较"></a>5)<a href="http://noi.openjudge.cn/ch0104/05/"> 整数大小比较</a></h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><p>输入两个整数，比较它们的大小。</p>
-<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><p>一行，包含两个整数x和y，中间用单个空格隔开。<br>0 &lt;&#x3D; x &lt; 2^32, -2^31 &lt;&#x3D; y &lt; 2^31。</p>
-<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><p>一个字符。<br>若x &gt; y，输出 &gt; ；<br>若x &#x3D; y，输出 &#x3D; ；<br>若x &lt; y，输出 &lt; ；</p>
-<hr>
-<p>用<code>map()</code>和<code>split()</code>是因為題目分割a和b是用空格，<del>把這串代碼背了就是</del>再判斷a和b的大小關係</p>
-<blockquote>
-<p>重點:賦值方法，判斷大小</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="keyword">if</span> a&gt;b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&gt;&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a==b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;=&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&lt;&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>就咁先啦，得閑先更😇</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>幫助</tag>
-        <tag>openjudge</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>openjudge1.4(6~10)</title>
     <url>/2022/12/25/openjudge1.4(6~10)/</url>
     <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="6-判断是否为两位数"><a href="#6-判断是否为两位数" class="headerlink" title="6) 判断是否为两位数"></a>6)<a href="http://noi.openjudge.cn/ch0104/06/"> 判断是否为两位数</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>判断一个正整数是否是两位数（即大于等于10且小于等于99）。</p>
@@ -308,19 +237,6 @@
       <tags>
         <tag>幫助</tag>
         <tag>openjudge</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>take the first step</title>
-    <url>/2023/01/21/take%20the%20first%20step/</url>
-    <content><![CDATA[<h1 id="this-is-nonsense-article"><a href="#this-is-nonsense-article" class="headerlink" title="this is nonsense article"></a>this is nonsense article</h1><p>I think I should start to write something down in this blog, and also that can improve my speaking skill. I will use english to record, I need to take the first step.<br>I need to adapt use english to read and write,  this article just talk myself</p>
-]]></content>
-      <categories>
-        <category>想說的話</category>
-      </categories>
-      <tags>
-        <tag>廢話</tag>
-        <tag>感受</tag>
       </tags>
   </entry>
   <entry>
@@ -462,6 +378,90 @@
       </categories>
       <tags>
         <tag>幫助</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openjudge1.4(1~5)</title>
+    <url>/2022/12/24/openjudge1.4(1~5)/</url>
+    <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="1-判断数正负"><a href="#1-判断数正负" class="headerlink" title="1) 判断数正负"></a>1)<a href="http://noi.openjudge.cn/ch0104/01/"> 判断数正负</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述:"></a>描述:</h3><p>给定一个整数N，判断其正负。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入:"></a>输入:</h3><p>一个整数N(-109 &lt;&#x3D; N &lt;&#x3D; 109)</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出:"></a>输出:</h3><p>如果N &gt; 0, 输出positive;<br>如果N &#x3D; 0, 输出zero;<br>如果N &lt; 0, 输出negative</p>
+<hr>
+<p>先輸入一個整數，再判斷是大於 0 or 等於0 or小於0 就行了<br><del>so easy</del></p>
+<blockquote>
+<p>重點:判斷</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> n &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;positive&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;zero&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n &lt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;negative&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-输出绝对值"><a href="#2-输出绝对值" class="headerlink" title="2) 输出绝对值"></a>2)<a href="http://noi.openjudge.cn/ch0104/02/"> 输出绝对值</a></h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>输入一个浮点数，输出这个浮点数的绝对值。</p>
+<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><p>输入一个浮点数，其绝对值不超过10000。</p>
+<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><p>输出这个浮点数的绝对值，保留到小数点后两位。</p>
+<hr>
+<p>輸入一個浮點數，再保留兩位小數輸出絕對值就ok了</p>
+<blockquote>
+<p>重點:占位輸出和abs函數</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">float</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%.2f&quot;</span>%<span class="built_in">abs</span>(x))</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-奇偶数判断"><a href="#3-奇偶数判断" class="headerlink" title="3)奇偶数判断"></a>3)<a href="http://noi.openjudge.cn/ch0104/03/">奇偶数判断</a></h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>给定一个整数，判断该数是奇数还是偶数。</p>
+<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><p>输入仅一行，一个大于零的正整数n。</p>
+<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>输出仅一行，如果n是奇数，输出odd；如果n是偶数，输出even。</p>
+<hr>
+<p>先輸入一個整數，用%去取余數，判斷是否能被2除盡</p>
+<blockquote>
+<p>重點:利用%</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;even&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;odd&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="4-奇偶ASCII值判断"><a href="#4-奇偶ASCII值判断" class="headerlink" title="4) 奇偶ASCII值判断"></a>4)<a href="http://noi.openjudge.cn/ch0104/04/"> 奇偶ASCII值判断</a></h2><h3 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h3><p>任意输入一个字符，判断其ASCII是否是奇数，若是，输出YES，否则，输出NO<br>例如，字符A的ASCII值是65，则输出YES，若输入字符B(ASCII值是66)，则输出NO</p>
+<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><p>输入一个字符</p>
+<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><p>如果其ASCII值为奇数，则输出YES，否则，输出NO</p>
+<hr>
+<p><del>呢個用python做比較麻煩，差啲諗住用c++算了</del><br>主要係python嘅<code>input()</code>會收空氣，就係你直接<strong>回車</strong>，嗰變量c就變成<code>&quot;&quot;</code>空字符串了，長度為0，但係<code>ord()</code>要長度為1的字符，所以直接把c放入會報錯，要先判斷c的長度是否為0，才能進行下一步。</p>
+<blockquote>
+<p><code>ord()</code>是把裏面的字符轉為ASCII碼</p>
+</blockquote>
+<p>把字符c變為ASCII再和上題一樣的操作就ok了</p>
+<blockquote>
+<p>重點:判斷特殊情况，判斷ASCII碼的奇偶</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c=<span class="built_in">input</span>()</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(c)==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">ord</span>(c)%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;YES&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="5-整数大小比较"><a href="#5-整数大小比较" class="headerlink" title="5) 整数大小比较"></a>5)<a href="http://noi.openjudge.cn/ch0104/05/"> 整数大小比较</a></h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><p>输入两个整数，比较它们的大小。</p>
+<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><p>一行，包含两个整数x和y，中间用单个空格隔开。<br>0 &lt;&#x3D; x &lt; 2^32, -2^31 &lt;&#x3D; y &lt; 2^31。</p>
+<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><p>一个字符。<br>若x &gt; y，输出 &gt; ；<br>若x &#x3D; y，输出 &#x3D; ；<br>若x &lt; y，输出 &lt; ；</p>
+<hr>
+<p>用<code>map()</code>和<code>split()</code>是因為題目分割a和b是用空格，<del>把這串代碼背了就是</del>再判斷a和b的大小關係</p>
+<blockquote>
+<p>重點:賦值方法，判斷大小</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="keyword">if</span> a&gt;b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&gt;&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a==b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;=&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&lt;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>就咁先啦，得閑先更😇</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>openjudge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>take the first step</title>
+    <url>/2023/01/21/take%20the%20first%20step/</url>
+    <content><![CDATA[<h1 id="this-is-nonsense-article"><a href="#this-is-nonsense-article" class="headerlink" title="this is nonsense article"></a>this is nonsense article</h1><p>I think I should start to write something down in this blog, and also that can improve my speaking skill. I will use english to record, I need to take the first step.<br>I need to adapt use english to read and write,  this article just talk myself</p>
+]]></content>
+      <categories>
+        <category>想說的話</category>
+      </categories>
+      <tags>
+        <tag>廢話</tag>
+        <tag>感受</tag>
       </tags>
   </entry>
   <entry>
