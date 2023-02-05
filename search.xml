@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>P1305 新二叉树</title>
+    <url>/2023/02/05/P1305%20%E6%96%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+    <content><![CDATA[<h1 id="P1305-新二叉树"><a href="#P1305-新二叉树" class="headerlink" title="P1305 新二叉树"></a><a href="https://www.luogu.com.cn/problem/P1305">P1305 新二叉树</a></h1><hr>
+<p>I initialization a multidimensional <strong>map</strong> .<br>It is because the questions will give you a whole BinaryTree’s value,so that I can create a multidimensional map to stor these value one by one.<br>And then,I have written a recursion.It is not complexity.<br>I have saved the begin root.Create a recursion while can preoder traversal the BinaryTree.</p>
+<blockquote>
+<p>If you move <code>cout&lt;&lt;a;</code> to the end of the <code>dfs()</code> ,that will become a postorder traversal.It is a intersting point.</p>
+</blockquote>
+<p>In the<code>dfs()</code> have two <strong>super operate</strong> because the problem can divide into <strong>left and right</strong> road,then the subproblem also can divide into two subproblem.</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">map&lt;<span class="type">char</span>,pair&lt;<span class="type">char</span>,<span class="type">char</span>&gt; &gt;f;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">char</span> a,b,c,A;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">char</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;a;</span><br><span class="line">    <span class="keyword">if</span>(f[a].first!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].first);</span><br><span class="line">    <span class="keyword">if</span>(f[a].second!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].second);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    cin&gt;&gt;A&gt;&gt;b&gt;&gt;c;</span><br><span class="line">    f[A].first=b;</span><br><span class="line">    f[A].second=c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        f[a].first=b;</span><br><span class="line">        f[a].second=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs</span>(A);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>yeeee~ ~ ~</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>algorithm</tag>
+        <tag>BinaryTree</tag>
+        <tag>recursion</tag>
+        <tag>c++</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>openjudge1.4(11-15)</title>
     <url>/2023/01/14/openjudge1.4(11-15)/</url>
     <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="11-晶晶赴约会"><a href="#11-晶晶赴约会" class="headerlink" title="11) 晶晶赴约会"></a>11)<a href="http://noi.openjudge.cn/ch0104/11/"> 晶晶赴约会</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的1、3、5有课必须上课，请帮晶晶判断她能否接受贝贝的邀请，如果能输出YES；如果不能则输出NO。</p>
