@@ -117,6 +117,27 @@
   </url>
   
   <url>
+    <loc>http://example.com/tags/Structure/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Stack/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/Queue/</loc>
+    <lastmod>2023-03-25</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/tags/algorithm/</loc>
     <lastmod>2023-03-25</lastmod>
     <changefreq>weekly</changefreq>

@@ -41,6 +41,12 @@
       <categories>
         <category>教程</category>
       </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>Structure</tag>
+        <tag>Stack</tag>
+        <tag>Queue</tag>
+      </tags>
   </entry>
   <entry>
     <title>P1305 新二叉树</title>

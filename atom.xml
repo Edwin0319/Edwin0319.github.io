@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-03-25T10:12:14.374Z</updated>
+  <updated>2023-03-25T10:15:32.051Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="http://example.com/2023/03/25/Application-of-Stack-and-Queue/"/>
     <id>http://example.com/2023/03/25/Application-of-Stack-and-Queue/</id>
     <published>2023-03-25T10:09:24.631Z</published>
-    <updated>2023-03-25T10:12:14.374Z</updated>
+    <updated>2023-03-25T10:15:32.051Z</updated>
     
     <content type="html"><![CDATA[<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><p>It can processing problems which have a <strong>complete inclusive relationship</strong>.</p><blockquote><p>We also can call that <code>FILO</code> , it mean <strong>First IN Last Out</strong></p></blockquote><hr><h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h2><p>This structure like queue, when we buy something we should form a line. <del>I don’t know what I say</del></p><blockquote><p>We alse can call that<code>FIFO</code> , it mean<strong>First IN First Out</strong></p></blockquote><hr><table><thead><tr><th align="left">Structure</th><th align="left">Application</th></tr></thead><tbody><tr><td align="left">Stack</td><td align="left">Trees’ deep traversal, deep priority search</td></tr><tr><td align="left">Queue(circulate)</td><td align="left">Trees’ layered traversal, wide priority search</td></tr><tr><td align="left">Monotonous Stack</td><td align="left">Near the maximum(minimum) value</td></tr><tr><td align="left">Monotonous Queue</td><td align="left">The maximum(minimum) value of interval</td></tr></tbody></table>]]></content>
     
@@ -32,6 +32,14 @@
     
     <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
     
+    
+    <category term="幫助" scheme="http://example.com/tags/%E5%B9%AB%E5%8A%A9/"/>
+    
+    <category term="Structure" scheme="http://example.com/tags/Structure/"/>
+    
+    <category term="Stack" scheme="http://example.com/tags/Stack/"/>
+    
+    <category term="Queue" scheme="http://example.com/tags/Queue/"/>
     
   </entry>
   
