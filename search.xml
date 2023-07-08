@@ -1,6 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Introduce Binary Trees&#39; structure</title>
+    <url>/2023/03/28/Introduce-Binary-Treesstructure/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_43762934/article/details/85539672">There is include the majority professional words</a></p>
+<span id="more"></span>
+
+<h1 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h1><h2 id="1-Every-node-at-most-two-children"><a href="#1-Every-node-at-most-two-children" class="headerlink" title="1. Every node at most two children ."></a>1. Every node at most two children .</h2><h2 id="2-There-is-one-more-leaf-node-than-the-number-of-two-child-nodes"><a href="#2-There-is-one-more-leaf-node-than-the-number-of-two-child-nodes" class="headerlink" title="2. There is one more leaf node than the number of two child nodes."></a>2. There is one more leaf node than the number of two child nodes.</h2><blockquote>
+<p>prove: n0+n1+n2&#x3D;n1+2*n2+1<br>so: n0&#x3D;n2+1</p>
+</blockquote>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h1><h2 id="1-Complete-binary-tree-important"><a href="#1-Complete-binary-tree-important" class="headerlink" title="1. Complete binary tree (important)"></a>1. Complete binary tree (important)</h2><p>Every layer is full except the last one, and the right side of the last layer is empty.</p>
+<h3 id="1-Node-numbered-i"><a href="#1-Node-numbered-i" class="headerlink" title="1. Node numbered i"></a>1. Node numbered i</h3><p>left child number: 2*i<br>right child number: 2*i+1</p>
+<h2 id="2-full-binary-tree"><a href="#2-full-binary-tree" class="headerlink" title="2. full binary tree"></a>2. full binary tree</h2><p>All the node either two child or none child.</p>
+<h2 id="3-Perfect-binary-tree"><a href="#3-Perfect-binary-tree" class="headerlink" title="3. Perfect binary tree"></a>3. Perfect binary tree</h2><p>Every layer is full, it is perfect.</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>BinaryTree</tag>
+        <tag>Structure</tag>
+        <tag>c++</tag>
+        <tag>algorithm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Application of Stack and Queue</title>
     <url>/2023/03/25/Application-of-Stack-and-Queue/</url>
     <content><![CDATA[<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><p>It can processing problems which have a <strong>complete inclusive relationship</strong>.</p>
@@ -46,56 +71,6 @@
         <tag>Structure</tag>
         <tag>Stack</tag>
         <tag>Queue</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Introduce Binary Trees&#39; structure</title>
-    <url>/2023/03/28/Introduce-Binary-Treesstructure/</url>
-    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_43762934/article/details/85539672">There is include the majority professional words</a></p>
-<span id="more"></span>
-
-<h1 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h1><h2 id="1-Every-node-at-most-two-children"><a href="#1-Every-node-at-most-two-children" class="headerlink" title="1. Every node at most two children ."></a>1. Every node at most two children .</h2><h2 id="2-There-is-one-more-leaf-node-than-the-number-of-two-child-nodes"><a href="#2-There-is-one-more-leaf-node-than-the-number-of-two-child-nodes" class="headerlink" title="2. There is one more leaf node than the number of two child nodes."></a>2. There is one more leaf node than the number of two child nodes.</h2><blockquote>
-<p>prove: n0+n1+n2&#x3D;n1+2*n2+1<br>so: n0&#x3D;n2+1</p>
-</blockquote>
-<h1 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h1><h2 id="1-Complete-binary-tree-important"><a href="#1-Complete-binary-tree-important" class="headerlink" title="1. Complete binary tree (important)"></a>1. Complete binary tree (important)</h2><p>Every layer is full except the last one, and the right side of the last layer is empty.</p>
-<h3 id="1-Node-numbered-i"><a href="#1-Node-numbered-i" class="headerlink" title="1. Node numbered i"></a>1. Node numbered i</h3><p>left child number: 2*i<br>right child number: 2*i+1</p>
-<h2 id="2-full-binary-tree"><a href="#2-full-binary-tree" class="headerlink" title="2. full binary tree"></a>2. full binary tree</h2><p>All the node either two child or none child.</p>
-<h2 id="3-Perfect-binary-tree"><a href="#3-Perfect-binary-tree" class="headerlink" title="3. Perfect binary tree"></a>3. Perfect binary tree</h2><p>Every layer is full, it is perfect.</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>幫助</tag>
-        <tag>Structure</tag>
-        <tag>BinaryTree</tag>
-        <tag>c++</tag>
-        <tag>algorithm</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>P1305 新二叉树</title>
-    <url>/2023/02/05/P1305%20%E6%96%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
-    <content><![CDATA[<h1 id="P1305-新二叉树"><a href="#P1305-新二叉树" class="headerlink" title="P1305 新二叉树"></a><a href="https://www.luogu.com.cn/problem/P1305">P1305 新二叉树</a></h1><hr>
-<p>I initialization a multidimensional <strong>map</strong> .<br>It is because the questions will give you a whole BinaryTree’s value,so that I can create a multidimensional map to stor these value one by one.<br>And then,I have written a recursion.It is not complexity.<br>I have saved the begin root.Create a recursion while can preoder traversal the BinaryTree.</p>
-<blockquote>
-<p>If you move <code>cout&lt;&lt;a;</code> to the end of the <code>dfs()</code> ,that will become a postorder traversal.It is a intersting point.</p>
-</blockquote>
-<p>In the<code>dfs()</code> have two <strong>super operate</strong> because the problem can divide into <strong>left and right</strong> road,then the subproblem also can divide into two subproblem.</p>
-<hr>
-<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">map&lt;<span class="type">char</span>,pair&lt;<span class="type">char</span>,<span class="type">char</span>&gt; &gt;f;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">char</span> a,b,c,A;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">char</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;a;</span><br><span class="line">    <span class="keyword">if</span>(f[a].first!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].first);</span><br><span class="line">    <span class="keyword">if</span>(f[a].second!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].second);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    cin&gt;&gt;A&gt;&gt;b&gt;&gt;c;</span><br><span class="line">    f[A].first=b;</span><br><span class="line">    f[A].second=c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        f[a].first=b;</span><br><span class="line">        f[a].second=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs</span>(A);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>yeeee~ ~ ~</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>幫助</tag>
-        <tag>BinaryTree</tag>
-        <tag>c++</tag>
-        <tag>algorithm</tag>
-        <tag>recursion</tag>
       </tags>
   </entry>
   <entry>
@@ -166,6 +141,31 @@
       <tags>
         <tag>幫助</tag>
         <tag>openjudge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>P1305 新二叉树</title>
+    <url>/2023/02/05/P1305%20%E6%96%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+    <content><![CDATA[<h1 id="P1305-新二叉树"><a href="#P1305-新二叉树" class="headerlink" title="P1305 新二叉树"></a><a href="https://www.luogu.com.cn/problem/P1305">P1305 新二叉树</a></h1><hr>
+<p>I initialization a multidimensional <strong>map</strong> .<br>It is because the questions will give you a whole BinaryTree’s value,so that I can create a multidimensional map to stor these value one by one.<br>And then,I have written a recursion.It is not complexity.<br>I have saved the begin root.Create a recursion while can preoder traversal the BinaryTree.</p>
+<blockquote>
+<p>If you move <code>cout&lt;&lt;a;</code> to the end of the <code>dfs()</code> ,that will become a postorder traversal.It is a intersting point.</p>
+</blockquote>
+<p>In the<code>dfs()</code> have two <strong>super operate</strong> because the problem can divide into <strong>left and right</strong> road,then the subproblem also can divide into two subproblem.</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">map&lt;<span class="type">char</span>,pair&lt;<span class="type">char</span>,<span class="type">char</span>&gt; &gt;f;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">char</span> a,b,c,A;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">char</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;a;</span><br><span class="line">    <span class="keyword">if</span>(f[a].first!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].first);</span><br><span class="line">    <span class="keyword">if</span>(f[a].second!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].second);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    cin&gt;&gt;A&gt;&gt;b&gt;&gt;c;</span><br><span class="line">    f[A].first=b;</span><br><span class="line">    f[A].second=c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        f[a].first=b;</span><br><span class="line">        f[a].second=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs</span>(A);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>yeeee~ ~ ~</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>BinaryTree</tag>
+        <tag>c++</tag>
+        <tag>algorithm</tag>
+        <tag>recursion</tag>
       </tags>
   </entry>
   <entry>
