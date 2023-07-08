@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2022/12/04/%E6%95%99%E7%A8%8B/</loc>
+    
+    <lastmod>2023-07-08</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2023/03/28/Introduce-Binary-Treesstructure/</loc>
     
     <lastmod>2023-03-28</lastmod>
@@ -74,15 +83,6 @@
   </url>
   
   <url>
-    <loc>http://example.com/2022/12/04/%E6%95%99%E7%A8%8B/</loc>
-    
-    <lastmod>2022-12-24</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2022/12/13/%E6%95%99%E7%A8%8B/</loc>
     
     <lastmod>2022-12-24</lastmod>
@@ -126,28 +126,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/BinaryTree/</loc>
-    <lastmod>2023-07-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/tags/Structure/</loc>
-    <lastmod>2023-07-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/c/</loc>
-    <lastmod>2023-07-08</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.2</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/tags/algorithm/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -168,7 +147,21 @@
   </url>
   
   <url>
-    <loc>http://example.com/tags/openjudge/</loc>
+    <loc>http://example.com/tags/BinaryTree/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/c/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/algorithm/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
@@ -176,6 +169,13 @@
   
   <url>
     <loc>http://example.com/tags/recursion/</loc>
+    <lastmod>2023-07-08</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.2</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/tags/openjudge/</loc>
     <lastmod>2023-07-08</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.2</priority>
