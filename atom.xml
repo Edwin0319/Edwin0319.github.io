@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-01-28T14:48:11.812Z</updated>
+  <updated>2024-02-08T05:34:52.773Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>The difference in c++ between priority_queue and set</title>
+    <link href="http://example.com/2024/02/08/2024-2-8-The-difference-in-c++-between-priority_queue-and-set/"/>
+    <id>http://example.com/2024/02/08/2024-2-8-The-difference-in-c++-between-priority_queue-and-set/</id>
+    <published>2024-02-08T04:47:00.000Z</published>
+    <updated>2024-02-08T05:34:52.773Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Teach-you-how-to-use"><a href="#Teach-you-how-to-use" class="headerlink" title="Teach you how to use"></a>Teach you how to use</h1><span id="more"></span><p>The underlying structure of the priority_queue is the <strong>heap</strong>, and that of the set is <strong>Red-black tree</strong>.</p><p>The priority_queue insertion time complexity <strong>worst</strong> <code>O(log(n))</code>, the average time complexity is constant. Take the minimum or maximum value <code>O(1)</code>. Pop <code>O(log(n))</code>. Build time <code>O(n)</code>.</p><p>The set insertion time complexity <code>O(log(n))</code>, but always over or equal the priority_queue   worst time. Take the minimum or maximum value <code>O(1)</code>. Pop <strong>worst</strong> <code>O(n)</code>. Build time <code>O(nlog(n))</code>.</p><h3 id="Priority-queue"><a href="#Priority-queue" class="headerlink" title="Priority_queue"></a>Priority_queue</h3><blockquote><p>Part of it is orderly<br>Take up less space<br>Supported operations are few, and application scenarios are limited</p></blockquote><h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><blockquote><p>Completely orderly<br>Take up a lot of space<br>Supported more operations, and more application scenarios</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">node</span>(<span class="type">int</span> t)&#123;<span class="keyword">this</span>-&gt;a = t;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> node a, <span class="type">const</span> node b)&#123;<span class="keyword">return</span> a.a &gt; b.a;&#125; <span class="comment">//priority_queue False優先排, 其他結構 True優先排</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line">priority_queue&lt;node&gt; p;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, a; i &lt; n; i++)&#123;</span><br><span class="line">cin &gt;&gt; a;</span><br><span class="line">p.<span class="built_in">push</span>(<span class="built_in">node</span>(a));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span>(!p.<span class="built_in">empty</span>())&#123;</span><br><span class="line">cout &lt;&lt; p.<span class="built_in">top</span>().a &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">p.<span class="built_in">pop</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Teach-you-how-to-use&quot;&gt;&lt;a href=&quot;#Teach-you-how-to-use&quot; class=&quot;headerlink&quot; title=&quot;Teach you how to use&quot;&gt;&lt;/a&gt;Teach you how to use&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="教程" scheme="http://example.com/categories/%E6%95%99%E7%A8%8B/"/>
+    
+    
+    <category term="幫助" scheme="http://example.com/tags/%E5%B9%AB%E5%8A%A9/"/>
+    
+    <category term="c++" scheme="http://example.com/tags/c/"/>
+    
+    <category term="structure" scheme="http://example.com/tags/structure/"/>
+    
+  </entry>
   
   <entry>
     <title>Interval dynamic programming</title>
