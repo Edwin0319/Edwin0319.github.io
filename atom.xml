@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-02-08T05:34:52.773Z</updated>
+  <updated>2024-05-05T03:15:09.982Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>My MOI</title>
+    <link href="http://example.com/2024/05/05/My-MOI/"/>
+    <id>http://example.com/2024/05/05/My-MOI/</id>
+    <published>2024-05-05T03:15:09.982Z</published>
+    <updated>2024-05-05T03:15:09.982Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="hit-myself"><a href="#hit-myself" class="headerlink" title="hit myself"></a>hit myself</h1><span id="more"></span><p>I think I should over my oi career. My MOI score was got zero in second round, I very terrible and hit me a lot. I usually blame myself why don’t pay more effort in practice.</p><p>I often indulge myself such as watching short videos, play games and so on. When I want to change myself, I just keep a short time and then return the previous state.</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;hit-myself&quot;&gt;&lt;a href=&quot;#hit-myself&quot; class=&quot;headerlink&quot; title=&quot;hit myself&quot;&gt;&lt;/a&gt;hit myself&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
+    
+    
+    <category term="想說的話" scheme="http://example.com/tags/%E6%83%B3%E8%AA%AA%E7%9A%84%E8%A9%B1/"/>
+    
+  </entry>
   
   <entry>
     <title>The difference in c++ between priority_queue and set</title>
