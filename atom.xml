@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-05-05T03:15:09.982Z</updated>
+  <updated>2024-05-10T14:59:56.414Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,32 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>I have some inspire</title>
+    <link href="http://example.com/2024/05/10/2024-5-10/"/>
+    <id>http://example.com/2024/05/10/2024-5-10/</id>
+    <published>2024-05-10T14:59:56.414Z</published>
+    <updated>2024-05-10T14:59:56.414Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="Should-I-register-at-the-University-of-Macao"><a href="#Should-I-register-at-the-University-of-Macao" class="headerlink" title="#Should I register at the University of Macao?"></a>#Should I register at the University of Macao?</h1><span id="more"></span><p>I have some inspire after Sunny have chatted with me today. He asked me some questions about the unsiversity interview, and I cannot answer it fluent because of my surface knowledge of computer science. Moreover,  he advise me don’t go to the University of Macao and he said in despair. Whereas, I is not my give up reason. I have a large confidence and believe that I can master the English as a tool and pass the interview. Now, I have to study English and master it in five month. Bless you have a good day.</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;Should-I-register-at-the-University-of-Macao&quot;&gt;&lt;a href=&quot;#Should-I-register-at-the-University-of-Macao&quot; class=&quot;headerlink&quot; title=&quot;#Should I register at the University of Macao?&quot;&gt;&lt;/a&gt;#Should I register at the University of Macao?&lt;/h1&gt;</summary>
+    
+    
+    
+    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
+    
+    
+    <category term="想說的話" scheme="http://example.com/tags/%E6%83%B3%E8%AA%AA%E7%9A%84%E8%A9%B1/"/>
+    
+  </entry>
+  
+  <entry>
     <title>My MOI</title>
     <link href="http://example.com/2024/05/05/My-MOI/"/>
     <id>http://example.com/2024/05/05/My-MOI/</id>
     <published>2024-05-05T03:15:09.982Z</published>
-    <updated>2024-05-05T03:15:09.982Z</updated>
+    <updated>2024-05-10T14:46:23.160Z</updated>
     
     <content type="html"><![CDATA[<h1 id="hit-myself"><a href="#hit-myself" class="headerlink" title="hit myself"></a>hit myself</h1><span id="more"></span><p>I think I should over my oi career. My MOI score was got zero in second round, I very terrible and hit me a lot. I usually blame myself why don’t pay more effort in practice.</p><p>I often indulge myself such as watching short videos, play games and so on. When I want to change myself, I just keep a short time and then return the previous state.</p>]]></content>
     

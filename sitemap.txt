@@ -1,3 +1,4 @@
+http://example.com/2024/05/10/2024-5-10/
 http://example.com/2024/05/05/My-MOI/
 http://example.com/2024/02/08/2024-2-8-The-difference-in-c++-between-priority_queue-and-set/
 http://example.com/2024/01/28/2024-1-28-interval-dynamic-programming/
