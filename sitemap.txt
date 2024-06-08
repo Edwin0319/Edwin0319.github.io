@@ -1,3 +1,4 @@
+http://example.com/2024/06/08/---/
 http://example.com/2024/01/28/2024-1-28-interval-dynamic-programming/
 http://example.com/2022/12/04/%E6%95%99%E7%A8%8B/
 http://example.com/2023/01/18/openjudge1.4(16-21)/
@@ -11,7 +12,6 @@ http://example.com/
 http://example.com/tags/%E5%B9%AB%E5%8A%A9/
 http://example.com/tags/c/
 http://example.com/tags/algorithm/
-http://example.com/tags/openjudge/
 http://example.com/tags/dynamic-programming/
-http://example.com/tags/private/
+http://example.com/tags/openjudge/
 http://example.com/categories/%E6%95%99%E7%A8%8B/
