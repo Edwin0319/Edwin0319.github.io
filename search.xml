@@ -1,10 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Hello World</title>
-    <url>/2024/06/08/---/</url>
-    <content><![CDATA[<p>fasfasdf</p>
+    <title>The difference in c++ between priority_queue and set</title>
+    <url>/2024/02/08/2024-2-8-The-difference-in-c++-between-priority_queue-and-set/</url>
+    <content><![CDATA[<h1 id="Teach-you-how-to-use"><a href="#Teach-you-how-to-use" class="headerlink" title="Teach you how to use"></a>Teach you how to use</h1><span id="more"></span>
+
+<p>The underlying structure of the priority_queue is the <strong>heap</strong>, and that of the set is <strong>Red-black tree</strong>.</p>
+<p>The priority_queue insertion time complexity <strong>worst</strong> <code>O(log(n))</code>, the average time complexity is constant. Take the minimum or maximum value <code>O(1)</code>. Pop <code>O(log(n))</code>. Build time <code>O(n)</code>.</p>
+<p>The set insertion time complexity <code>O(log(n))</code>, but always over or equal the priority_queue   worst time. Take the minimum or maximum value <code>O(1)</code>. Pop <strong>worst</strong> <code>O(n)</code>. Build time <code>O(nlog(n))</code>.</p>
+<h3 id="Priority-queue"><a href="#Priority-queue" class="headerlink" title="Priority_queue"></a>Priority_queue</h3><blockquote>
+<p>Part of it is orderly<br>Take up less space<br>Supported operations are few, and application scenarios are limited</p>
+</blockquote>
+<h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><blockquote>
+<p>Completely orderly<br>Take up a lot of space<br>Supported more operations, and more application scenarios</p>
+</blockquote>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line">	<span class="type">int</span> a;</span><br><span class="line">	<span class="built_in">node</span>(<span class="type">int</span> t)&#123;<span class="keyword">this</span>-&gt;a = t;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> node a, <span class="type">const</span> node b)&#123;<span class="keyword">return</span> a.a &gt; b.a;&#125; <span class="comment">//priority_queue False優先排, 其他結構 True優先排</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> n;</span><br><span class="line">	cin &gt;&gt; n;</span><br><span class="line">	priority_queue&lt;node&gt; p;</span><br><span class="line">	<span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, a; i &lt; n; i++)&#123;</span><br><span class="line">		cin &gt;&gt; a;</span><br><span class="line">		p.<span class="built_in">push</span>(<span class="built_in">node</span>(a));</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">while</span>(!p.<span class="built_in">empty</span>())&#123;</span><br><span class="line">		cout &lt;&lt; p.<span class="built_in">top</span>().a &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">		p.<span class="built_in">pop</span>();</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>c++</tag>
+        <tag>structure</tag>
+      </tags>
   </entry>
   <entry>
     <title>Interval dynamic programming</title>
@@ -31,6 +53,168 @@
         <tag>c++</tag>
         <tag>algorithm</tag>
         <tag>dynamic programming</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Application of Stack and Queue</title>
+    <url>/2023/03/25/Application-of-Stack-and-Queue/</url>
+    <content><![CDATA[<h2 id="Stack"><a href="#Stack" class="headerlink" title="Stack"></a>Stack</h2><p>It can processing problems which have a <strong>complete inclusive relationship</strong>.</p>
+<blockquote>
+<p>We also can call that <code>FILO</code> , it mean <strong>First IN Last Out</strong></p>
+</blockquote>
+<hr>
+<h2 id="Queue"><a href="#Queue" class="headerlink" title="Queue"></a>Queue</h2><p>This structure like queue, when we buy something we should form a line. <del>I don’t know what I say</del></p>
+<blockquote>
+<p>We alse can call that<code>FIFO</code> , it mean<strong>First IN First Out</strong></p>
+</blockquote>
+<hr>
+<table>
+<thead>
+<tr>
+<th align="left">Structure</th>
+<th align="left">Application</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">Stack</td>
+<td align="left">Trees’ deep traversal, deep priority search</td>
+</tr>
+<tr>
+<td align="left">Queue(circulate)</td>
+<td align="left">Trees’ layered traversal, wide priority search</td>
+</tr>
+<tr>
+<td align="left">Monotonous Stack</td>
+<td align="left">Near the maximum(minimum) value</td>
+</tr>
+<tr>
+<td align="left">Monotonous Queue</td>
+<td align="left">The maximum(minimum) value of interval</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>Structure</tag>
+        <tag>Stack</tag>
+        <tag>Queue</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Brian help me prepare interview</title>
+    <url>/2024/05/24/Brian-help-me-prepare-interview/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="72618ff6f5d96566dc6508b9c28ca5faa6885d4aa5f534e15ec9181a03da1127">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c65950b985fc42edacfff6d4ec6c06ca2cbeac470426953f1b07aaefb376ab5d7da088559207daafac8b619fe775d7ddb56831298cbbf0e04c5e829b16372e659b5683e6fe220625fa58d68a6bce044685d08d37775c014c3f69de882ce627ed646cb9fee5d3ed69ff0850f632e20d32a0db5593ebb80bc96c638fe2f1bdc0acb0c538de076d52ced3deaa4972a67ea467d853497c354d6e0dfaa77b32230cb9cc19d888a965290878aa4d0347271a673b016fb79b5ac2aaf4f9dad21809757349f0d1c37b58cf158f1dacf71a7c6e9e6f02e8357d6645e546837b70158b44b204dc970df8ac883633e2c96b8f31422a7eb78943a271a9291cf11045bc49d0d0aec5e84bd50ad578d1cc1c83e4af908116c7cd5e3061d23b7a19881cfb05a65170bf81d100be20ce3c9402b426b3f7ce479bc61df14f450fa9af2c295d89696a65a6f8802d65854cb9119501c2f07ab4c8201f5f5b69f66240103df9cdc8f7e20bf3504fe65d87bddc099f61f0361a5e0b001adaacf725d30b13821af25c6c13bd4ed66ed192c60232abfc7e081a1ffa5fc50394aada3fcc8b515b7211a7f6387dea0e03a5fa3dd173f08a2c27cdd2216c1ff7ea1346d0404fe551b6a75b505953afced2921cca466e95eec5da044937f2e6f1f17c4df6372401ab026aa0b7b6ad10f4358acc0c12005f00751255985b74e7b7f4080220327de45282c1c4b2466c4b6cc7f2d98e47121d67caf0f72d1145614b083b06b55030d9774c3d0c08319632f77862995aa9705d85be3d0fc0a135264df053cc1a52cd9de6f9ad8eb45b7bb3694828e5d6f890dc9b013552779ba07c4edb9e8875c28efe8d8929dab579e702432a8726a2f899cb6d1ad0319d74ee56b5b71a4170d4e8c74c1b772bedae4a9162d2de64d9dd7ae74e6a7e9c9c51cd33ab31daebb832513275b0018815983a74ae85b1d2e9e8817a2a84cf770a033b35eb630b14cb25542c8202d3832407eea4439ba5d45225cb186bf6286456982791073b3f2c042863b285abee66fbb0eca71662f9d3b2ee43ea5ff36f2c63af79d74c7218d1550db181366ef9227a0aea20094907989d3ef1cea72eec18c433bc1875a7dc347fd5beae13beb57f62bcfc4e875b8019f5caae0b4b422cbad7620a89847af58a3899435f76a9c8938a11e5db6af9ffd8c170a2145dc3731c970baaefea468dd703c5907d27e2df83be9fd9f7ec1ae168423bb89b1967627fbca54ec6f880052cd4fee2cd0f0a7cb6dcaafbd0ba93409fb4726eb142b20f79b9c966cf0dbf6f289f56395136a89cea8f765dd1e8aa8ed96726cb950827b7655c6988577ec21af4ed1edd2460517517e44b7d9d3cc752388bf3945b5c0d6c71c159d71fcad2efd61445202e0fd4b78d3a2e16215d93f3bb29803e12f2021bb504c9433fd1f1cf17b85bfdf48ef5b30a052644541</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>I have some inspire</title>
+    <url>/2024/05/10/2024-5-10/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="3194ed2b2cc630f87be1c615feb7dd5f45c39a17e5405dcaacf94945b9b29de3">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c659509af40c70468fda9f306c9ea891806575912d9c0205eff8e9a8b52904101b8d15a8d9877c0b8bbca31efd3633987d27654c5da3b7d85ee37fa6a83d516a019c1dc90db11bfba67b27687118ca900ffc6d31553e6ba26262369b3c84d814ee4af954d707e02d63c6e10dbaf610202cec27fe38da3c9f43f7db293a4f34763dba9be2e7007d64fdb8ed6598e9382f1ee599293ff2e5365a204f74755d89b418ea3434b456205c95460c691b52dd085d7f7927c4aa6294ecbf6e9ebb4ee834d16401430f232c556ce870631441123f6e1538a382d18d2e3c20d12c0da533fe9d62f021f350e051777a66f6a9f967f522070eff3c889d6d763bb67ad0a840982bcc887edc58e6f661abf7684f5ddb673e3db4a22a4976f2e5448c2824cbb10d0d60a17e97ccf58e2e148fd1f50118311beacbed0471a7bf51939154e926bed6e9f330adb5bad2aa7329bc31412279e31c124bbe3512a899c6af73f0c8b428cc761470b9a25e2893d64460bb798132731ffff94133fc423ad8f9722b5e6bc4ef7d4a31ef05cb31e99857f4d098ef743d538da4a57a70ae97b9bb8cfdd902edb8fc15350fb52266496a4f30560af1651aace23c6e386f8047a9500afc518de226dce2ff8aab24d55da48de41a988d583272151bd9236e7e6309d1f5e8c17c88fb7265b9e1e9d6dd8dca2659fd8e79692d808999088a78a30d613f09bd76fba006e1d2c245c8da4655b67f0b73f197bee4db4ac2392cb84df14514150a2a9f84fb11be179aef0f1f5804d7080e5f243fa4af71bfa46b211596e6b757756b4a029409a2f8d23dd12f4d8a330b63267549fac235dec2c945f636eddf42b664e01f698cfa9c4afd33e0e96ac3fb90d3ac4d3158aff6dda06134036088a63d46adf4af45e5c5e06355397a9686a6e7a7262456ddbf21eb7003aa65c8d6dafe5894de5641d9662bd8a76705b68a241329109b159d2b294ac83751723a063c2e4337cc4622c995ecf499898d22dd9ca1dbb1a0d98860c10d9fc5959f27bacf31c767150b9e2e7b8567085429beba68aa643db4a3f396207b7ddd08dbcab86aa2c1e70389aa5ed9de3059bfdf8fcedefa9234b796b3f27</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openjudge1.4(11-15)</title>
+    <url>/2023/01/14/openjudge1.4(11-15)/</url>
+    <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="11-晶晶赴约会"><a href="#11-晶晶赴约会" class="headerlink" title="11) 晶晶赴约会"></a>11)<a href="http://noi.openjudge.cn/ch0104/11/"> 晶晶赴约会</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的1、3、5有课必须上课，请帮晶晶判断她能否接受贝贝的邀请，如果能输出YES；如果不能则输出NO。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>输入有一行，贝贝邀请晶晶去看展览的日期，用数字1到7表示从星期一到星期日。</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>输出有一行，如果晶晶可以接受贝贝的邀请，输出YES，否则，输出NO。注意YES和NO都是大写字母！</p>
+<hr>
+<p>輸入整數再判斷是否為1 or 3 or 5</p>
+<blockquote>
+<p>重點:or</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a==<span class="number">1</span> <span class="keyword">or</span> a==<span class="number">3</span> <span class="keyword">or</span> a==<span class="number">5</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;YES&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="12-骑车与走路"><a href="#12-骑车与走路" class="headerlink" title="12) 骑车与走路"></a>12)<a href="http://noi.openjudge.cn/ch0104/12/"> 骑车与走路</a></h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>在北大校园里,没有自行车,上课办事会很不方便.但实际上,并非去办任何事情都是骑车快,因为骑车总要找车、开锁、停车、锁车等,这要耽误一些时间.假设找到自行车,开锁并车上自行车的时间为27秒;停车锁车的时间为23秒;步行每秒行走1.2米,骑车每秒行走3.0米。请判断走不同的距离去办事,是骑车快还是走路快。</p>
+<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><p>输入一行，包含一个整数，表示一次办事要行走的距离,单位为米。</p>
+<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><p>输出一行,如果骑车快,输出一行”Bike”;如果走路快,输出一行”Walk”;如果一样快,输出一行”All”。</p>
+<hr>
+<p>一個簡單的數學題，單車是B(x)&#x3D;x&#x2F;3+50，行路是W(x)&#x3D;x&#x2F;1.2，再判斷B(x)和W(x)的關係</p>
+<blockquote>
+<p>重點:數學</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">meter=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">B=meter/<span class="number">3</span>+<span class="number">50</span></span><br><span class="line">W=meter/<span class="number">1.2</span></span><br><span class="line"><span class="keyword">if</span> B&lt;W:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Bike&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> W&lt;B:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Walk&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;All&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="13-分段函数"><a href="#13-分段函数" class="headerlink" title="13) 分段函数"></a>13)<a href="http://noi.openjudge.cn/ch0104/13/"> 分段函数</a></h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>编写程序，计算下列分段函数y&#x3D;f(x)的值。</p>
+<p>y&#x3D;-x+2.5; 0 &lt;&#x3D; x &lt; 5</p>
+<p>y&#x3D;2-1.5(x-3)(x-3); 5 &lt;&#x3D; x &lt; 10</p>
+<p>y&#x3D;x&#x2F;2-1.5; 10 &lt;&#x3D; x &lt; 20</p>
+<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><p>一个浮点数N,0 &lt;&#x3D; N &lt; 20</p>
+<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>输出N对应的分段函数值：f(N)。结果保留到小数点后三位。</p>
+<hr>
+<p>普通的數學分段函數，直接copy就行，記得保留小數點後三位</p>
+<blockquote>
+<p>重點:分段函數</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">x=<span class="built_in">float</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> x &gt;= <span class="number">0</span> <span class="keyword">and</span> x &lt; <span class="number">5</span>:</span><br><span class="line">    y = -x + <span class="number">2.5</span></span><br><span class="line"><span class="keyword">elif</span> x &gt;= <span class="number">5</span> <span class="keyword">and</span> x &lt; <span class="number">10</span>:</span><br><span class="line">    y = <span class="number">2</span> - <span class="number">1.5</span> * (x - <span class="number">3</span>) * (x - <span class="number">3</span>)</span><br><span class="line"><span class="keyword">elif</span> x &gt;= <span class="number">10</span> <span class="keyword">and</span> x &lt; <span class="number">20</span>:</span><br><span class="line">    y = x / <span class="number">2</span> - <span class="number">1.5</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%.3f&quot;</span>%y)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+<h2 id="14-计算邮资"><a href="#14-计算邮资" class="headerlink" title="14)计算邮资"></a>14)<a href="http://noi.openjudge.cn/ch0104/14/">计算邮资</a></h2><h3 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h3><p>根据邮件的重量和用户是否选择加急计算邮费。计算规则：重量在1000克以内(包括1000克), 基本费8元。超过1000克的部分，每500克加收超重费4元，不足500克部分按500克计算；如果用户选择加急，多收5元。</p>
+<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><p>输入一行，包含整数和一个字符，以一个空格分开，分别表示重量（单位为克）和是否加急。如果字符是y，说明选择加急；如果字符是n，说明不加急。</p>
+<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><p>输出一行，包含一个整数，表示邮费。</p>
+<hr>
+<p>先判斷是不是<em><strong>加急</strong></em>，再判斷重量是否大於1000，而大於1000的物件要再判斷超過1000的部分是否被500整除，如果除500有小數，都要進一位，再利用你們的數學知識解決吧</p>
+<blockquote>
+<p>重點:嵌套判斷</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">input</span>().split()</span><br><span class="line">a=<span class="built_in">int</span>(a)</span><br><span class="line"><span class="keyword">if</span> b==<span class="string">&#x27;n&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> a &lt;= <span class="number">1000</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>)</span><br><span class="line">    <span class="keyword">elif</span> a &gt; <span class="number">1000</span>:</span><br><span class="line">        <span class="keyword">if</span> (a-<span class="number">1000</span>) % <span class="number">500</span>==<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span></span><br><span class="line">        <span class="keyword">elif</span> (a-<span class="number">1000</span>)%<span class="number">500</span>!=<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span>+<span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>+y*<span class="number">4</span>)</span><br><span class="line"><span class="keyword">elif</span> b==<span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> a &lt;= <span class="number">1000</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>+<span class="number">5</span>)</span><br><span class="line">    <span class="keyword">elif</span> a &gt; <span class="number">1000</span>:</span><br><span class="line">        <span class="keyword">if</span> (a-<span class="number">1000</span>) % <span class="number">500</span>==<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span></span><br><span class="line">        <span class="keyword">elif</span> (a-<span class="number">1000</span>)%<span class="number">500</span>!=<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span>+<span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>+y*<span class="number">4</span>+<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
+
+<h2 id="15-最大数输出"><a href="#15-最大数输出" class="headerlink" title="15)最大数输出"></a>15)<a href="http://noi.openjudge.cn/ch0104/15/">最大数输出</a></h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><p>输入三个整数,输出最大的数。</p>
+<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><p>输入为一行，包含三个整数，数与数之间以一个空格分开。</p>
+<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><p>输出一行，包含一个整数，即最大的整数。</p>
+<hr>
+<p>直接用<code>max()</code>函數</p>
+<blockquote>
+<p>重點:max()</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b,c=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">max</span>(a,b,c))</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>openjudge</tag>
       </tags>
   </entry>
   <entry>
@@ -169,6 +353,77 @@
 </blockquote>
 <hr>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="keyword">if</span> (a&lt;<span class="number">60</span> <span class="keyword">and</span> b&gt;=<span class="number">60</span>) <span class="keyword">or</span> (b&lt;<span class="number">60</span> <span class="keyword">and</span> a&gt;=<span class="number">60</span>):</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">1</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="number">0</span>)</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>openjudge</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>openjudge1.4(1~5)</title>
+    <url>/2022/12/24/openjudge1.4(1~5)/</url>
+    <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="1-判断数正负"><a href="#1-判断数正负" class="headerlink" title="1) 判断数正负"></a>1)<a href="http://noi.openjudge.cn/ch0104/01/"> 判断数正负</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述:"></a>描述:</h3><p>给定一个整数N，判断其正负。</p>
+<h3 id="输入"><a href="#输入" class="headerlink" title="输入:"></a>输入:</h3><p>一个整数N(-109 &lt;&#x3D; N &lt;&#x3D; 109)</p>
+<h3 id="输出"><a href="#输出" class="headerlink" title="输出:"></a>输出:</h3><p>如果N &gt; 0, 输出positive;<br>如果N &#x3D; 0, 输出zero;<br>如果N &lt; 0, 输出negative</p>
+<hr>
+<p>先輸入一個整數，再判斷是大於 0 or 等於0 or小於0 就行了<br><del>so easy</del></p>
+<blockquote>
+<p>重點:判斷</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> n &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;positive&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;zero&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n &lt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;negative&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h2 id="2-输出绝对值"><a href="#2-输出绝对值" class="headerlink" title="2) 输出绝对值"></a>2)<a href="http://noi.openjudge.cn/ch0104/02/"> 输出绝对值</a></h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>输入一个浮点数，输出这个浮点数的绝对值。</p>
+<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><p>输入一个浮点数，其绝对值不超过10000。</p>
+<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><p>输出这个浮点数的绝对值，保留到小数点后两位。</p>
+<hr>
+<p>輸入一個浮點數，再保留兩位小數輸出絕對值就ok了</p>
+<blockquote>
+<p>重點:占位輸出和abs函數</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">float</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%.2f&quot;</span>%<span class="built_in">abs</span>(x))</span><br></pre></td></tr></table></figure>
+
+<h2 id="3-奇偶数判断"><a href="#3-奇偶数判断" class="headerlink" title="3)奇偶数判断"></a>3)<a href="http://noi.openjudge.cn/ch0104/03/">奇偶数判断</a></h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>给定一个整数，判断该数是奇数还是偶数。</p>
+<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><p>输入仅一行，一个大于零的正整数n。</p>
+<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>输出仅一行，如果n是奇数，输出odd；如果n是偶数，输出even。</p>
+<hr>
+<p>先輸入一個整數，用%去取余數，判斷是否能被2除盡</p>
+<blockquote>
+<p>重點:利用%</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;even&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;odd&quot;</span>)</span><br></pre></td></tr></table></figure>
+<h2 id="4-奇偶ASCII值判断"><a href="#4-奇偶ASCII值判断" class="headerlink" title="4) 奇偶ASCII值判断"></a>4)<a href="http://noi.openjudge.cn/ch0104/04/"> 奇偶ASCII值判断</a></h2><h3 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h3><p>任意输入一个字符，判断其ASCII是否是奇数，若是，输出YES，否则，输出NO<br>例如，字符A的ASCII值是65，则输出YES，若输入字符B(ASCII值是66)，则输出NO</p>
+<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><p>输入一个字符</p>
+<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><p>如果其ASCII值为奇数，则输出YES，否则，输出NO</p>
+<hr>
+<p><del>呢個用python做比較麻煩，差啲諗住用c++算了</del><br>主要係python嘅<code>input()</code>會收空氣，就係你直接<strong>回車</strong>，嗰變量c就變成<code>&quot;&quot;</code>空字符串了，長度為0，但係<code>ord()</code>要長度為1的字符，所以直接把c放入會報錯，要先判斷c的長度是否為0，才能進行下一步。</p>
+<blockquote>
+<p><code>ord()</code>是把裏面的字符轉為ASCII碼</p>
+</blockquote>
+<p>把字符c變為ASCII再和上題一樣的操作就ok了</p>
+<blockquote>
+<p>重點:判斷特殊情况，判斷ASCII碼的奇偶</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c=<span class="built_in">input</span>()</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(c)==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">ord</span>(c)%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;YES&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="5-整数大小比较"><a href="#5-整数大小比较" class="headerlink" title="5) 整数大小比较"></a>5)<a href="http://noi.openjudge.cn/ch0104/05/"> 整数大小比较</a></h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><p>输入两个整数，比较它们的大小。</p>
+<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><p>一行，包含两个整数x和y，中间用单个空格隔开。<br>0 &lt;&#x3D; x &lt; 2^32, -2^31 &lt;&#x3D; y &lt; 2^31。</p>
+<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><p>一个字符。<br>若x &gt; y，输出 &gt; ；<br>若x &#x3D; y，输出 &#x3D; ；<br>若x &lt; y，输出 &lt; ；</p>
+<hr>
+<p>用<code>map()</code>和<code>split()</code>是因為題目分割a和b是用空格，<del>把這串代碼背了就是</del>再判斷a和b的大小關係</p>
+<blockquote>
+<p>重點:賦值方法，判斷大小</p>
+</blockquote>
+<hr>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="keyword">if</span> a&gt;b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&gt;&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a==b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;=&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&lt;&quot;</span>)</span><br></pre></td></tr></table></figure>
+
+<hr>
+<p>就咁先啦，得閑先更😇</p>
+]]></content>
       <categories>
         <category>教程</category>
       </categories>
@@ -319,147 +574,6 @@
       </tags>
   </entry>
   <entry>
-    <title>openjudge1.4(11-15)</title>
-    <url>/2023/01/14/openjudge1.4(11-15)/</url>
-    <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="11-晶晶赴约会"><a href="#11-晶晶赴约会" class="headerlink" title="11) 晶晶赴约会"></a>11)<a href="http://noi.openjudge.cn/ch0104/11/"> 晶晶赴约会</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h3><p>晶晶的朋友贝贝约晶晶下周一起去看展览，但晶晶每周的1、3、5有课必须上课，请帮晶晶判断她能否接受贝贝的邀请，如果能输出YES；如果不能则输出NO。</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入"></a>输入</h3><p>输入有一行，贝贝邀请晶晶去看展览的日期，用数字1到7表示从星期一到星期日。</p>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>输出有一行，如果晶晶可以接受贝贝的邀请，输出YES，否则，输出NO。注意YES和NO都是大写字母！</p>
-<hr>
-<p>輸入整數再判斷是否為1 or 3 or 5</p>
-<blockquote>
-<p>重點:or</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a==<span class="number">1</span> <span class="keyword">or</span> a==<span class="number">3</span> <span class="keyword">or</span> a==<span class="number">5</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;YES&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="12-骑车与走路"><a href="#12-骑车与走路" class="headerlink" title="12) 骑车与走路"></a>12)<a href="http://noi.openjudge.cn/ch0104/12/"> 骑车与走路</a></h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>在北大校园里,没有自行车,上课办事会很不方便.但实际上,并非去办任何事情都是骑车快,因为骑车总要找车、开锁、停车、锁车等,这要耽误一些时间.假设找到自行车,开锁并车上自行车的时间为27秒;停车锁车的时间为23秒;步行每秒行走1.2米,骑车每秒行走3.0米。请判断走不同的距离去办事,是骑车快还是走路快。</p>
-<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><p>输入一行，包含一个整数，表示一次办事要行走的距离,单位为米。</p>
-<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><p>输出一行,如果骑车快,输出一行”Bike”;如果走路快,输出一行”Walk”;如果一样快,输出一行”All”。</p>
-<hr>
-<p>一個簡單的數學題，單車是B(x)&#x3D;x&#x2F;3+50，行路是W(x)&#x3D;x&#x2F;1.2，再判斷B(x)和W(x)的關係</p>
-<blockquote>
-<p>重點:數學</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">meter=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line">B=meter/<span class="number">3</span>+<span class="number">50</span></span><br><span class="line">W=meter/<span class="number">1.2</span></span><br><span class="line"><span class="keyword">if</span> B&lt;W:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Bike&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> W&lt;B:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;Walk&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;All&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="13-分段函数"><a href="#13-分段函数" class="headerlink" title="13) 分段函数"></a>13)<a href="http://noi.openjudge.cn/ch0104/13/"> 分段函数</a></h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>编写程序，计算下列分段函数y&#x3D;f(x)的值。</p>
-<p>y&#x3D;-x+2.5; 0 &lt;&#x3D; x &lt; 5</p>
-<p>y&#x3D;2-1.5(x-3)(x-3); 5 &lt;&#x3D; x &lt; 10</p>
-<p>y&#x3D;x&#x2F;2-1.5; 10 &lt;&#x3D; x &lt; 20</p>
-<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><p>一个浮点数N,0 &lt;&#x3D; N &lt; 20</p>
-<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>输出N对应的分段函数值：f(N)。结果保留到小数点后三位。</p>
-<hr>
-<p>普通的數學分段函數，直接copy就行，記得保留小數點後三位</p>
-<blockquote>
-<p>重點:分段函數</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">x=<span class="built_in">float</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> x &gt;= <span class="number">0</span> <span class="keyword">and</span> x &lt; <span class="number">5</span>:</span><br><span class="line">    y = -x + <span class="number">2.5</span></span><br><span class="line"><span class="keyword">elif</span> x &gt;= <span class="number">5</span> <span class="keyword">and</span> x &lt; <span class="number">10</span>:</span><br><span class="line">    y = <span class="number">2</span> - <span class="number">1.5</span> * (x - <span class="number">3</span>) * (x - <span class="number">3</span>)</span><br><span class="line"><span class="keyword">elif</span> x &gt;= <span class="number">10</span> <span class="keyword">and</span> x &lt; <span class="number">20</span>:</span><br><span class="line">    y = x / <span class="number">2</span> - <span class="number">1.5</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%.3f&quot;</span>%y)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-<h2 id="14-计算邮资"><a href="#14-计算邮资" class="headerlink" title="14)计算邮资"></a>14)<a href="http://noi.openjudge.cn/ch0104/14/">计算邮资</a></h2><h3 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h3><p>根据邮件的重量和用户是否选择加急计算邮费。计算规则：重量在1000克以内(包括1000克), 基本费8元。超过1000克的部分，每500克加收超重费4元，不足500克部分按500克计算；如果用户选择加急，多收5元。</p>
-<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><p>输入一行，包含整数和一个字符，以一个空格分开，分别表示重量（单位为克）和是否加急。如果字符是y，说明选择加急；如果字符是n，说明不加急。</p>
-<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><p>输出一行，包含一个整数，表示邮费。</p>
-<hr>
-<p>先判斷是不是<em><strong>加急</strong></em>，再判斷重量是否大於1000，而大於1000的物件要再判斷超過1000的部分是否被500整除，如果除500有小數，都要進一位，再利用你們的數學知識解決吧</p>
-<blockquote>
-<p>重點:嵌套判斷</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">input</span>().split()</span><br><span class="line">a=<span class="built_in">int</span>(a)</span><br><span class="line"><span class="keyword">if</span> b==<span class="string">&#x27;n&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> a &lt;= <span class="number">1000</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>)</span><br><span class="line">    <span class="keyword">elif</span> a &gt; <span class="number">1000</span>:</span><br><span class="line">        <span class="keyword">if</span> (a-<span class="number">1000</span>) % <span class="number">500</span>==<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span></span><br><span class="line">        <span class="keyword">elif</span> (a-<span class="number">1000</span>)%<span class="number">500</span>!=<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span>+<span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>+y*<span class="number">4</span>)</span><br><span class="line"><span class="keyword">elif</span> b==<span class="string">&#x27;y&#x27;</span>:</span><br><span class="line">    <span class="keyword">if</span> a &lt;= <span class="number">1000</span>:</span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>+<span class="number">5</span>)</span><br><span class="line">    <span class="keyword">elif</span> a &gt; <span class="number">1000</span>:</span><br><span class="line">        <span class="keyword">if</span> (a-<span class="number">1000</span>) % <span class="number">500</span>==<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span></span><br><span class="line">        <span class="keyword">elif</span> (a-<span class="number">1000</span>)%<span class="number">500</span>!=<span class="number">0</span>:</span><br><span class="line">            y=(a-<span class="number">1000</span>)//<span class="number">500</span>+<span class="number">1</span></span><br><span class="line">        <span class="built_in">print</span>(<span class="number">8</span>+y*<span class="number">4</span>+<span class="number">5</span>)</span><br></pre></td></tr></table></figure>
-
-<h2 id="15-最大数输出"><a href="#15-最大数输出" class="headerlink" title="15)最大数输出"></a>15)<a href="http://noi.openjudge.cn/ch0104/15/">最大数输出</a></h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><p>输入三个整数,输出最大的数。</p>
-<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><p>输入为一行，包含三个整数，数与数之间以一个空格分开。</p>
-<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><p>输出一行，包含一个整数，即最大的整数。</p>
-<hr>
-<p>直接用<code>max()</code>函數</p>
-<blockquote>
-<p>重點:max()</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b,c=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="built_in">print</span>(<span class="built_in">max</span>(a,b,c))</span><br></pre></td></tr></table></figure>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>幫助</tag>
-        <tag>openjudge</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>openjudge1.4(1~5)</title>
-    <url>/2022/12/24/openjudge1.4(1~5)/</url>
-    <content><![CDATA[<h1 id="1-4编程基础之逻辑表达式与条件分支"><a href="#1-4编程基础之逻辑表达式与条件分支" class="headerlink" title="1.4编程基础之逻辑表达式与条件分支"></a>1.4编程基础之逻辑表达式与条件分支</h1><h2 id="1-判断数正负"><a href="#1-判断数正负" class="headerlink" title="1) 判断数正负"></a>1)<a href="http://noi.openjudge.cn/ch0104/01/"> 判断数正负</a></h2><h3 id="描述"><a href="#描述" class="headerlink" title="描述:"></a>描述:</h3><p>给定一个整数N，判断其正负。</p>
-<h3 id="输入"><a href="#输入" class="headerlink" title="输入:"></a>输入:</h3><p>一个整数N(-109 &lt;&#x3D; N &lt;&#x3D; 109)</p>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出:"></a>输出:</h3><p>如果N &gt; 0, 输出positive;<br>如果N &#x3D; 0, 输出zero;<br>如果N &lt; 0, 输出negative</p>
-<hr>
-<p>先輸入一個整數，再判斷是大於 0 or 等於0 or小於0 就行了<br><del>so easy</del></p>
-<blockquote>
-<p>重點:判斷</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">n=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> n &gt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;positive&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n == <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;zero&quot;</span>)</span><br><span class="line"><span class="keyword">if</span> n &lt; <span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;negative&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-<h2 id="2-输出绝对值"><a href="#2-输出绝对值" class="headerlink" title="2) 输出绝对值"></a>2)<a href="http://noi.openjudge.cn/ch0104/02/"> 输出绝对值</a></h2><h3 id="描述-1"><a href="#描述-1" class="headerlink" title="描述"></a>描述</h3><p>输入一个浮点数，输出这个浮点数的绝对值。</p>
-<h3 id="输入-1"><a href="#输入-1" class="headerlink" title="输入"></a>输入</h3><p>输入一个浮点数，其绝对值不超过10000。</p>
-<h3 id="输出-1"><a href="#输出-1" class="headerlink" title="输出"></a>输出</h3><p>输出这个浮点数的绝对值，保留到小数点后两位。</p>
-<hr>
-<p>輸入一個浮點數，再保留兩位小數輸出絕對值就ok了</p>
-<blockquote>
-<p>重點:占位輸出和abs函數</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">x=<span class="built_in">float</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;%.2f&quot;</span>%<span class="built_in">abs</span>(x))</span><br></pre></td></tr></table></figure>
-
-<h2 id="3-奇偶数判断"><a href="#3-奇偶数判断" class="headerlink" title="3)奇偶数判断"></a>3)<a href="http://noi.openjudge.cn/ch0104/03/">奇偶数判断</a></h2><h3 id="描述-2"><a href="#描述-2" class="headerlink" title="描述"></a>描述</h3><p>给定一个整数，判断该数是奇数还是偶数。</p>
-<h3 id="输入-2"><a href="#输入-2" class="headerlink" title="输入"></a>输入</h3><p>输入仅一行，一个大于零的正整数n。</p>
-<h3 id="输出-2"><a href="#输出-2" class="headerlink" title="输出"></a>输出</h3><p>输出仅一行，如果n是奇数，输出odd；如果n是偶数，输出even。</p>
-<hr>
-<p>先輸入一個整數，用%去取余數，判斷是否能被2除盡</p>
-<blockquote>
-<p>重點:利用%</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a=<span class="built_in">int</span>(<span class="built_in">input</span>())</span><br><span class="line"><span class="keyword">if</span> a%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;even&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;odd&quot;</span>)</span><br></pre></td></tr></table></figure>
-<h2 id="4-奇偶ASCII值判断"><a href="#4-奇偶ASCII值判断" class="headerlink" title="4) 奇偶ASCII值判断"></a>4)<a href="http://noi.openjudge.cn/ch0104/04/"> 奇偶ASCII值判断</a></h2><h3 id="描述-3"><a href="#描述-3" class="headerlink" title="描述"></a>描述</h3><p>任意输入一个字符，判断其ASCII是否是奇数，若是，输出YES，否则，输出NO<br>例如，字符A的ASCII值是65，则输出YES，若输入字符B(ASCII值是66)，则输出NO</p>
-<h3 id="输入-3"><a href="#输入-3" class="headerlink" title="输入"></a>输入</h3><p>输入一个字符</p>
-<h3 id="输出-3"><a href="#输出-3" class="headerlink" title="输出"></a>输出</h3><p>如果其ASCII值为奇数，则输出YES，否则，输出NO</p>
-<hr>
-<p><del>呢個用python做比較麻煩，差啲諗住用c++算了</del><br>主要係python嘅<code>input()</code>會收空氣，就係你直接<strong>回車</strong>，嗰變量c就變成<code>&quot;&quot;</code>空字符串了，長度為0，但係<code>ord()</code>要長度為1的字符，所以直接把c放入會報錯，要先判斷c的長度是否為0，才能進行下一步。</p>
-<blockquote>
-<p><code>ord()</code>是把裏面的字符轉為ASCII碼</p>
-</blockquote>
-<p>把字符c變為ASCII再和上題一樣的操作就ok了</p>
-<blockquote>
-<p>重點:判斷特殊情况，判斷ASCII碼的奇偶</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">c=<span class="built_in">input</span>()</span><br><span class="line"><span class="keyword">if</span> <span class="built_in">len</span>(c)==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> <span class="built_in">ord</span>(c)%<span class="number">2</span>==<span class="number">0</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;NO&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;YES&quot;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h2 id="5-整数大小比较"><a href="#5-整数大小比较" class="headerlink" title="5) 整数大小比较"></a>5)<a href="http://noi.openjudge.cn/ch0104/05/"> 整数大小比较</a></h2><h3 id="描述-4"><a href="#描述-4" class="headerlink" title="描述"></a>描述</h3><p>输入两个整数，比较它们的大小。</p>
-<h3 id="输入-4"><a href="#输入-4" class="headerlink" title="输入"></a>输入</h3><p>一行，包含两个整数x和y，中间用单个空格隔开。<br>0 &lt;&#x3D; x &lt; 2^32, -2^31 &lt;&#x3D; y &lt; 2^31。</p>
-<h3 id="输出-4"><a href="#输出-4" class="headerlink" title="输出"></a>输出</h3><p>一个字符。<br>若x &gt; y，输出 &gt; ；<br>若x &#x3D; y，输出 &#x3D; ；<br>若x &lt; y，输出 &lt; ；</p>
-<hr>
-<p>用<code>map()</code>和<code>split()</code>是因為題目分割a和b是用空格，<del>把這串代碼背了就是</del>再判斷a和b的大小關係</p>
-<blockquote>
-<p>重點:賦值方法，判斷大小</p>
-</blockquote>
-<hr>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line">a,b=<span class="built_in">map</span>(<span class="built_in">int</span>,<span class="built_in">input</span>().split())</span><br><span class="line"><span class="keyword">if</span> a&gt;b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&gt;&quot;</span>)</span><br><span class="line"><span class="keyword">elif</span> a==b:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;=&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;&lt;&quot;</span>)</span><br></pre></td></tr></table></figure>
-
-<hr>
-<p>就咁先啦，得閑先更😇</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>幫助</tag>
-        <tag>openjudge</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Markdown用法</title>
     <url>/2022/12/04/%E6%95%99%E7%A8%8B/</url>
     <content><![CDATA[<h1 id="使用Markdown不是梦"><a href="#使用Markdown不是梦" class="headerlink" title="使用Markdown不是梦"></a>使用Markdown不是梦</h1><span id="more"></span>
@@ -543,6 +657,211 @@
       </categories>
       <tags>
         <tag>幫助</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Introduce Binary Trees&#39; structure</title>
+    <url>/2023/03/28/Introduce-Binary-Treesstructure/</url>
+    <content><![CDATA[<p><a href="https://blog.csdn.net/weixin_43762934/article/details/85539672">There is include the majority professional words</a></p>
+<span id="more"></span>
+
+<h1 id="Concept"><a href="#Concept" class="headerlink" title="Concept"></a>Concept</h1><h2 id="1-Every-node-at-most-two-children"><a href="#1-Every-node-at-most-two-children" class="headerlink" title="1. Every node at most two children ."></a>1. Every node at most two children .</h2><h2 id="2-There-is-one-more-leaf-node-than-the-number-of-two-child-nodes"><a href="#2-There-is-one-more-leaf-node-than-the-number-of-two-child-nodes" class="headerlink" title="2. There is one more leaf node than the number of two child nodes."></a>2. There is one more leaf node than the number of two child nodes.</h2><blockquote>
+<p>prove: n0+n1+n2&#x3D;n1+2*n2+1<br>so: n0&#x3D;n2+1</p>
+</blockquote>
+<h1 id="categories"><a href="#categories" class="headerlink" title="categories"></a>categories</h1><h2 id="1-Complete-binary-tree-important"><a href="#1-Complete-binary-tree-important" class="headerlink" title="1. Complete binary tree (important)"></a>1. Complete binary tree (important)</h2><p>Every layer is full except the last one, and the right side of the last layer is empty.</p>
+<h3 id="1-Node-numbered-i"><a href="#1-Node-numbered-i" class="headerlink" title="1. Node numbered i"></a>1. Node numbered i</h3><p>left child number: 2*i<br>right child number: 2*i+1</p>
+<h2 id="2-full-binary-tree"><a href="#2-full-binary-tree" class="headerlink" title="2. full binary tree"></a>2. full binary tree</h2><p>All the node either two child or none child.</p>
+<h2 id="3-Perfect-binary-tree"><a href="#3-Perfect-binary-tree" class="headerlink" title="3. Perfect binary tree"></a>3. Perfect binary tree</h2><p>Every layer is full, it is perfect.</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>c++</tag>
+        <tag>algorithm</tag>
+        <tag>Structure</tag>
+        <tag>BinaryTree</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Nico Birthday</title>
+    <url>/2024/05/16/Nico-Birthday/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="bf420584750c5f73d38b314d44d5ec53de71bc550e9725236c3249a55027a17e">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c659538098b88a784491cd9552151799e66ea0e251c43c0ba117977afd38246731f065078a659f5adf86ea9b1f2d044ae320de4b6b0cca2a418ccc81f34bb5abb2de3eb126d0af483f5e667cd4577ef9e19bc295ce36decc298ac645a3fecab4a83d80d6e5551986e2f3eba3199da0dfb38d1214347ab808f8a11df108f9214c3eed1f750d0858340c7e2051e5eee667f70ef737734011bc04f08b8714d0dd49c35c994a7442f36263dcd4f809ce252bdd5723256c8ed0981603643e00640e240b411aa7568dd7b547ae9581d02f3d50fadabece43146d2fb1b27d599566e67f10761c785d7b359877eab57428c44b33d2b54e73ef286324b274617779b8791e426e7705b428716064dd17f95224188e35d08f35b0fe239bb51900301ec783c6677a5e1ad7e538e2e2932e1fbbddcd91a3d217321872e9e713e3068a9684c1f4d6589a2fcfe782fe585cd2a95ac0fb0bb3d36c9ae2264ab6794809205552dddb7cf3f747091b0e1c6f63a69650911992279b9420f9d8555685b0b11ed01ff18f2b60fc8ec903087ccd4eee6482bcc3235b05b730438763282638473daa60bea71e35316a9cdb76c11cd427bb3ac9daac75d362703aa3888443c2a9b8ee84c7c3f228bc799674a11a1f76d2991b9c355f6654f7eafd7f0a9b80c95e35db91a303c0aa53133e45fab1cb6f89e4d36b746ec203eac510355a041ce3c1b1be71455b6b39b7eb478632103b15afd76dcd24643df85dfe935c46e8feafd81c58f75879e09059e4d6ea5614c644471956d80f2ee3a7b8227e34d29c79a0eb128233c590c80747c99469fd47f9a65ab92fcf9da7811841d44029fd504be927910bcd629348d4696ade5007b2ff4266a8026d27b164de0e9ffd6ce146ca6b51afad3c50fa3ae10a962f34f040a035fdeddde480444b1dc0713e8f895108b394335e2e636c6d82e94cc683aa295a5bf15df5c122921d7c7bab6ed774572c27951d93bc63d673a9371e2f12b752dfbfc04e5daee57f18e9eee63fa6231a1fa84affd072d83a0ae946b6ac362a9a23830d08bdb81e33c42119df7428c6fa71a5af0a56d866da370a0acd2a92f5d10c93422ab842edab771ccf07716d8f7ae569404bfa0bc388e1cc82aad38c294db2c23d785f60797655f02287fbbed5e3233d9537805c42ce121554415b5c54329c9a984a10457cfab5ff7ecb679726fac53790c99581d3fdf3b605c34b7b61be623c6c1cca5f9d63b97b14524197690ad4d854f7f4ddffd303a7552c6a48ef5358bb5270e8de9dcf9d811</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Have a dinner with the team</title>
+    <url>/2024/05/12/Have-a-dinner-with-the-team/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="e35bdbac043d32585c4fbc96791cc6b686780b84e2e160967039f30d96f37644">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c3c808a6b94b735d248f4897c5b8ed3210ffeb787af21518cba59006240d0645b81948be43fa4432c9452f5ba0cbf0c7bc90d2d2e057d7867d7be2f375b9849fa0db7727cbf7224988ebb3945181b3f4969ee2860ccee72116ffe6d96062b479840c893cc26e4d71a66315e9d779a3d2c2fb142f1bc91df6e29b58efa57fae3457982239f99d200416f378d20c1ea8fc6902f202960a137bc6baa7541f411d1bc3ffbb57a2de4abe1bb10b374ea0181474494981bb7cb0ab215d7fdbef87ab1c619609f515122548e08b390da65ae7074683d0fd580282b85f5cbc6b52e070956e9ba4ce24fd5fb55e717b974a36b220dfad3c68c84416115818c5cce04bc68f09354e990c8dd6f034bbe30c82297335bca5ae91c9e29e77417e8a8e27b54a4a305e67ce828260812b33d6951f2bc9fab4ae70cea62bd132764905d3c8807de78844d2d7b7faa67a0fd7743241ff3ea2f8be2ad9f2909f108e26f8cdbf629746ca53c5519dac199a0062eab3a6c23ccf047b956bbe6b34326b430767f90138712269c4932de80f6e8ad44855c2ec141b877adc983560f695933d3e9640fac4034df1dee77b91da06ec1c1d9bde01fe06b</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>My MOI</title>
+    <url>/2024/05/05/My-MOI/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="1289fc5e1bdc5fb032d9fc2b827834a6b010049e43f957bcd2ad3c94dcd88602">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c6595b2754275585c0885266f46e53c3b0e80bffd7915d383dfda33b98ad8e157c2372a711b44a1ffbba3bf45c491112df5018eb3f626b7eeaf4a24de92ea7f81cb3c094f01f6c8efa876a432d293723f6e395f407281507f7499fa68a860e1e5d2a1d9096c23f150f2bc632ea837bc275146a860362169cca2be9d79ee34962540aee6aeba3072580cfcdc888fd58cf56410b85ca9711da15a3e590dae90491a59d1ec662e02c55d33dfbcebf998f394b82b72ed5e16b61eff237d86b11e4a7aa5bfbc19bbe2d0d46dc3fb235a79ee1e3c488e46f74ceeb82dad8dc487f87bd181987cd83e6a66033d71dd31b4edeec001a6be98c090242c439435a67003ed0266bf4af9161f58b8594fcc06744f9a55ebce0e3f8242fce2dc1e33c5dbb792e9ff7b2c87bb4c4c83fcead882e6be119fcbba506fa1609f810f308223d0911d23d1d7c84e57e386d7156b57fabe211ddad660dbe3ed305feb773c7e0770ccc043d01487b968e9004c990fc9d012f2ade6ef8cf07ddf322daf2db4055625517a2ace31218552a181f6e03a9cf3e3e962d6bc52f7c343e183815b7b3a15f5b68c6abfb48de5f360e0b33d7ddb50bf548e3b9a2eda9c955851b4ba95fd6f880ca27c9efe80cd0b8273b1f899feb0c1651fffb869ac6749cbfc0ed6bf295dc059a34d3a5f</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>P1305 新二叉树</title>
+    <url>/2023/02/05/P1305%20%E6%96%B0%E4%BA%8C%E5%8F%89%E6%A0%91/</url>
+    <content><![CDATA[<h1 id="P1305-新二叉树"><a href="#P1305-新二叉树" class="headerlink" title="P1305 新二叉树"></a><a href="https://www.luogu.com.cn/problem/P1305">P1305 新二叉树</a></h1><hr>
+<p>I initialization a multidimensional <strong>map</strong> .<br>It is because the questions will give you a whole BinaryTree’s value,so that I can create a multidimensional map to stor these value one by one.<br>And then,I have written a recursion.It is not complexity.<br>I have saved the begin root.Create a recursion while can preoder traversal the BinaryTree.</p>
+<blockquote>
+<p>If you move <code>cout&lt;&lt;a;</code> to the end of the <code>dfs()</code> ,that will become a postorder traversal.It is a intersting point.</p>
+</blockquote>
+<p>In the<code>dfs()</code> have two <strong>super operate</strong> because the problem can divide into <strong>left and right</strong> road,then the subproblem also can divide into two subproblem.</p>
+<hr>
+<figure class="highlight c++"><table><tr><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line">map&lt;<span class="type">char</span>,pair&lt;<span class="type">char</span>,<span class="type">char</span>&gt; &gt;f;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line"><span class="type">char</span> a,b,c,A;</span><br><span class="line"><span class="function"><span class="type">void</span> <span class="title">dfs</span><span class="params">(<span class="type">char</span> a)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cout&lt;&lt;a;</span><br><span class="line">    <span class="keyword">if</span>(f[a].first!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].first);</span><br><span class="line">    <span class="keyword">if</span>(f[a].second!=<span class="string">&#x27;*&#x27;</span>)<span class="built_in">dfs</span>(f[a].second);</span><br><span class="line">    </span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    cin&gt;&gt;n;</span><br><span class="line">    cin&gt;&gt;A&gt;&gt;b&gt;&gt;c;</span><br><span class="line">    f[A].first=b;</span><br><span class="line">    f[A].second=c;</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">2</span>;i&lt;=n;i++)</span><br><span class="line">    &#123;</span><br><span class="line">        cin&gt;&gt;a&gt;&gt;b&gt;&gt;c;</span><br><span class="line">        f[a].first=b;</span><br><span class="line">        f[a].second=c;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">dfs</span>(A);</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>yeeee~ ~ ~</p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>幫助</tag>
+        <tag>c++</tag>
+        <tag>algorithm</tag>
+        <tag>BinaryTree</tag>
+        <tag>recursion</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>a normal day</title>
+    <url>/2024/05/17/girls_basketball_S2A/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c83cd266f22ff1ce94cb1c474ca8aa8a3934a703be5993b56a2336978b1f3846">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c7205acbd26fe704984f900f3740f082e6c794e67f0e4859875b021559d4868a27f0f1a9264f22e84230f589af1f0c08bc30f3de90b2c526fa5899c3189f6300feb0c01970856959da57b64b83c9c3009f345c88ffaefbed33985a786e249a1d94868fcd3bbde54e4afbeb4e20fd08367cb9924bdba3846d9e7511536a102cbb31ee349a812c754d8a37f299df5d30a6fcc44b681d9b0001560654fe2fd3cade4d020426ed2c29f4bef9d7ef8bfeb775eb6e63ab9fb25a28e08b21e30b0c50f1af5a75e2500664e2c59b5a44ecf6efb194b5b86fe5b070c5a98a4dae921b1f03e6b8868e4459300c68b7bb0ca012b3c80ae05793c3c6d0157e7550ab329fba8bf509a13aefd1b06dca1956f957477a7a338db0033befd4df1ba7f64b62e483951d3aff300802c718b72f37752027c25b3e3148818616a344cf1978f961a9d5a708846752f815cf37dca44f256fcf8caed030da201765fd7d92f300e8651e177c61799db672271a6aaf3247f37f16294b5c803a8f519463759979143d8b6c6d1739ca86c128a6c9b9f2602078f1b27f15288807062ba50d7ce8af7a40f96d6a3980803ac2b8088b9a8463109476a9302f97c529671fe988b8a85e440115a8485b053ccbd2f38bc62f1f72a720cf8ba236fd57910c49cf6aed2bc1bbde3373547db</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>take the first step</title>
+    <url>/2023/01/21/take%20the%20first%20step/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="39a830d81c197bb691649b260b99009928fae970b0d6b2d6869f8a03bf1e42b8">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c6595ba72ac8eb7b789666a3f184cb57f6ab31f7404aa025f13d515d27f3b4e4891d66038f04e0ede464a73804dfe157e8f1abe489e07ff8b2c730fe2cfee780034f16ad87ffec6382e2df1b88efe8692479413d969dd50929842da749711dc283f96646c583e09ecce0037506cf6e5a15eb88e97586de7366cca34830fc4e729bc35f639eb6af2847587d2b1795e0c940b9fd2f97efd9e10aad8749ec3859d1549b4d361f3fdd1a42a7ccc8e8ecf3ee5b0d28551728290cd77223b6fab2dde5682ec4ae99c971c9022ec467e9b2207961f4864d9cc5b09805200559cff28d1926f943ef9efcf31ecd6ba113cac4a08eba332f29b4e2bf084cf9a2d95794cc29315a3f44dc370f9a9e1e0ef68a2aaf164d3120c9b83a97fd9aa4e89d5590feffc2a4a92c5677a88024a0c93c3c8d68a0e55cf2595fa2e5d242484f7c2f12f3da2a94f8cf3bc4cfe2bb6e36384229d5ce70ddca1bee998282ba6b1e9f6ff4589db11b9eb3a6e1321426295d68ed9c6684737fa8a69453464799481af258e4f0c13dccfce9f998e09b3b997fc15ffd1649da6757c53b40f75ed8cbd5d2363d0b8b6a3ba</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>想說的話</category>
+      </categories>
+      <tags>
+        <tag>廢話</tag>
+        <tag>感受</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>today is singing competition</title>
+    <url>/2024/05/19/today-is-singing-competition/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="79e42cc332f46107290baefa5f0acc410a84a0ca1052dcdf01cdc19e32452ea0">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c341175eb8d9ebe03945f07d37b937ef00b020dfbcc74ac3a5157604ac5d7686b8e63763025dec6c53032cdeaf829a5ff97ac1c2e9687ab6b6227f8ee2e903030027b62fc55e3f97ea5896d4b6c68fb3bb7add6508b8a579e3781a759961f91d09230ac01044a881d18eaa62110921b6195a47f63709b6b1989bd634112a2c4e6a874c731d79b277db864b442e7496a128ba36aecb7acf585a54b58d7bd69441d103c565434541f0ab7b9a1242663883dc0ebab60be84e1c9e1d15f286a792d531b0e606aa76af8b5269cf1bc55ec8a8a69f62b74ba9af5014f2f27f038a98f7235e7dc4243603e483af97e2a73981950d59c08eb025018ee85dd269d956d747a687c15d34db57d3cb3d1e3551043d258ccfa4eb82796543f815d328016d6efdf0162e9628474ac350f5726c214f599867a259adc1250dfd1185b785098507614576846809153c07b128e3a2d941ecebf3cd9633bad2689efb2f3d183202eac05a3cc9053e74b76e90fc3b21967c493b9a9fd53b26834150c44e830bc37010dbf3bf9be2bdc7e3c8be10f4717729c41d82aa43298f036d8d3e504cde26aad314a856278862ce7fd1b4552190276640f52e98b7426d2497c83d02a73e562e04bbd0459094bb594f2ca31cae814833fbe2b2f373980e6f43b11329282317cd3b483d72dd0df696532a6c88bcd86664d2a3eeb898f65ec235821a9a6016d582deb4f6fa908376b25de0d6d93687b1d9d5a36c05c802e610bc3c2823f2db7e6feb20614f1d0b1d0716891920b87590c34dc27f8fa52baace397ff7bf91c512f9916dab4884aa1daaa82bb3baec676a2d95b8e92007001878137e9c328cfef087895213b1db4eef4ec934b16f06d15bf1d4259fba1b607bddeb667bb83978a906fc827740ab06d7b68256f29c9856611fced12462fa98421f8078af8cd6e167283a2860ea48fe0ae384e5a8a45078e83859fc2ece514583b1dbdee27e9137ab1f30a20bd8db2f2efef7e97ec2dcc7bfed4e3fc0579ea8ef4cc5fc3a24122411bc11f76c3f0f6eeae961fe58380428d923faecb9a588fe589caee168bb2824641ecbd92e62ca1daf92786f185c54949b8fecb0eadaa933273358e350d8bd282ed8f88fe642b5060ee0411d3c35e8f5119a22f4f644903a9b72b277808f549478468f76d012df169d5873faafa1de4ab0066334c098ce71a8fbdd459f8baa675580a50c18a95539d2d33119e17adfcc725fe44ba1f2e9b50c3fd77f1412bbc171ba1b6e2c91159afcb61628d43bf4887d26e5dfdc53c48fb3cf7c62b8ca61264f825208a44afd4e76d682309b33c63ab428b11a11ccf690d6000ea0bd8d36acc78108ff9</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>my reflection about the civil test</title>
+    <url>/2024/06/03/my-reflection-about-the-civil-test/</url>
+    <content><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">
+  <script id="hbeData" type="hbeData" data-hmacdigest="c286fe435f14aadcdbea1aee37622787517151d9b0a74de330e14b08388cdbc9">dcbb9f7aad60423f5649a1885dea973862559d391ebbb01281e5c89925e069cfa230f6dd278d8ff80851cd23ec13855c06b6f4052ce737e31641d6e735499d6030d4a15645aa430ea6a2b6dee9c2f92b106e3c5be8e97d123052405dc80354b8c43648be175353fd50db03ce956eb67ca34f793c1fa67711af655793e8b9fa123e6f18838f7104807ec9a36af8915ac261aabfcf31efea22b4c8dc29e8ea758f820dfd9accd7d453fec49763db871e50385500dd0eddbf7edcbccadaf051d47ed5b9912c16b002d2b946cd6a87a97adbf6f44b61712fe5ef59c44f5d0ea4cc08ab6153abf2b22cfd8799c5664f8e62dda94352506f4aab6bb3635db433e688504ee7bbd3799769b867d4a4c7f7f5587a48eca308aa07f50894d5b354a0fefc022137f2e95f97302980dbf4f1f7ffebe0c93d8283a7eda10376594f81d6bf52bfaa34c230c78146bf8976fcb798405f25bd5871f656f910b969ec4d811f0cc14aa9c16aea08acaa024553fc9d3375cf624cc3bd85b99ff2f8a76f1bc2c4807763ef3353d2e7e0645492162768d2d7ff1e3d9891f7e8ef498b7fd1c3d91bab59b6ac5e3980bf56716b3681697b6f59bb417f1490c03332cedee64d4208c0a9a53381fec5e2e45fb80e16ae9193f8406b9507585f01f7307bb2fe7d2ee3863d84286b5d63e10b229af7626cc16a87dff7a0c82c543af8169073632133f2af6a0c4fc61f63274c13733380a1c673d88a5388a8c4a701688d7a9178f79ec17b8bef89c2bba992482cb02fd373294ff99fac50fa2f325e4637cd268bcbf39ef9b83bfce9ad839f410542a72f72fac0408e506c6d77630cd2492dd4e7d86146d1526ade160645014a01de8455bed44a2b32b35b707369780eb6982beae58c44b17f297ac063cf5897432afb0bf4adb156492852a4e30a0e6d3d5b681ab9f70b1028cfbd4d01d1e2b6e4202c3fb5b4f45fb9beb00a0247dc2c58f96cda53d3bcd8934749020fc4263b4a921d35235ae57dec6144ec43009bedc40e7a8d5cf1c84fc822a7a3360057b931fbbc90dde236e2ac71b04acd7b2aa1b375b629e3821c179e38d11b3b8cd0c1db8f1c0106d8d93a5055f8f823f1ca4ffcb29d02d5ae96df811f0e21169039cc661bf8a49cf35b10e0fcb3</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
+      <categories>
+        <category>nonsense</category>
+      </categories>
+      <tags>
+        <tag>想說的話</tag>
       </tags>
   </entry>
 </search>
