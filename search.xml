@@ -920,7 +920,8 @@
         <category>experience</category>
       </categories>
       <tags>
-        <tag>-helping -conda</tag>
+        <tag>helping</tag>
+        <tag>conda</tag>
       </tags>
   </entry>
   <entry>
@@ -951,7 +952,8 @@
         <category>experience</category>
       </categories>
       <tags>
-        <tag>-english -conversation</tag>
+        <tag>english</tag>
+        <tag>conversation</tag>
       </tags>
   </entry>
   <entry>
@@ -992,7 +994,8 @@
         <category>discover</category>
       </categories>
       <tags>
-        <tag>-helping -javascript</tag>
+        <tag>helping</tag>
+        <tag>javascript</tag>
       </tags>
   </entry>
   <entry>
@@ -1011,7 +1014,7 @@
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>nonsence</category>
+        <category>nonsense</category>
       </categories>
       <tags>
         <tag>-feeling</tag>
@@ -1033,7 +1036,7 @@
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>nonsence</category>
+        <category>nonsense</category>
       </categories>
       <tags>
         <tag>-feeling</tag>
@@ -1055,7 +1058,7 @@
 </div>
 <script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
       <categories>
-        <category>nonsence</category>
+        <category>nonsense</category>
       </categories>
       <tags>
         <tag>feeling</tag>
@@ -1084,7 +1087,37 @@
         <category>discover</category>
       </categories>
       <tags>
-        <tag>-helping -javascript</tag>
+        <tag>helping</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>encourtered some problems in my english writing homework</title>
+    <url>/2024/10/28/encourtered-some-problems-in-my-english-writing-homework/</url>
+    <content><![CDATA[<p>I try to use GPT to assist me to doing homework. It is really helpful and explain clearly, answering some deep and specific question.</p>
+<p>me: </p>
+<p>​	here is a topic”Working <strong>from</strong> home or working <strong>in</strong> the office:which is better?” I want to ask why this sentence use working form home instead of working in home or at home</p>
+<p>GPT: </p>
+<ul>
+<li>“From” implies origin or source, which makes sense here because it suggests that work is being done starting from a home location.</li>
+<li>“In home” is not correct because “home” doesn’t function as a place you can be “inside” in this context.</li>
+<li>“At home” could make sense in casual settings to mean you’re doing something at your residence, but in the phrase “working from home,” the focus is on the origin of the work, not the specific physical location.</li>
+</ul>
+<blockquote>
+<p>in office. emphasizes being physically inside a specific place</p>
+</blockquote>
+<blockquote>
+<p>from home. suggests that home is the starting point or base for<br>your work, without necessarily emphasizing a specific location within the home.</p>
+</blockquote>
+<p>not only we can ask GPT explain, but also can let GPT revise your sentence like correct your grammar.</p>
+<p>which can interpret detailedly why you get wrong .</p>
+]]></content>
+      <categories>
+        <category>experience</category>
+      </categories>
+      <tags>
+        <tag>homework</tag>
+        <tag>problem</tag>
       </tags>
   </entry>
 </search>

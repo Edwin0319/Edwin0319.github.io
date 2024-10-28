@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-10-25T15:16:05.541Z</updated>
+  <updated>2024-10-28T13:58:53.244Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>encourtered some problems in my english writing homework</title>
+    <link href="http://example.com/2024/10/28/encourtered-some-problems-in-my-english-writing-homework/"/>
+    <id>http://example.com/2024/10/28/encourtered-some-problems-in-my-english-writing-homework/</id>
+    <published>2024-10-28T13:58:53.244Z</published>
+    <updated>2024-10-28T13:58:53.244Z</updated>
+    
+    <content type="html"><![CDATA[<p>I try to use GPT to assist me to doing homework. It is really helpful and explain clearly, answering some deep and specific question.</p><p>me: </p><p>​here is a topic”Working <strong>from</strong> home or working <strong>in</strong> the office:which is better?” I want to ask why this sentence use working form home instead of working in home or at home</p><p>GPT: </p><ul><li>“From” implies origin or source, which makes sense here because it suggests that work is being done starting from a home location.</li><li>“In home” is not correct because “home” doesn’t function as a place you can be “inside” in this context.</li><li>“At home” could make sense in casual settings to mean you’re doing something at your residence, but in the phrase “working from home,” the focus is on the origin of the work, not the specific physical location.</li></ul><blockquote><p>in office. emphasizes being physically inside a specific place</p></blockquote><blockquote><p>from home. suggests that home is the starting point or base for<br>your work, without necessarily emphasizing a specific location within the home.</p></blockquote><p>not only we can ask GPT explain, but also can let GPT revise your sentence like correct your grammar.</p><p>which can interpret detailedly why you get wrong .</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;I try to use GPT to assist me to doing homework. It is really helpful and explain clearly, answering some deep and specific question.&lt;/p&gt;</summary>
+      
+    
+    
+    
+    <category term="experience" scheme="http://example.com/categories/experience/"/>
+    
+    
+    <category term="homework" scheme="http://example.com/tags/homework/"/>
+    
+    <category term="problem" scheme="http://example.com/tags/problem/"/>
+    
+  </entry>
   
   <entry>
     <title>The first interview practice</title>
@@ -44,7 +70,7 @@
     <link href="http://example.com/2024/10/13/Build_paddleocr_environment/"/>
     <id>http://example.com/2024/10/13/Build_paddleocr_environment/</id>
     <published>2024-10-12T16:28:34.596Z</published>
-    <updated>2024-10-25T15:09:21.130Z</updated>
+    <updated>2024-10-28T13:42:12.483Z</updated>
     
     <content type="html"><![CDATA[<p>whenever I want to build a new environment on python, it must disturb me a long time. Just now, I want to learn OCR suddenly, because I want to write a code which can automatically do the MCQ on website. I ever watch the course at bilibili, but it is not entire. I consider I need to learn how to read the official document and use the product. </p><p><a href="https://paddlepaddle.github.io/PaddleOCR/latest/ppocr/overview.html">paddleocr</a>, I find that I can’t casual install or uninstall anything, like numpy, when I copy the code in terminal, it maybe install the suitable numpy automatically. If I reinstall it, it will get wrong.</p><blockquote><p>If you have something wrong, maybe rebuild the environment is the best method.</p></blockquote>]]></content>
     
@@ -59,7 +85,9 @@
     <category term="experience" scheme="http://example.com/categories/experience/"/>
     
     
-    <category term="-helping -conda" scheme="http://example.com/tags/helping-conda/"/>
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="conda" scheme="http://example.com/tags/conda/"/>
     
   </entry>
   
@@ -68,7 +96,7 @@
     <link href="http://example.com/2024/10/02/National%20holiday/"/>
     <id>http://example.com/2024/10/02/National%20holiday/</id>
     <published>2024-10-02T13:34:45.846Z</published>
-    <updated>2024-10-25T15:15:51.245Z</updated>
+    <updated>2024-10-28T13:41:24.802Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="b3a1ac038f1374fb3bc32249d60a77fc30c603e20e7481d6ff52d4e4913a8a3a">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5cf13c3c894d9c4f55187bf9a93eeb843af7df1602e5c4a4a10b88f91a9ae75806dcf56b0a3bbe216a760cec44ad27df5d8472a06851216915aa99ff9849ca14ff639ee41bde73bf98b82decf0fbf86e795b94304f5d37720dc61b6a3704f37ae9d229970f9cb37f5457cd84d8d062864289c25e118420076a2383bcc16669d964da6c31b30875efc5d6598737cb81ff8b25f4fdf57df694be36d134ee081023d15a94732ac82ce3d1376f9e1a62813320cf7d9e805674bfd86b5986875cc920305590113322fd1013b55dd3c759daccd78ad0bcd8a8c3aa18c85c303152db24da9cee39e29014587ec37f88e45820c452e23c669c93d846debc2219562c80f8c5fc54d9383b86cb5ba0bd5cb240b35f35c7a460f562c220fee751042f99894e027136915a560040bbe93bf75a3277a60ebba2d090e1794f75ee52653c6da62dd104b1ab45a3c5c68a2ccf7d8ecb04b5e8f61b4e55931231af887451cac76ebf01513c76f9f1b106f096b06dd5acde8fd9f8ec73d67dc1ac5c563bd9b402ea5cdf7a661c55284962a3a6cc96e1891227df6a7bcb32ed8cb4d8202dc0c9accd99297038d63b9a6810f8c4ad607246c1f7b0b033ffcc74e86ac1ad19186b1855114f75659507386faee73f7d4789691c40d585514ec28c6ebba3f59c2b1bab00c64053fe807c424f23a6857679dbcb1e164493c267f17c4a8c33bf1fecc99c5930b5acc1d9349f07435b127317e6da932463b6c35bff6f77ee8e7e15a2da4b0c613ad0e604206ae549cadce6d8aa35918c8d64633fc846b033e84b68262c234100ff807865f79461534d331f62c26ec7339544572c7b08197a45f90dc88254764b7b06f3708d70dada4060536c7b51f7c424504f5221fc8e090b28573271f8485adff6e4744a39b1dccf0f3eadf7708322cdbf7455a7a300d70e2104b6c8ec70663d859898e5a40a571be19d201115228b821a58ae473acf3a883c9e9636fa846410bf37985dc298bf3a1bfa801c7b748bdf45a42093b430ccc75340a5b0ad7070dc1047005f11bdcbb8e4fef1fb295bca02d32b1235824556d5fa77032ccd2e03e7ef7c44fee1f4ce95d25425a4ef628d9a2166612127ed83386931a576d8d62e655fcb363afee34877fbe4c5268104b16ca96278f7b6208e02842ce513742c21c09994d90df46ea269b16ff7ea0769a389281ae302f700f95af5c6c523ac668aaf3dbfcec95b32d49346a8c4f2fbaefbac63a6f62e5c974b3adcff9442264c140111765bcbe4c15a69a438cf01af46ff6b7f401e01c79fb030ed84ace6dfe68743ba153138f85834e7f9f0502b1db554559c71db996f2772f1a68f6be6b04049efba796243fb7c883c0190d3b7deb1cd1f00a1a4c728054e7aa44a7badc7d54ea78e95739e211b8d3db986b8b072fdc7c2fb2a69edea1899e1b0895cb45f867cba4955d54412bea97c038a5e5c9dde5420</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
@@ -77,7 +105,7 @@
     
     
     
-    <category term="nonsence" scheme="http://example.com/categories/nonsence/"/>
+    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
     
     
     <category term="-feeling" scheme="http://example.com/tags/feeling/"/>
@@ -89,7 +117,7 @@
     <link href="http://example.com/2024/09/10/The-distinction-between-adding-if-and-not-adding-if-in-a-sentence/"/>
     <id>http://example.com/2024/09/10/The-distinction-between-adding-if-and-not-adding-if-in-a-sentence/</id>
     <published>2024-09-10T11:50:39.315Z</published>
-    <updated>2024-09-10T11:50:39.315Z</updated>
+    <updated>2024-10-28T13:42:08.666Z</updated>
     
     <content type="html"><![CDATA[<p>I found a sentence “how about if you watch this movie with me?” in Duolingo. I’m curious why it would insert ‘if’ in the sentence above. Then, I asked GPT.</p><blockquote><p>“how about if you watch this movie with me?” why the above sentence need to add ‘if’</p></blockquote><blockquote><p>The word “if” in the sentence “How about if you watch this movie with me?” is used to propose a hypothetical situation or suggestion. It introduces the idea that “watching the movie” is something the other person might choose to do. Without “if,” the sentence would sound more like a direct invitation rather than a suggestion for consideration.</p></blockquote><p>Here’s a breakdown:</p><blockquote><ul><li><strong>With “if”</strong>: “How about if you watch this movie with me?” This implies you’re offering the idea of watching the movie together, but you’re framing it as a possibility, leaving room for the other person to think about it.</li></ul></blockquote><blockquote><ul><li><strong>Without “if”</strong>: “How about you watch this movie with me?” This comes across as more of a direct suggestion or invitation, where the choice seems less hypothetical and more like an expectation.</li></ul></blockquote><p><strong>The “if” softens the suggestion, making it feel more open-ended and polite.</strong></p><p>So, I learned it.</p>]]></content>
     
@@ -104,7 +132,9 @@
     <category term="experience" scheme="http://example.com/categories/experience/"/>
     
     
-    <category term="-english -conversation" scheme="http://example.com/tags/english-conversation/"/>
+    <category term="english" scheme="http://example.com/tags/english/"/>
+    
+    <category term="conversation" scheme="http://example.com/tags/conversation/"/>
     
   </entry>
   
@@ -113,7 +143,7 @@
     <link href="http://example.com/2024/08/10/my-travel/"/>
     <id>http://example.com/2024/08/10/my-travel/</id>
     <published>2024-08-10T13:41:38.295Z</published>
-    <updated>2024-10-25T15:15:19.427Z</updated>
+    <updated>2024-10-28T13:41:20.635Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="0f90ef063696255cd9b9560c004dbed9c9577f590fa03ab07c77443832742332">dcbb9f7aad60423f5649a1885dea9738e42a0070fcb64b158da7da581c0f0e10a9c8822daca8be53bf3729a68cbb2eb3c81c3c85e427e5b417d4721ebe72ae5a73e06fbf7eb77e06176c8ddf1f5c8123689728ad4a8ed2e28d6ad05a784b201b3107827ec020fd63c40434a581fca328a701ba337a85e46dd8b29779e2ff6dca9a431c8bfde30207b89b5321f4fcf0d0bb82c920b31fdd3117d6c1a8879664d3334a57720aebf7d88031742660273aa10ec00dc75c7dd2b1d24387063db03b9670ad1799c1f47ae2deb3342f58c21ed9d2dec12aa31553c5743fd3722ab692782cd3e4fc8eba467dd3a2dd55f10ea1283a05acbe1c46fab9b3ec03c4d93808faa0fc251e33b1f05065aa37becd4036d5580b7d54b81cc9ae983f1d8dfc9df8e0a005eec9c9dd073bb6daad6e0af665f0970a6f3caf12915c172fd7de60b198eb1ffa68d667126b1f1f9cf18e65b7b01d8c79604057a51f438ab4c83cb1e4656a0eddc646b49758b88c92e3eb7c6862999aec9723991ee7f5a3b3cfe1ac12d05ed741bad080b185c9880fdf9064c98c1d58f8f406416aedc2604f1fc745e6a68b1452c668c5f081cd7dac193cdf3354482541db46c15b0e42f5335eddda335179196858b566948415f304a2aafa21dc5ecc7cd50cce2a2fb24a870e2814b76e9bcf043d1215476622594c43e05dfd518932af0a7d85971c1f8225b7e4ce528c14056caeb79d85f44e31241c58f43da4f700839eeffc9433c5806046d1e02a05ea1b88b754144ef22b8c949831004f6c82</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
@@ -122,7 +152,7 @@
     
     
     
-    <category term="nonsence" scheme="http://example.com/categories/nonsence/"/>
+    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
     
     
     <category term="-feeling" scheme="http://example.com/tags/feeling/"/>
@@ -134,7 +164,7 @@
     <link href="http://example.com/2024/07/21/the-confuse-from-console.log/"/>
     <id>http://example.com/2024/07/21/the-confuse-from-console.log/</id>
     <published>2024-07-21T13:23:34.323Z</published>
-    <updated>2024-10-25T15:11:22.935Z</updated>
+    <updated>2024-10-28T13:43:35.468Z</updated>
     
     <content type="html"><![CDATA[<p>When I learn javascript and I wrote the dialogue</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(div)</span><br><span class="line"><span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">div.<span class="title function_">appendChild</span>(text)</span><br></pre></td></tr></table></figure><p>I find the browser output the second statue so I am curious why it happen.<br>Then, I asked GPT and it tell me</p><hr><p>The console may show a live reference to the object, not a snapshot of its state at the time console.log was called.</p><hr><p>After that, I understood the reason. But I wonder if I want to show the status at that time, what should I do. Then, he give me a answer</p><hr><p>If you want to capture the exact state of the div at the time of logging, you can log its outerHTML:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Before appending text node:&quot;</span>, div.<span class="property">outerHTML</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">div.<span class="title function_">appendChild</span>(text);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;After appending text node:&quot;</span>, div.<span class="property">outerHTML</span>);</span><br></pre></td></tr></table></figure><p>This way, you’ll see:</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Before</span> appending text <span class="attr">node</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="title class_">After</span> appending text <span class="attr">node</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure><p>This approach ensures that you log a snapshot of the div’s state at each point in time.</p><hr><p>So, if I want to show the static status I need to use outerHTML.</p>]]></content>
     
@@ -150,7 +180,9 @@
     <category term="discover" scheme="http://example.com/categories/discover/"/>
     
     
-    <category term="-helping -javascript" scheme="http://example.com/tags/helping-javascript/"/>
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
     
   </entry>
   
@@ -159,7 +191,7 @@
     <link href="http://example.com/2024/07/18/just-array-can-use-forEach/"/>
     <id>http://example.com/2024/07/18/just-array-can-use-forEach/</id>
     <published>2024-07-18T15:37:18.048Z</published>
-    <updated>2024-10-25T15:09:33.331Z</updated>
+    <updated>2024-10-28T13:43:27.462Z</updated>
     
     <content type="html"><![CDATA[<p>document is belong to HTMLElement.</p><p>arr is HTMLCollection, it can’t use <code>forEach</code>.</p><p>…Array is mean it can undress Array’s clothes</p><p>I have researched this code for one night. And finds above concepts, because my basic of javascript is poor. Just only roughly watch once.</p><p>I trying use allElements[0].innerText but I find it didn’t have pop a tip is innerText after allElements[0] so I reckon it didn’t have innerText API. But I wrong, just vscode doesn’t show it. allElements[0].inner is correct. Because allElements[0] and aa[0] is the same object.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"><span class="keyword">const</span> arr2 = [...<span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;h1&quot;</span>)];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> arr, <span class="keyword">typeof</span> arr2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>], arr2[<span class="number">0</span>]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> arr[<span class="number">0</span>], <span class="keyword">typeof</span> arr2[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getAllSpan</span>(<span class="params">tagName</span>)&#123;</span><br><span class="line">    <span class="comment">// const allElements = [...document.getElementsByTagName(tagName)];</span></span><br><span class="line">    <span class="keyword">const</span> allElements = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(tagName);</span><br><span class="line">    <span class="comment">// const aa = Array.from(allElements);</span></span><br><span class="line">    <span class="keyword">const</span> aa = [...allElements];</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(allElements, aa)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(allElements[<span class="number">0</span>], aa[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">setInterval</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">// aa.forEach(item=&gt;&#123;</span></span><br><span class="line">        <span class="comment">//     item.innerText = count</span></span><br><span class="line">        <span class="comment">//     console.log(typeof item, item);</span></span><br><span class="line">        <span class="comment">// &#125;)</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; allElements.<span class="property">length</span>; i++)&#123;</span><br><span class="line">            allElements.<span class="title function_">item</span>(i).<span class="property">innerText</span> = count;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> allElements[i], allElements[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getAllSpan</span>(<span class="string">&#x27;span&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
     
@@ -176,7 +208,9 @@
     <category term="discover" scheme="http://example.com/categories/discover/"/>
     
     
-    <category term="-helping -javascript" scheme="http://example.com/tags/helping-javascript/"/>
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
     
   </entry>
   
@@ -227,7 +261,7 @@
     <link href="http://example.com/2024/06/06/my_think/"/>
     <id>http://example.com/2024/06/06/my_think/</id>
     <published>2024-06-06T05:46:44.094Z</published>
-    <updated>2024-10-25T15:15:01.385Z</updated>
+    <updated>2024-10-28T13:41:15.503Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="972e1c406015d20f21e7836c20d4a236a9f2549b7314b5d5449887f31286f06b">dcbb9f7aad60423f5649a1885dea9738b651bd25b3540c3453ccd385092a06d58f4464a24ca8c5f5e56380c9114d7d0b9ae76606edc51b585f802b4be07f6600c2f7a6eff4cdb4b1052a7e58bfefd3c19d99e3d817e30c27e33364e9fe5075b913bd3b9daa346fe8ae3652e6f334c67a8ee982cd4ec281101639b2d06b9b08141016e10fc4d7211f0c4474c438b75726d4a98ec42a487d8033c97e2143a250bf3fafc71965c3e08385f0758cd8bd605de9954013f0bccad0d911c36007c2987b32b2ce3400cadd756c05c5445c0ce13e809481a35397ea70d1ecd6b16b446b88a41f3ef0a4134f2e6430debb2d3bc31866c3910bf806e083ddfc360b2343386d8e71e736cce06d8e1783503bfa17893cd3c1642412540bf1017a12e3b32e4fa938066a6be25cd8e731ec5569d436db14a3f306f0aaee507eb40bf0c4d3ba3aaae7a3af6bdecc53a6f6412887e52cfe0074c3310e95b53023fd866b924ddaf0a09086a8894cfe092fff895f227648744450683eac389206adbd7c7ac8ab6677f1626d8a1feef4a9fc610b232349a826903575229dbbed29448e406b40e7d1128a50ad67384ead1d63d2960694c54e7b72f209fb1f00e32968681ee6f24a955dca3f041821025f85fd4cf857c33d8f6a49addba5e5c3bf92a9310e29957ba47b77f27c3ae036793f20d7865305f17746fd4f936fcfb375cb1e4957458cf9076de666f3e00a296c66a0b1b2cbfe4ac0a779ef4ae34c6916545b43969f26fd71b2b9ab6d58692bc0a6f5f0e21cfcd4d36a43d5124a0d34beb25c468524915c4b8375654b534949cf990921129d9046c16accd3a2e305502f68687166747d1baa6135a3ca94f5e964a184695b30fffc0b0200811224622e93ea9d978d69d3af638161ba5aac8bb629bd0ec857d88259b4341b1aecaf920a08aaa33111a31b5cc76bf3655973abdbf45802de505068437ce5d46a20702bbbd3a303621af9c97958c3bf5b1a105ef2da5c770ce8df1f8c3a1ae3ca95d0b662504561aa5eef27a849dcd61729c3d5cab1e9450ab4969a2cc15b4de59f3fe28529e5ab0e563082a207bacfb14864939320c00100a9b229271cab07e7a7bf27186e06e57a1573d348f29f06c8b2167bd9164121bd9fcb8f4f43da86a5cc75479e48172187e183330db52b61d2cdaf8e995800ac3f0fd527fb156510c17d719468e89875b0556edaafb1345678c3065214c4868f62a48c694bf73d37b225aea93fe17f805c8638eb9ce67f6336ed36f4be47bb8c32fe2f4bc8446e435d9026e81eb5327977ac39bf51df5ecdc1a9ef066f4358f598927306d07612276d11c6247b71412972be6aab584b9e76293896311ad619fca9d896cd4eecfb7d79103100e34fd2178b34527114f470ba55fcdef37601488f378506fb6ea6d536560371adc42cbf1c26d6875defa4c17246b6b6661c1ae42f69cbcb45fd298b2a8dfb69b7512b4b436da94f356a1cff9c8c09e9432dd757a9abead9179c882c0552f054082add6ae742b2bf025c916880996eef6fbf3137781aee05197bb9211342ef42cc713e43da8a9193803c2f2013aca6d100178b5fb8174f6240acbf47db5f2a8aef85f92d7bf016b72adf8c22fc38460316fe74ffc9e019efe365d05cb00bf6c09edc57e697694df184102f7a7f216fbe11048ec80fcbb41262f79b75906d6fbedb5c3bbbfaa4577ba0e63ed53ce79fd6fe4d77b7fa2efa09b8b9f879d585bdbd2921390319933b413e0ae205e4b09464415b2ca3fe009f46d918bbf71023f31948b6dd2e9df724b574eb9cf2f3c6a2707e1c2d0e4595e021f48f5253e777362d223ffd432d59df15589a9febfacb1a5d5b8213e0fcc7257f0fecfc97e4e1bc276ccaabe6b58485825a04a0a820ef93a18083775688040f05286b7dbedc85eef7687c7da7e99b62fc65b0865cc9818af04a93988718043e35eca16803cd2f7470140c5ce2866de0d11eb801e263aaff8ca8ced10255ab2519a1fb0f2083e38dfc85d5baf2dc8c3257c9d6ac9e62ba869658d5c1a3451acf5d3e63565443b70ecb965396b9fe57debf9fe058d47db830d858193546b844b34fe8450d39c5b6c33b23e8b11f55254cf40697d0b33738687317aedde9f8bf322b3eebff928f96a3b8515ce1a6382ed85658beb24c1ba3c2823a5dcff774748cc9751956c7ef8fefc806f95c15fff4a944b10ba9db7361dfe5af46a10b24f5f7ed7f22b82f0c6a9fc1bd2b3db5ca9cb8e7f9453d1ac807905f7b6cb52e86b4f06cc46afcb1ed1e563697706593e384d111786bf9e821212e53e8c82744dd2e1a12c7a1d095e29b2f5719f8ebbd9902c000be66be2bba9e7251044bc303dfaadb2a45b4598009aff0bf12144abfd27983ac3357de4be315249152e8d466cfc87f504eb45d7c41d1fabe9588eea26bf766ab3173896f36d7e4bbcbb078275f96f4bc724ac17e952000443ca4d03d6d50d856c74161c18245b84eecef31c4798463bba6fbd49cc33e8be6d4e724b91bb3ebec8bde908bb6902a9a646d9475921b565446cc0288d6fb206ceb08347993cd1678c3fd49935328966c0fa1b01cce193f8025b9bec1be8c38b9a69c42206f22fcf525431ab970dd8fa8a1b9f5ee304b8296ad43632825af40e7f5fd7bf451bede25c4f76d9c38cc3441e42276baca36263a31bb1f974cd40d9f7df2b008eaba457fa398aae159ed3346fa9693044186e701684f1e56adc8d44a755b8e629da26700ca928441f7902ec0134f34c3f1e1222368315fc4d7492d1aceef885703302d3b2354623a57edb9fa76cd13956dff2e3c5881f5cdf3b8ca6b2e9b5e302f02d605dbf63f9d306307e83f610bb6d20e7888ed5fda5bf919d1d2e4ed33bd8a0c2f14a39ee6d5fe2c20276fe0ac0300110c943e609d1c207c91b2349cc262dfd5b72155af3bf3384b0c658a0f52e66494f4b27ca4085d650ed8c2c165b8521ddfb392a20720dd9a0eeacef6296456a7acef324c7c16c10bc29aa1d12ded740d7a5d1b1c86b0c269370ef46a0512d65d5c725fd2596385525df9090bfc558036082fb247f3d3917ad840e91cb255667946620451e8d82b08fbc78cb8907877fedb0863e50d90e914c335d54261714100b5e517f25b93f8ed403a6ca585fcc02811755c8f4dcdb9b75fab3b9351661365883e5628fa83a13786317ecd1ea1b64ce28d92ea796444affacfa62bd609c09d054fd8366ff9ed398122b98a8715c6c719fa7c0a591c54fcbffc923ececd7d28acd74739decc30cfed46a68ec3c26d82cf14d3856a1831f2e87d4cb8544f6627e8cf053ce64ba7e6dcb50039277a4de0709ae850d207c0b2d0fd0b371b5d51aa322593f01715c4fb981dbcfb20b254059294474207c04bb8c411a599ec3cd56ee84d387d0c3c53bf934accc34c95dbc41eb9552cf8f3cf70603c7f17d9b58dc830c8e84fff1fc7594cd4e0e0eb756339ddb55e64400a9049</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
@@ -236,7 +270,7 @@
     
     
     
-    <category term="nonsence" scheme="http://example.com/categories/nonsence/"/>
+    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
     
     
     <category term="feeling" scheme="http://example.com/tags/feeling/"/>
@@ -431,33 +465,6 @@
     <category term="c++" scheme="http://example.com/tags/c/"/>
     
     <category term="structure" scheme="http://example.com/tags/structure/"/>
-    
-    <category term="helping" scheme="http://example.com/tags/helping/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Interval dynamic programming</title>
-    <link href="http://example.com/2024/01/28/2024-1-28-interval-dynamic-programming/"/>
-    <id>http://example.com/2024/01/28/2024-1-28-interval-dynamic-programming/</id>
-    <published>2024-01-28T14:20:00.000Z</published>
-    <updated>2024-10-25T15:18:59.392Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Tutorial-on-the-use-of-interval-dynamic-programming"><a href="#Tutorial-on-the-use-of-interval-dynamic-programming" class="headerlink" title="Tutorial on the use of interval dynamic programming"></a>Tutorial on the use of interval dynamic programming</h1><span id="more"></span><p>The important thinking is that:</p><ol><li>From short interval to long interval.</li><li>i and j are incremental.</li><li>Determine the state transfer equation.</li></ol><h3 id="This-is-a-example-of-interval-DP"><a href="#This-is-a-example-of-interval-DP" class="headerlink" title="This is a example of interval DP"></a><a href="https://oj.haizeix.com/problem/46">This is a example of interval DP</a></h3><blockquote><p>Cut string of palindrome</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">define</span> MAX_N 1000</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="type">char</span> s[MAX_N + <span class="number">5</span>];</span><br><span class="line"><span class="type">int</span> dp[MAX_N +<span class="number">5</span>][MAX_N + <span class="number">5</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%s&quot;</span>, s + <span class="number">1</span>);</span><br><span class="line">    <span class="type">int</span> n = <span class="built_in">strlen</span>(s + <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">for</span>(<span class="type">int</span> l = <span class="number">1</span>; l &lt;= n; l++)&#123; <span class="comment">// There is a length of l.</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">1</span>; i &lt;= n - l + <span class="number">1</span>; i++)&#123; <span class="comment">// i is the beginning of the substring</span></span><br><span class="line">            <span class="type">int</span> j = i + l - <span class="number">1</span>; <span class="comment">// j is the ending of the substring</span></span><br><span class="line">            <span class="keyword">if</span>(s[i] == s[j] &amp;&amp; dp[i + <span class="number">1</span>][j - <span class="number">1</span>] == <span class="number">0</span>) dp[i][j] = <span class="number">0</span>;</span><br><span class="line">            <span class="keyword">else</span>&#123;</span><br><span class="line">                dp[i][j] = l;</span><br><span class="line">                <span class="keyword">for</span>(<span class="type">int</span> k = i; k &lt; j; k++)&#123; <span class="comment">// k is between i and j, and i, j state are also confirm.</span></span><br><span class="line">                    dp[i][j] = <span class="built_in">min</span>(dp[i][j], dp[i][k] + dp[k + <span class="number">1</span>][j] + <span class="number">1</span>);</span><br><span class="line">                &#125;</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    cout &lt;&lt; dp[<span class="number">1</span>][n];</span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;Tutorial-on-the-use-of-interval-dynamic-programming&quot;&gt;&lt;a href=&quot;#Tutorial-on-the-use-of-interval-dynamic-programming&quot; class=&quot;headerlink&quot; title=&quot;Tutorial on the use of interval dynamic programming&quot;&gt;&lt;/a&gt;Tutorial on the use of interval dynamic programming&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
-    
-    
-    <category term="c++" scheme="http://example.com/tags/c/"/>
-    
-    <category term="algorithm" scheme="http://example.com/tags/algorithm/"/>
-    
-    <category term="dynamic programming" scheme="http://example.com/tags/dynamic-programming/"/>
     
     <category term="helping" scheme="http://example.com/tags/helping/"/>
     
