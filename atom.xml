@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-10-28T13:58:53.244Z</updated>
+  <updated>2024-12-23T09:32:51.797Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,115 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>References between js</title>
+    <link href="http://example.com/2024/12/23/References_between_js/"/>
+    <id>http://example.com/2024/12/23/References_between_js/</id>
+    <published>2024-12-23T09:32:51.797Z</published>
+    <updated>2024-12-23T09:32:51.797Z</updated>
+    
+    <content type="html"><![CDATA[<p>If module is referenced by index.html, all js below that module can use the function without referenced module, even needn’t import and module.js needn’t export.</p><p>If module.js doesn’t be referenced by index.html, other js can only import module.js function and which also need to export.</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// index.html</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./moduleC.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./main.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;main1&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> &#123;a&#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleA.js&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123;moduleB&#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleB.js&#x27;</span></span><br><span class="line"><span class="title function_">a</span>()</span><br><span class="line"><span class="title function_">moduleB</span>()</span><br><span class="line"><span class="title function_">moduleC</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;main2&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleA.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; moduleB &#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleB.js&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> a = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">moduleB</span>()</span><br><span class="line">    <span class="title function_">moduleC</span>()</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;aaa&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleB.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> moduleB = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;moduleB&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;bbb&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleC.js</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">moduleC</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;moduleC&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;ccc&#x27;</span>)</span><br></pre></td></tr></table></figure><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// output</span><br><span class="line">ccc</span><br><span class="line">bbb</span><br><span class="line">aaa</span><br><span class="line">moduleB</span><br><span class="line">moduleC</span><br><span class="line">moduleB</span><br><span class="line">moduleC</span><br></pre></td></tr></table></figure><p>Because moduleC.js is upper than main.js, so <code>ccc</code> first. And I guess all code should waiting the module loaded then run. First, import moduleA in faster than moduleB in main.js, and moduleB is referenced by moduleA. So it will output <code>bbb</code> first, then <code>aaa</code>. And moduleB.js has been referenced, so it wouldn’t occur again even main.js refer it.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;If module is referenced by index.html, all js below that module can use the function without referenced module, even needn’t import and m</summary>
+      
+    
+    
+    
+    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    
+    
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>HTMLDocument.style detail</title>
+    <link href="http://example.com/2024/12/23/HTMLDocument.style_detail/"/>
+    <id>http://example.com/2024/12/23/HTMLDocument.style_detail/</id>
+    <published>2024-12-23T09:01:32.838Z</published>
+    <updated>2024-12-23T09:01:32.838Z</updated>
+    
+    <content type="html"><![CDATA[<p>HTMLDocument.style is point to DOM</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.d</span>&#123;</span></span><br><span class="line"><span class="language-css"><span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;d&quot;</span>&gt;</span>DOM<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.d&#x27;</span>).<span class="property">style</span>.<span class="property">color</span>)</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 空</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.d</span>&#123;</span></span><br><span class="line"><span class="language-css"><span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;d&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: green;&quot;</span>&gt;</span>DOM<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.d&#x27;</span>).<span class="property">style</span>.<span class="property">color</span>)</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// green</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>So it mean HTMLDocument.style just refer html label. Even though you have written the color in css file but not written in html label, it just print ‘’ in terminal.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;HTMLDocument.style is point to DOM&lt;/p&gt;
+&lt;figure class=&quot;highlight html&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;</summary>
+      
+    
+    
+    
+    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    
+    
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>set percentage in css</title>
+    <link href="http://example.com/2024/11/09/set_percentage_in_css/"/>
+    <id>http://example.com/2024/11/09/set_percentage_in_css/</id>
+    <published>2024-11-09T04:05:11.563Z</published>
+    <updated>2024-12-22T12:10:26.436Z</updated>
+    
+    <content type="html"><![CDATA[<p>If you want to set a percentage width or height, you must sure the parent nood have set a fix width or height, min-width and min-height are not the kind of fix. normally, you can set a min-width and width to make a responsive website. This approach like flex-grow flex-shrink flex-base, flex-grow can automatically adjust, flex-base is set a base size.</p><p><code>flex-basis</code> is a CSS property used in a flex container to define the initial size of a flex item before any extra space is distributed based on <code>flex-grow</code> or <code>flex-shrink</code> properties. Think of <code>flex-basis</code> as a starting point for the width (in a row layout) or height (in a column layout) of the flex item.</p><blockquote><p>GPT said</p></blockquote><p>Your <code>color-bar</code> div isn’t taking up the full 60% height as expected due to a few potential issues. Here’s how to troubleshoot and fix this:</p><ol><li><p><strong><code>section-one</code> height constraints</strong>: Since <code>section-one</code> is defined to have a minimum height (<code>min-height: 90vh</code>), the <code>color-bar</code> div’s height of 60% is relative to the <code>.section-one</code> container, which can make the layout behave unexpectedly based on screen height.</p></li><li><p><strong>Parent container height</strong>: Because <code>.section-one</code> only has a <code>min-height</code>, its height can change if the content inside it grows, making <code>color-bar</code>‘s height unpredictable.</p></li><li><p><strong>Testing with <code>height</code> directly</strong>: To see the desired effect of <code>color-bar</code> taking up 60% of the viewport height, try setting its height explicitly as <code>height: 60vh;</code> (viewport height). Alternatively, ensure <code>.section-one</code> has a fixed height rather than just <code>min-height</code>.</p></li></ol><p>Here’s the modified code with <code>60vh</code> applied to <code>color-bar</code>:</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;color-bar&quot;</span> <span class="attr">style</span>=<span class="string">&quot;height: 60vh;&quot;</span>&gt;</span></span><br><span class="line">    hi</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure><p>Or set the height of <code>.section-one</code> to a fixed height, for example, <code>90vh</code>, to make the <code>60%</code> height work as intended:</p><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.section-one</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">90vh</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>This should help you see the <code>color-bar</code> at the expected height. Let me know if this works for you!</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;If you want to set a percentage width or height, you must sure the parent nood have set a fix width or height, min-width and min-height a</summary>
+      
+    
+    
+    
+    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    
+    
+    <category term="GPT" scheme="http://example.com/tags/GPT/"/>
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="website" scheme="http://example.com/tags/website/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>delate function js</title>
+    <link href="http://example.com/2024/11/02/delate-function-js/"/>
+    <id>http://example.com/2024/11/02/delate-function-js/</id>
+    <published>2024-11-02T11:11:39.641Z</published>
+    <updated>2024-11-02T11:11:39.641Z</updated>
+    
+    <content type="html"><![CDATA[<p>I make a adjust seat website, which increase my understanding of javascript.</p><p>I learned how to delate the loop</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">delay</span>(<span class="params">ms</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">setTimeout</span>(resolve, ms));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">delayedLoop</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">delay</span>(<span class="number">1000</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">delayedLoop</span>();</span><br></pre></td></tr></table></figure><p>and </p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">    &#125;, i * <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Once, I make a sleep function, but I forget to return the Promise data.</p><p>Which let me impress. And I find that no need to change <code>async</code>function.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sleep</span>(<span class="params">ms</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">setTimeout</span>(resolve, ms));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure><p>Because it is no use to add async to sleep function, only add async to your operative function, adding <code>await sleep(delate)</code> just take effect. Otherwise, your operative wouldn’t wait the sleep function, running next code directly.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;I make a adjust seat website, which increase my understanding of javascript.&lt;/p&gt;
+&lt;p&gt;I learned how to delate the loop&lt;/p&gt;
+&lt;figure class=&quot;h</summary>
+      
+    
+    
+    
+    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    
+    
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
+    
+  </entry>
   
   <entry>
     <title>encourtered some problems in my english writing homework</title>
@@ -379,94 +488,6 @@
     
     
     <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Have a dinner with the team</title>
-    <link href="http://example.com/2024/05/12/Have-a-dinner-with-the-team/"/>
-    <id>http://example.com/2024/05/12/Have-a-dinner-with-the-team/</id>
-    <published>2024-05-12T15:40:08.815Z</published>
-    <updated>2024-10-25T15:14:54.749Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="e35bdbac043d32585c4fbc96791cc6b686780b84e2e160967039f30d96f37644">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c3c808a6b94b735d248f4897c5b8ed3210ffeb787af21518cba59006240d0645b81948be43fa4432c9452f5ba0cbf0c7bc90d2d2e057d7867d7be2f375b9849fa0db7727cbf7224988ebb3945181b3f4969ee2860ccee72116ffe6d96062b479840c893cc26e4d71a66315e9d779a3d2c2fb142f1bc91df6e29b58efa57fae3457982239f99d200416f378d20c1ea8fc6902f202960a137bc6baa7541f411d1bc3ffbb57a2de4abe1bb10b374ea0181474494981bb7cb0ab215d7fdbef87ab1c619609f515122548e08b390da65ae7074683d0fd580282b85f5cbc6b52e070956e9ba4ce24fd5fb55e717b974a36b220dfad3c68c84416115818c5cce04bc68f09354e990c8dd6f034bbe30c82297335bca5ae91c9e29e77417e8a8e27b54a4a305e67ce828260812b33d6951f2bc9fab4ae70cea62bd132764905d3c8807de78844d2d7b7faa67a0fd7743241ff3ea2f8be2ad9f2909f108e26f8cdbf629746ca53c5519dac199a0062eab3a6c23ccf047b956bbe6b34326b430767f90138712269c4932de80f6e8ad44855c2ec141b877adc983560f695933d3e9640fac4034df1dee77b91da06ec1c1d9bde01fe06b</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>I have some inspire</title>
-    <link href="http://example.com/2024/05/10/2024-5-10/"/>
-    <id>http://example.com/2024/05/10/2024-5-10/</id>
-    <published>2024-05-10T14:59:56.414Z</published>
-    <updated>2024-10-25T15:14:20.476Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="3194ed2b2cc630f87be1c615feb7dd5f45c39a17e5405dcaacf94945b9b29de3">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c659509af40c70468fda9f306c9ea891806575912d9c0205eff8e9a8b52904101b8d15a8d9877c0b8bbca31efd3633987d27654c5da3b7d85ee37fa6a83d516a019c1dc90db11bfba67b27687118ca900ffc6d31553e6ba26262369b3c84d814ee4af954d707e02d63c6e10dbaf610202cec27fe38da3c9f43f7db293a4f34763dba9be2e7007d64fdb8ed6598e9382f1ee599293ff2e5365a204f74755d89b418ea3434b456205c95460c691b52dd085d7f7927c4aa6294ecbf6e9ebb4ee834d16401430f232c556ce870631441123f6e1538a382d18d2e3c20d12c0da533fe9d62f021f350e051777a66f6a9f967f522070eff3c889d6d763bb67ad0a840982bcc887edc58e6f661abf7684f5ddb673e3db4a22a4976f2e5448c2824cbb10d0d60a17e97ccf58e2e148fd1f50118311beacbed0471a7bf51939154e926bed6e9f330adb5bad2aa7329bc31412279e31c124bbe3512a899c6af73f0c8b428cc761470b9a25e2893d64460bb798132731ffff94133fc423ad8f9722b5e6bc4ef7d4a31ef05cb31e99857f4d098ef743d538da4a57a70ae97b9bb8cfdd902edb8fc15350fb52266496a4f30560af1651aace23c6e386f8047a9500afc518de226dce2ff8aab24d55da48de41a988d583272151bd9236e7e6309d1f5e8c17c88fb7265b9e1e9d6dd8dca2659fd8e79692d808999088a78a30d613f09bd76fba006e1d2c245c8da4655b67f0b73f197bee4db4ac2392cb84df14514150a2a9f84fb11be179aef0f1f5804d7080e5f243fa4af71bfa46b211596e6b757756b4a029409a2f8d23dd12f4d8a330b63267549fac235dec2c945f636eddf42b664e01f698cfa9c4afd33e0e96ac3fb90d3ac4d3158aff6dda06134036088a63d46adf4af45e5c5e06355397a9686a6e7a7262456ddbf21eb7003aa65c8d6dafe5894de5641d9662bd8a76705b68a241329109b159d2b294ac83751723a063c2e4337cc4622c995ecf499898d22dd9ca1dbb1a0d98860c10d9fc5959f27bacf31c767150b9e2e7b8567085429beba68aa643db4a3f396207b7ddd08dbcab86aa2c1e70389aa5ed9de3059bfdf8fcedefa9234b796b3f27</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>My MOI</title>
-    <link href="http://example.com/2024/05/05/My-MOI/"/>
-    <id>http://example.com/2024/05/05/My-MOI/</id>
-    <published>2024-05-05T03:15:09.982Z</published>
-    <updated>2024-10-25T15:15:07.286Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="1289fc5e1bdc5fb032d9fc2b827834a6b010049e43f957bcd2ad3c94dcd88602">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c6595b2754275585c0885266f46e53c3b0e80bffd7915d383dfda33b98ad8e157c2372a711b44a1ffbba3bf45c491112df5018eb3f626b7eeaf4a24de92ea7f81cb3c094f01f6c8efa876a432d293723f6e395f407281507f7499fa68a860e1e5d2a1d9096c23f150f2bc632ea837bc275146a860362169cca2be9d79ee34962540aee6aeba3072580cfcdc888fd58cf56410b85ca9711da15a3e590dae90491a59d1ec662e02c55d33dfbcebf998f394b82b72ed5e16b61eff237d86b11e4a7aa5bfbc19bbe2d0d46dc3fb235a79ee1e3c488e46f74ceeb82dad8dc487f87bd181987cd83e6a66033d71dd31b4edeec001a6be98c090242c439435a67003ed0266bf4af9161f58b8594fcc06744f9a55ebce0e3f8242fce2dc1e33c5dbb792e9ff7b2c87bb4c4c83fcead882e6be119fcbba506fa1609f810f308223d0911d23d1d7c84e57e386d7156b57fabe211ddad660dbe3ed305feb773c7e0770ccc043d01487b968e9004c990fc9d012f2ade6ef8cf07ddf322daf2db4055625517a2ace31218552a181f6e03a9cf3e3e962d6bc52f7c343e183815b7b3a15f5b68c6abfb48de5f360e0b33d7ddb50bf548e3b9a2eda9c955851b4ba95fd6f880ca27c9efe80cd0b8273b1f899feb0c1651fffb869ac6749cbfc0ed6bf295dc059a34d3a5f</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>The difference in c++ between priority_queue and set</title>
-    <link href="http://example.com/2024/02/08/2024-2-8-The-difference-in-c++-between-priority_queue-and-set/"/>
-    <id>http://example.com/2024/02/08/2024-2-8-The-difference-in-c++-between-priority_queue-and-set/</id>
-    <published>2024-02-08T04:47:00.000Z</published>
-    <updated>2024-10-25T15:19:10.148Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="Teach-you-how-to-use"><a href="#Teach-you-how-to-use" class="headerlink" title="Teach you how to use"></a>Teach you how to use</h1><span id="more"></span><p>The underlying structure of the priority_queue is the <strong>heap</strong>, and that of the set is <strong>Red-black tree</strong>.</p><p>The priority_queue insertion time complexity <strong>worst</strong> <code>O(log(n))</code>, the average time complexity is constant. Take the minimum or maximum value <code>O(1)</code>. Pop <code>O(log(n))</code>. Build time <code>O(n)</code>.</p><p>The set insertion time complexity <code>O(log(n))</code>, but always over or equal the priority_queue   worst time. Take the minimum or maximum value <code>O(1)</code>. Pop <strong>worst</strong> <code>O(n)</code>. Build time <code>O(nlog(n))</code>.</p><h3 id="Priority-queue"><a href="#Priority-queue" class="headerlink" title="Priority_queue"></a>Priority_queue</h3><blockquote><p>Part of it is orderly<br>Take up less space<br>Supported operations are few, and application scenarios are limited</p></blockquote><h3 id="Set"><a href="#Set" class="headerlink" title="Set"></a>Set</h3><blockquote><p>Completely orderly<br>Take up a lot of space<br>Supported more operations, and more application scenarios</p></blockquote><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span><span class="string">&lt;bits/stdc++.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>&#123;</span><br><span class="line"><span class="type">int</span> a;</span><br><span class="line"><span class="built_in">node</span>(<span class="type">int</span> t)&#123;<span class="keyword">this</span>-&gt;a = t;&#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="type">bool</span> <span class="keyword">operator</span>&lt;(<span class="type">const</span> node a, <span class="type">const</span> node b)&#123;<span class="keyword">return</span> a.a &gt; b.a;&#125; <span class="comment">//priority_queue False優先排, 其他結構 True優先排</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>&#123;</span><br><span class="line"><span class="type">int</span> n;</span><br><span class="line">cin &gt;&gt; n;</span><br><span class="line">priority_queue&lt;node&gt; p;</span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i = <span class="number">0</span>, a; i &lt; n; i++)&#123;</span><br><span class="line">cin &gt;&gt; a;</span><br><span class="line">p.<span class="built_in">push</span>(<span class="built_in">node</span>(a));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">while</span>(!p.<span class="built_in">empty</span>())&#123;</span><br><span class="line">cout &lt;&lt; p.<span class="built_in">top</span>().a &lt;&lt; <span class="string">&#x27; &#x27;</span>;</span><br><span class="line">p.<span class="built_in">pop</span>();</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-    <summary type="html">&lt;h1 id=&quot;Teach-you-how-to-use&quot;&gt;&lt;a href=&quot;#Teach-you-how-to-use&quot; class=&quot;headerlink&quot; title=&quot;Teach you how to use&quot;&gt;&lt;/a&gt;Teach you how to use&lt;/h1&gt;</summary>
-    
-    
-    
-    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
-    
-    
-    <category term="c++" scheme="http://example.com/tags/c/"/>
-    
-    <category term="structure" scheme="http://example.com/tags/structure/"/>
-    
-    <category term="helping" scheme="http://example.com/tags/helping/"/>
     
   </entry>
   

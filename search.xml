@@ -1120,4 +1120,106 @@
         <tag>problem</tag>
       </tags>
   </entry>
+  <entry>
+    <title>HTMLDocument.style detail</title>
+    <url>/2024/12/23/HTMLDocument.style_detail/</url>
+    <content><![CDATA[<p>HTMLDocument.style is point to DOM</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.d</span>&#123;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;d&quot;</span>&gt;</span>DOM<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.d&#x27;</span>).<span class="property">style</span>.<span class="property">color</span>)</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 空</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.d</span>&#123;</span></span><br><span class="line"><span class="language-css">	<span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;d&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: green;&quot;</span>&gt;</span>DOM<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.d&#x27;</span>).<span class="property">style</span>.<span class="property">color</span>)</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// green</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>So it mean HTMLDocument.style just refer html label. Even though you have written the color in css file but not written in html label, it just print ‘’ in terminal.</p>
+]]></content>
+      <categories>
+        <category>tutorial</category>
+      </categories>
+      <tags>
+        <tag>helping</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>References between js</title>
+    <url>/2024/12/23/References_between_js/</url>
+    <content><![CDATA[<p>If module is referenced by index.html, all js below that module can use the function without referenced module, even needn’t import and module.js needn’t export.</p>
+<p>If module.js doesn’t be referenced by index.html, other js can only import module.js function and which also need to export.</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line">// index.html</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./moduleC.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./main.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;main1&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> &#123;a&#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleA.js&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123;moduleB&#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleB.js&#x27;</span></span><br><span class="line"><span class="title function_">a</span>()</span><br><span class="line"><span class="title function_">moduleB</span>()</span><br><span class="line"><span class="title function_">moduleC</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;main2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// moduleA.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; moduleB &#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleB.js&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> a = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">moduleB</span>()</span><br><span class="line">    <span class="title function_">moduleC</span>()</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;aaa&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// moduleB.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> moduleB = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;moduleB&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;bbb&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="code"><pre><span class="line"><span class="comment">// moduleC.js</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">moduleC</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;moduleC&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;ccc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">// output</span><br><span class="line">ccc</span><br><span class="line">bbb</span><br><span class="line">aaa</span><br><span class="line">moduleB</span><br><span class="line">moduleC</span><br><span class="line">moduleB</span><br><span class="line">moduleC</span><br></pre></td></tr></table></figure>
+
+<p>Because moduleC.js is upper than main.js, so <code>ccc</code> first. And I guess all code should waiting the module loaded then run. First, import moduleA in faster than moduleB in main.js, and moduleB is referenced by moduleA. So it will output <code>bbb</code> first, then <code>aaa</code>. And moduleB.js has been referenced, so it wouldn’t occur again even main.js refer it.</p>
+]]></content>
+      <categories>
+        <category>tutorial</category>
+      </categories>
+      <tags>
+        <tag>helping</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>delate function js</title>
+    <url>/2024/11/02/delate-function-js/</url>
+    <content><![CDATA[<p>I make a adjust seat website, which increase my understanding of javascript.</p>
+<p>I learned how to delate the loop</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">delay</span>(<span class="params">ms</span>) &#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">setTimeout</span>(resolve, ms));</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">async</span> <span class="keyword">function</span> <span class="title function_">delayedLoop</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">await</span> <span class="title function_">delay</span>(<span class="number">1000</span>);</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">delayedLoop</span>();</span><br></pre></td></tr></table></figure>
+
+<p>and </p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) &#123;</span><br><span class="line">    <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(i);</span><br><span class="line">    &#125;, i * <span class="number">1000</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Once, I make a sleep function, but I forget to return the Promise data.</p>
+<p>Which let me impress. And I find that no need to change <code>async</code>function.</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="title function_">sleep</span>(<span class="params">ms</span>)&#123;</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">new</span> <span class="title class_">Promise</span>(<span class="function"><span class="params">resolve</span> =&gt;</span> <span class="built_in">setTimeout</span>(resolve, ms));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>Because it is no use to add async to sleep function, only add async to your operative function, adding <code>await sleep(delate)</code> just take effect. Otherwise, your operative wouldn’t wait the sleep function, running next code directly.</p>
+]]></content>
+      <categories>
+        <category>tutorial</category>
+      </categories>
+      <tags>
+        <tag>helping</tag>
+        <tag>javascript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>set percentage in css</title>
+    <url>/2024/11/09/set_percentage_in_css/</url>
+    <content><![CDATA[<p>If you want to set a percentage width or height, you must sure the parent nood have set a fix width or height, min-width and min-height are not the kind of fix. normally, you can set a min-width and width to make a responsive website. This approach like flex-grow flex-shrink flex-base, flex-grow can automatically adjust, flex-base is set a base size.</p>
+<p><code>flex-basis</code> is a CSS property used in a flex container to define the initial size of a flex item before any extra space is distributed based on <code>flex-grow</code> or <code>flex-shrink</code> properties. Think of <code>flex-basis</code> as a starting point for the width (in a row layout) or height (in a column layout) of the flex item.</p>
+<blockquote>
+<p>GPT said</p>
+</blockquote>
+<p>Your <code>color-bar</code> div isn’t taking up the full 60% height as expected due to a few potential issues. Here’s how to troubleshoot and fix this:</p>
+<ol>
+<li><p><strong><code>section-one</code> height constraints</strong>: Since <code>section-one</code> is defined to have a minimum height (<code>min-height: 90vh</code>), the <code>color-bar</code> div’s height of 60% is relative to the <code>.section-one</code> container, which can make the layout behave unexpectedly based on screen height.</p>
+</li>
+<li><p><strong>Parent container height</strong>: Because <code>.section-one</code> only has a <code>min-height</code>, its height can change if the content inside it grows, making <code>color-bar</code>‘s height unpredictable.</p>
+</li>
+<li><p><strong>Testing with <code>height</code> directly</strong>: To see the desired effect of <code>color-bar</code> taking up 60% of the viewport height, try setting its height explicitly as <code>height: 60vh;</code> (viewport height). Alternatively, ensure <code>.section-one</code> has a fixed height rather than just <code>min-height</code>.</p>
+</li>
+</ol>
+<p>Here’s the modified code with <code>60vh</code> applied to <code>color-bar</code>:</p>
+<figure class="highlight html"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;color-bar&quot;</span> <span class="attr">style</span>=<span class="string">&quot;height: 60vh;&quot;</span>&gt;</span></span><br><span class="line">    hi</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Or set the height of <code>.section-one</code> to a fixed height, for example, <code>90vh</code>, to make the <code>60%</code> height work as intended:</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="selector-class">.section-one</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">90vh</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This should help you see the <code>color-bar</code> at the expected height. Let me know if this works for you!</p>
+]]></content>
+      <categories>
+        <category>tutorial</category>
+      </categories>
+      <tags>
+        <tag>GPT</tag>
+        <tag>css</tag>
+        <tag>website</tag>
+      </tags>
+  </entry>
 </search>
