@@ -1,5 +1,6 @@
-http://example.com/2024/12/23/References_between_js/
 http://example.com/2024/12/23/HTMLDocument.style_detail/
+http://example.com/2024/12/24/the_maximum_box/
+http://example.com/2024/12/23/References_between_js/
 http://example.com/2024/11/09/set_percentage_in_css/
 http://example.com/2024/11/02/delate-function-js/
 http://example.com/2024/10/28/encourtered-some-problems-in-my-english-writing-homework/
@@ -60,6 +61,7 @@ http://example.com/tags/javascript/
 http://example.com/tags/GPT/
 http://example.com/tags/css/
 http://example.com/tags/website/
+http://example.com/tags/html/
 http://example.com/categories/%E6%95%99%E7%A8%8B/
 http://example.com/categories/nonsense/
 http://example.com/categories/tutorial/

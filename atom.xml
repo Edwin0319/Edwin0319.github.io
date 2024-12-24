@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-12-23T09:32:51.797Z</updated>
+  <updated>2024-12-24T07:12:52.950Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,36 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>the maximum box</title>
+    <link href="http://example.com/2024/12/24/the_maximum_box/"/>
+    <id>http://example.com/2024/12/24/the_maximum_box/</id>
+    <published>2024-12-24T07:12:52.950Z</published>
+    <updated>2024-12-24T07:12:52.950Z</updated>
+    
+    <content type="html"><![CDATA[<p>the box contain the whole view at most, even the child nood is beyond the screen. So you set border on the father nood, you will see the border is stick to the left and right screen, and the child content will beyond the border.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;the box contain the whole view at most, even the child nood is beyond the screen. So you set border on the father nood, you will see the </summary>
+      
+    
+    
+    
+    <category term="discover" scheme="http://example.com/categories/discover/"/>
+    
+    
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="website" scheme="http://example.com/tags/website/"/>
+    
+    <category term="html" scheme="http://example.com/tags/html/"/>
+    
+  </entry>
   
   <entry>
     <title>References between js</title>
@@ -47,7 +77,7 @@
     <link href="http://example.com/2024/12/23/HTMLDocument.style_detail/"/>
     <id>http://example.com/2024/12/23/HTMLDocument.style_detail/</id>
     <published>2024-12-23T09:01:32.838Z</published>
-    <updated>2024-12-23T09:01:32.838Z</updated>
+    <updated>2024-12-24T07:13:17.291Z</updated>
     
     <content type="html"><![CDATA[<p>HTMLDocument.style is point to DOM</p><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.d</span>&#123;</span></span><br><span class="line"><span class="language-css"><span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;d&quot;</span>&gt;</span>DOM<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.d&#x27;</span>).<span class="property">style</span>.<span class="property">color</span>)</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// 空</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">style</span>&gt;</span><span class="language-css"></span></span><br><span class="line"><span class="language-css"><span class="selector-class">.d</span>&#123;</span></span><br><span class="line"><span class="language-css"><span class="attribute">color</span>: red;</span></span><br><span class="line"><span class="language-css">&#125;</span></span><br><span class="line"><span class="language-css"></span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;d&quot;</span> <span class="attr">style</span>=<span class="string">&quot;color: green;&quot;</span>&gt;</span>DOM<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span>&gt;</span><span class="language-javascript"></span></span><br><span class="line"><span class="language-javascript"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;.d&#x27;</span>).<span class="property">style</span>.<span class="property">color</span>)</span></span><br><span class="line"><span class="language-javascript"><span class="comment">// green</span></span></span><br><span class="line"><span class="language-javascript"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure><p>So it mean HTMLDocument.style just refer html label. Even though you have written the color in css file but not written in html label, it just print ‘’ in terminal.</p>]]></content>
     
@@ -60,7 +90,7 @@
     
     
     
-    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    <category term="discover" scheme="http://example.com/categories/discover/"/>
     
     
     <category term="helping" scheme="http://example.com/tags/helping/"/>
@@ -457,27 +487,6 @@
     <updated>2024-10-25T15:14:47.484Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="c83cd266f22ff1ce94cb1c474ca8aa8a3934a703be5993b56a2336978b1f3846">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c7205acbd26fe704984f900f3740f082e6c794e67f0e4859875b021559d4868a27f0f1a9264f22e84230f589af1f0c08bc30f3de90b2c526fa5899c3189f6300feb0c01970856959da57b64b83c9c3009f345c88ffaefbed33985a786e249a1d94868fcd3bbde54e4afbeb4e20fd08367cb9924bdba3846d9e7511536a102cbb31ee349a812c754d8a37f299df5d30a6fcc44b681d9b0001560654fe2fd3cade4d020426ed2c29f4bef9d7ef8bfeb775eb6e63ab9fb25a28e08b21e30b0c50f1af5a75e2500664e2c59b5a44ecf6efb194b5b86fe5b070c5a98a4dae921b1f03e6b8868e4459300c68b7bb0ca012b3c80ae05793c3c6d0157e7550ab329fba8bf509a13aefd1b06dca1956f957477a7a338db0033befd4df1ba7f64b62e483951d3aff300802c718b72f37752027c25b3e3148818616a344cf1978f961a9d5a708846752f815cf37dca44f256fcf8caed030da201765fd7d92f300e8651e177c61799db672271a6aaf3247f37f16294b5c803a8f519463759979143d8b6c6d1739ca86c128a6c9b9f2602078f1b27f15288807062ba50d7ce8af7a40f96d6a3980803ac2b8088b9a8463109476a9302f97c529671fe988b8a85e440115a8485b053ccbd2f38bc62f1f72a720cf8ba236fd57910c49cf6aed2bc1bbde3373547db</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Nico Birthday</title>
-    <link href="http://example.com/2024/05/16/Nico-Birthday/"/>
-    <id>http://example.com/2024/05/16/Nico-Birthday/</id>
-    <published>2024-05-15T22:57:00.779Z</published>
-    <updated>2024-10-25T15:15:58.277Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="bf420584750c5f73d38b314d44d5ec53de71bc550e9725236c3249a55027a17e">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c659538098b88a784491cd9552151799e66ea0e251c43c0ba117977afd38246731f065078a659f5adf86ea9b1f2d044ae320de4b6b0cca2a418ccc81f34bb5abb2de3eb126d0af483f5e667cd4577ef9e19bc295ce36decc298ac645a3fecab4a83d80d6e5551986e2f3eba3199da0dfb38d1214347ab808f8a11df108f9214c3eed1f750d0858340c7e2051e5eee667f70ef737734011bc04f08b8714d0dd49c35c994a7442f36263dcd4f809ce252bdd5723256c8ed0981603643e00640e240b411aa7568dd7b547ae9581d02f3d50fadabece43146d2fb1b27d599566e67f10761c785d7b359877eab57428c44b33d2b54e73ef286324b274617779b8791e426e7705b428716064dd17f95224188e35d08f35b0fe239bb51900301ec783c6677a5e1ad7e538e2e2932e1fbbddcd91a3d217321872e9e713e3068a9684c1f4d6589a2fcfe782fe585cd2a95ac0fb0bb3d36c9ae2264ab6794809205552dddb7cf3f747091b0e1c6f63a69650911992279b9420f9d8555685b0b11ed01ff18f2b60fc8ec903087ccd4eee6482bcc3235b05b730438763282638473daa60bea71e35316a9cdb76c11cd427bb3ac9daac75d362703aa3888443c2a9b8ee84c7c3f228bc799674a11a1f76d2991b9c355f6654f7eafd7f0a9b80c95e35db91a303c0aa53133e45fab1cb6f89e4d36b746ec203eac510355a041ce3c1b1be71455b6b39b7eb478632103b15afd76dcd24643df85dfe935c46e8feafd81c58f75879e09059e4d6ea5614c644471956d80f2ee3a7b8227e34d29c79a0eb128233c590c80747c99469fd47f9a65ab92fcf9da7811841d44029fd504be927910bcd629348d4696ade5007b2ff4266a8026d27b164de0e9ffd6ce146ca6b51afad3c50fa3ae10a962f34f040a035fdeddde480444b1dc0713e8f895108b394335e2e636c6d82e94cc683aa295a5bf15df5c122921d7c7bab6ed774572c27951d93bc63d673a9371e2f12b752dfbfc04e5daee57f18e9eee63fa6231a1fa84affd072d83a0ae946b6ac362a9a23830d08bdb81e33c42119df7428c6fa71a5af0a56d866da370a0acd2a92f5d10c93422ab842edab771ccf07716d8f7ae569404bfa0bc388e1cc82aad38c294db2c23d785f60797655f02287fbbed5e3233d9537805c42ce121554415b5c54329c9a984a10457cfab5ff7ecb679726fac53790c99581d3fdf3b605c34b7b61be623c6c1cca5f9d63b97b14524197690ad4d854f7f4ddffd303a7552c6a48ef5358bb5270e8de9dcf9d811</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
     <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
