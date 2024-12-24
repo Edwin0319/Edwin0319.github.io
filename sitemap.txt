@@ -1,11 +1,11 @@
-http://example.com/2024/12/23/HTMLDocument.style_detail/
 http://example.com/2024/12/24/the_maximum_box/
+http://example.com/2024/07/18/just-array-can-use-forEach/
+http://example.com/2024/07/21/the-confuse-from-console.log/
+http://example.com/2024/11/02/delate-function-js/
+http://example.com/2024/12/23/HTMLDocument.style_detail/
 http://example.com/2024/12/23/References_between_js/
 http://example.com/2024/11/09/set_percentage_in_css/
-http://example.com/2024/11/02/delate-function-js/
 http://example.com/2024/10/28/encourtered-some-problems-in-my-english-writing-homework/
-http://example.com/2024/07/21/the-confuse-from-console.log/
-http://example.com/2024/07/18/just-array-can-use-forEach/
 http://example.com/2024/10/13/Build_paddleocr_environment/
 http://example.com/2024/09/10/The-distinction-between-adding-if-and-not-adding-if-in-a-sentence/
 http://example.com/2024/10/02/National%20holiday/

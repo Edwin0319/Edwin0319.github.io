@@ -996,6 +996,7 @@
       <tags>
         <tag>helping</tag>
         <tag>javascript</tag>
+        <tag>website</tag>
       </tags>
   </entry>
   <entry>
@@ -1089,6 +1090,7 @@
       <tags>
         <tag>helping</tag>
         <tag>javascript</tag>
+        <tag>website</tag>
       </tags>
   </entry>
   <entry>
@@ -1136,6 +1138,7 @@
       <tags>
         <tag>helping</tag>
         <tag>javascript</tag>
+        <tag>website</tag>
       </tags>
   </entry>
   <entry>
@@ -1162,6 +1165,7 @@
       <tags>
         <tag>helping</tag>
         <tag>javascript</tag>
+        <tag>website</tag>
       </tags>
   </entry>
   <entry>
@@ -1186,6 +1190,7 @@
       <tags>
         <tag>helping</tag>
         <tag>javascript</tag>
+        <tag>website</tag>
       </tags>
   </entry>
   <entry>
@@ -1223,9 +1228,12 @@
       </tags>
   </entry>
   <entry>
-    <title>the maximum box</title>
+    <title>default flex box</title>
     <url>/2024/12/24/the_maximum_box/</url>
-    <content><![CDATA[<p>the box contain the whole view at most, even the child nood is beyond the screen. So you set border on the father nood, you will see the border is stick to the left and right screen, and the child content will beyond the border.</p>
+    <content><![CDATA[<p>Flex would change the state of element. Width would be set to 100%.</p>
+<p>Whatever the <code>flex-direction</code> is row or column.</p>
+<p>I often meditate on that thing why the box would occupy the whole width without setting, even <code>span</code>.</p>
+<p>content can beyond the border. And border also can beyond the screen.</p>
 ]]></content>
       <categories>
         <category>discover</category>

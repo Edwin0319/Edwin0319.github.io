@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://example.com/2024/12/23/HTMLDocument.style_detail/</loc>
+    <loc>http://example.com/2024/12/24/the_maximum_box/</loc>
     
     <lastmod>2024-12-24</lastmod>
     
@@ -11,7 +11,34 @@
   </url>
   
   <url>
-    <loc>http://example.com/2024/12/24/the_maximum_box/</loc>
+    <loc>http://example.com/2024/07/18/just-array-can-use-forEach/</loc>
+    
+    <lastmod>2024-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/07/21/the-confuse-from-console.log/</loc>
+    
+    <lastmod>2024-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/11/02/delate-function-js/</loc>
+    
+    <lastmod>2024-12-24</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
+    <loc>http://example.com/2024/12/23/HTMLDocument.style_detail/</loc>
     
     <lastmod>2024-12-24</lastmod>
     
@@ -22,7 +49,7 @@
   <url>
     <loc>http://example.com/2024/12/23/References_between_js/</loc>
     
-    <lastmod>2024-12-23</lastmod>
+    <lastmod>2024-12-24</lastmod>
     
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
@@ -38,34 +65,7 @@
   </url>
   
   <url>
-    <loc>http://example.com/2024/11/02/delate-function-js/</loc>
-    
-    <lastmod>2024-11-02</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
     <loc>http://example.com/2024/10/28/encourtered-some-problems-in-my-english-writing-homework/</loc>
-    
-    <lastmod>2024-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/07/21/the-confuse-from-console.log/</loc>
-    
-    <lastmod>2024-10-28</lastmod>
-    
-    <changefreq>monthly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  
-  <url>
-    <loc>http://example.com/2024/07/18/just-array-can-use-forEach/</loc>
     
     <lastmod>2024-10-28</lastmod>
     
