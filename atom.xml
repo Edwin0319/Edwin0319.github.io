@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2024-12-24T08:13:19.103Z</updated>
+  <updated>2025-01-04T11:31:40.621Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,38 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>the process of my windows repairing</title>
+    <link href="http://example.com/2025/01/04/the-process-of-my-windows-repairing/"/>
+    <id>http://example.com/2025/01/04/the-process-of-my-windows-repairing/</id>
+    <published>2025-01-04T11:31:40.621Z</published>
+    <updated>2025-01-04T11:31:40.621Z</updated>
+    
+    <content type="html"><![CDATA[<p>Yesterday, I deleted my user account and change a new password. Therefore, I was under the confusion what password is it and the account was locked. I search a lot of method. Finally, I choose the PE tool but I don’t have windows PC, even my virtual windows can’t work. I had decided to go to school next day. I asked Jasper to help me open the computer room. I tell him what I was facing the problem then he give me a U storage which is PE tool(老毛桃). I also downloaded another PE tool(微PE), but it seem not ok. Eventually, I take the U storage Jasper gave me and get home. I appreciate him. If he no give me 老毛桃, I bet I will spend more time. </p><p>After I unlock the password, I log in a new account. Fortunately, C disk and D disk both are exist. But I am using the new account, the edwin folder in users. I want to use Edwin user folder be my main user faolder. And I almost cut the Edwin folder to my current user folder. I become smarter, I search the method which change my current user folder to edwin user folder. Finally, nothing are disappear. </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;Yesterday, I deleted my user account and change a new password. Therefore, I was under the confusion what password is it and the account </summary>
+      
+    
+    
+    
+    <category term="experience" scheme="http://example.com/categories/experience/"/>
+    
+    
+    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
+    
+    <category term="reflection" scheme="http://example.com/tags/reflection/"/>
+    
+    <category term="problem" scheme="http://example.com/tags/problem/"/>
+    
+    <category term="system" scheme="http://example.com/tags/system/"/>
+    
+    <category term="window" scheme="http://example.com/tags/window/"/>
+    
+  </entry>
   
   <entry>
     <title>default flex box</title>
@@ -477,27 +509,6 @@
     <updated>2024-10-25T15:16:15.185Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="79e42cc332f46107290baefa5f0acc410a84a0ca1052dcdf01cdc19e32452ea0">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c341175eb8d9ebe03945f07d37b937ef00b020dfbcc74ac3a5157604ac5d7686b8e63763025dec6c53032cdeaf829a5ff97ac1c2e9687ab6b6227f8ee2e903030027b62fc55e3f97ea5896d4b6c68fb3bb7add6508b8a579e3781a759961f91d09230ac01044a881d18eaa62110921b6195a47f63709b6b1989bd634112a2c4e6a874c731d79b277db864b442e7496a128ba36aecb7acf585a54b58d7bd69441d103c565434541f0ab7b9a1242663883dc0ebab60be84e1c9e1d15f286a792d531b0e606aa76af8b5269cf1bc55ec8a8a69f62b74ba9af5014f2f27f038a98f7235e7dc4243603e483af97e2a73981950d59c08eb025018ee85dd269d956d747a687c15d34db57d3cb3d1e3551043d258ccfa4eb82796543f815d328016d6efdf0162e9628474ac350f5726c214f599867a259adc1250dfd1185b785098507614576846809153c07b128e3a2d941ecebf3cd9633bad2689efb2f3d183202eac05a3cc9053e74b76e90fc3b21967c493b9a9fd53b26834150c44e830bc37010dbf3bf9be2bdc7e3c8be10f4717729c41d82aa43298f036d8d3e504cde26aad314a856278862ce7fd1b4552190276640f52e98b7426d2497c83d02a73e562e04bbd0459094bb594f2ca31cae814833fbe2b2f373980e6f43b11329282317cd3b483d72dd0df696532a6c88bcd86664d2a3eeb898f65ec235821a9a6016d582deb4f6fa908376b25de0d6d93687b1d9d5a36c05c802e610bc3c2823f2db7e6feb20614f1d0b1d0716891920b87590c34dc27f8fa52baace397ff7bf91c512f9916dab4884aa1daaa82bb3baec676a2d95b8e92007001878137e9c328cfef087895213b1db4eef4ec934b16f06d15bf1d4259fba1b607bddeb667bb83978a906fc827740ab06d7b68256f29c9856611fced12462fa98421f8078af8cd6e167283a2860ea48fe0ae384e5a8a45078e83859fc2ece514583b1dbdee27e9137ab1f30a20bd8db2f2efef7e97ec2dcc7bfed4e3fc0579ea8ef4cc5fc3a24122411bc11f76c3f0f6eeae961fe58380428d923faecb9a588fe589caee168bb2824641ecbd92e62ca1daf92786f185c54949b8fecb0eadaa933273358e350d8bd282ed8f88fe642b5060ee0411d3c35e8f5119a22f4f644903a9b72b277808f549478468f76d012df169d5873faafa1de4ab0066334c098ce71a8fbdd459f8baa675580a50c18a95539d2d33119e17adfcc725fe44ba1f2e9b50c3fd77f1412bbc171ba1b6e2c91159afcb61628d43bf4887d26e5dfdc53c48fb3cf7c62b8ca61264f825208a44afd4e76d682309b33c63ab428b11a11ccf690d6000ea0bd8d36acc78108ff9</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>a normal day</title>
-    <link href="http://example.com/2024/05/17/girls_basketball_S2A/"/>
-    <id>http://example.com/2024/05/17/girls_basketball_S2A/</id>
-    <published>2024-05-17T15:46:20.405Z</published>
-    <updated>2024-10-25T15:14:47.484Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="c83cd266f22ff1ce94cb1c474ca8aa8a3934a703be5993b56a2336978b1f3846">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c7205acbd26fe704984f900f3740f082e6c794e67f0e4859875b021559d4868a27f0f1a9264f22e84230f589af1f0c08bc30f3de90b2c526fa5899c3189f6300feb0c01970856959da57b64b83c9c3009f345c88ffaefbed33985a786e249a1d94868fcd3bbde54e4afbeb4e20fd08367cb9924bdba3846d9e7511536a102cbb31ee349a812c754d8a37f299df5d30a6fcc44b681d9b0001560654fe2fd3cade4d020426ed2c29f4bef9d7ef8bfeb775eb6e63ab9fb25a28e08b21e30b0c50f1af5a75e2500664e2c59b5a44ecf6efb194b5b86fe5b070c5a98a4dae921b1f03e6b8868e4459300c68b7bb0ca012b3c80ae05793c3c6d0157e7550ab329fba8bf509a13aefd1b06dca1956f957477a7a338db0033befd4df1ba7f64b62e483951d3aff300802c718b72f37752027c25b3e3148818616a344cf1978f961a9d5a708846752f815cf37dca44f256fcf8caed030da201765fd7d92f300e8651e177c61799db672271a6aaf3247f37f16294b5c803a8f519463759979143d8b6c6d1739ca86c128a6c9b9f2602078f1b27f15288807062ba50d7ce8af7a40f96d6a3980803ac2b8088b9a8463109476a9302f97c529671fe988b8a85e440115a8485b053ccbd2f38bc62f1f72a720cf8ba236fd57910c49cf6aed2bc1bbde3373547db</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
     <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
