@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-01-04T11:31:40.621Z</updated>
+  <updated>2025-01-08T10:44:54.764Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>back up system at regular intervals</title>
+    <link href="http://example.com/2025/01/08/back-up-system-at-regular-intervals/"/>
+    <id>http://example.com/2025/01/08/back-up-system-at-regular-intervals/</id>
+    <published>2025-01-08T10:44:54.764Z</published>
+    <updated>2025-01-08T10:44:54.764Z</updated>
+    
+    <content type="html"><![CDATA[<p>don’t install application causally. I downloaded <code>docker</code> and deleted it before long, then restarted. Unexpectedly, my user folder(edwin) was eaten. I call help, my teacher tell my that I gave docker a power authority, so it will do something unexpected thing. Docker can only install in virtual environment or sever which don’t have important file.</p><p>Coincidentally, my windows was running a sever. Finally, I decided to reinstall my system. And I was reflecting the whole accident why it would happen. And the answer is <strong>back up system</strong> at regular intervals.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;don’t install application causally. I downloaded &lt;code&gt;docker&lt;/code&gt; and deleted it before long, then restarted. Unexpectedly, my user fo</summary>
+      
+    
+    
+    
+    <category term="experience" scheme="http://example.com/categories/experience/"/>
+    
+    
+    <category term="reflection" scheme="http://example.com/tags/reflection/"/>
+    
+    <category term="system" scheme="http://example.com/tags/system/"/>
+    
+    <category term="window" scheme="http://example.com/tags/window/"/>
+    
+  </entry>
   
   <entry>
     <title>the process of my windows repairing</title>
@@ -488,27 +516,6 @@
     <updated>2024-10-25T15:14:40.103Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="72618ff6f5d96566dc6508b9c28ca5faa6885d4aa5f534e15ec9181a03da1127">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c65950b985fc42edacfff6d4ec6c06ca2cbeac470426953f1b07aaefb376ab5d7da088559207daafac8b619fe775d7ddb56831298cbbf0e04c5e829b16372e659b5683e6fe220625fa58d68a6bce044685d08d37775c014c3f69de882ce627ed646cb9fee5d3ed69ff0850f632e20d32a0db5593ebb80bc96c638fe2f1bdc0acb0c538de076d52ced3deaa4972a67ea467d853497c354d6e0dfaa77b32230cb9cc19d888a965290878aa4d0347271a673b016fb79b5ac2aaf4f9dad21809757349f0d1c37b58cf158f1dacf71a7c6e9e6f02e8357d6645e546837b70158b44b204dc970df8ac883633e2c96b8f31422a7eb78943a271a9291cf11045bc49d0d0aec5e84bd50ad578d1cc1c83e4af908116c7cd5e3061d23b7a19881cfb05a65170bf81d100be20ce3c9402b426b3f7ce479bc61df14f450fa9af2c295d89696a65a6f8802d65854cb9119501c2f07ab4c8201f5f5b69f66240103df9cdc8f7e20bf3504fe65d87bddc099f61f0361a5e0b001adaacf725d30b13821af25c6c13bd4ed66ed192c60232abfc7e081a1ffa5fc50394aada3fcc8b515b7211a7f6387dea0e03a5fa3dd173f08a2c27cdd2216c1ff7ea1346d0404fe551b6a75b505953afced2921cca466e95eec5da044937f2e6f1f17c4df6372401ab026aa0b7b6ad10f4358acc0c12005f00751255985b74e7b7f4080220327de45282c1c4b2466c4b6cc7f2d98e47121d67caf0f72d1145614b083b06b55030d9774c3d0c08319632f77862995aa9705d85be3d0fc0a135264df053cc1a52cd9de6f9ad8eb45b7bb3694828e5d6f890dc9b013552779ba07c4edb9e8875c28efe8d8929dab579e702432a8726a2f899cb6d1ad0319d74ee56b5b71a4170d4e8c74c1b772bedae4a9162d2de64d9dd7ae74e6a7e9c9c51cd33ab31daebb832513275b0018815983a74ae85b1d2e9e8817a2a84cf770a033b35eb630b14cb25542c8202d3832407eea4439ba5d45225cb186bf6286456982791073b3f2c042863b285abee66fbb0eca71662f9d3b2ee43ea5ff36f2c63af79d74c7218d1550db181366ef9227a0aea20094907989d3ef1cea72eec18c433bc1875a7dc347fd5beae13beb57f62bcfc4e875b8019f5caae0b4b422cbad7620a89847af58a3899435f76a9c8938a11e5db6af9ffd8c170a2145dc3731c970baaefea468dd703c5907d27e2df83be9fd9f7ec1ae168423bb89b1967627fbca54ec6f880052cd4fee2cd0f0a7cb6dcaafbd0ba93409fb4726eb142b20f79b9c966cf0dbf6f289f56395136a89cea8f765dd1e8aa8ed96726cb950827b7655c6988577ec21af4ed1edd2460517517e44b7d9d3cc752388bf3945b5c0d6c71c159d71fcad2efd61445202e0fd4b78d3a2e16215d93f3bb29803e12f2021bb504c9433fd1f1cf17b85bfdf48ef5b30a052644541</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>today is singing competition</title>
-    <link href="http://example.com/2024/05/19/today-is-singing-competition/"/>
-    <id>http://example.com/2024/05/19/today-is-singing-competition/</id>
-    <published>2024-05-19T12:49:35.505Z</published>
-    <updated>2024-10-25T15:16:15.185Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="79e42cc332f46107290baefa5f0acc410a84a0ca1052dcdf01cdc19e32452ea0">dcbb9f7aad60423f5649a1885dea9738bd2a220c96d161a7b1b071e33d307f5c341175eb8d9ebe03945f07d37b937ef00b020dfbcc74ac3a5157604ac5d7686b8e63763025dec6c53032cdeaf829a5ff97ac1c2e9687ab6b6227f8ee2e903030027b62fc55e3f97ea5896d4b6c68fb3bb7add6508b8a579e3781a759961f91d09230ac01044a881d18eaa62110921b6195a47f63709b6b1989bd634112a2c4e6a874c731d79b277db864b442e7496a128ba36aecb7acf585a54b58d7bd69441d103c565434541f0ab7b9a1242663883dc0ebab60be84e1c9e1d15f286a792d531b0e606aa76af8b5269cf1bc55ec8a8a69f62b74ba9af5014f2f27f038a98f7235e7dc4243603e483af97e2a73981950d59c08eb025018ee85dd269d956d747a687c15d34db57d3cb3d1e3551043d258ccfa4eb82796543f815d328016d6efdf0162e9628474ac350f5726c214f599867a259adc1250dfd1185b785098507614576846809153c07b128e3a2d941ecebf3cd9633bad2689efb2f3d183202eac05a3cc9053e74b76e90fc3b21967c493b9a9fd53b26834150c44e830bc37010dbf3bf9be2bdc7e3c8be10f4717729c41d82aa43298f036d8d3e504cde26aad314a856278862ce7fd1b4552190276640f52e98b7426d2497c83d02a73e562e04bbd0459094bb594f2ca31cae814833fbe2b2f373980e6f43b11329282317cd3b483d72dd0df696532a6c88bcd86664d2a3eeb898f65ec235821a9a6016d582deb4f6fa908376b25de0d6d93687b1d9d5a36c05c802e610bc3c2823f2db7e6feb20614f1d0b1d0716891920b87590c34dc27f8fa52baace397ff7bf91c512f9916dab4884aa1daaa82bb3baec676a2d95b8e92007001878137e9c328cfef087895213b1db4eef4ec934b16f06d15bf1d4259fba1b607bddeb667bb83978a906fc827740ab06d7b68256f29c9856611fced12462fa98421f8078af8cd6e167283a2860ea48fe0ae384e5a8a45078e83859fc2ece514583b1dbdee27e9137ab1f30a20bd8db2f2efef7e97ec2dcc7bfed4e3fc0579ea8ef4cc5fc3a24122411bc11f76c3f0f6eeae961fe58380428d923faecb9a588fe589caee168bb2824641ecbd92e62ca1daf92786f185c54949b8fecb0eadaa933273358e350d8bd282ed8f88fe642b5060ee0411d3c35e8f5119a22f4f644903a9b72b277808f549478468f76d012df169d5873faafa1de4ab0066334c098ce71a8fbdd459f8baa675580a50c18a95539d2d33119e17adfcc725fe44ba1f2e9b50c3fd77f1412bbc171ba1b6e2c91159afcb61628d43bf4887d26e5dfdc53c48fb3cf7c62b8ca61264f825208a44afd4e76d682309b33c63ab428b11a11ccf690d6000ea0bd8d36acc78108ff9</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
     <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>

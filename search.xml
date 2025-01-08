@@ -4,6 +4,35 @@
   
     
     <entry>
+      <title>back up system at regular intervals</title>
+      <link href="/2025/01/08/back-up-system-at-regular-intervals/"/>
+      <url>/2025/01/08/back-up-system-at-regular-intervals/</url>
+      
+        <content type="html"><![CDATA[<p>don’t install application causally. I downloaded <code>docker</code> and deleted it before long, then restarted. Unexpectedly, my user folder(edwin) was eaten. I call help, my teacher tell my that I gave docker a power authority, so it will do something unexpected thing. Docker can only install in virtual environment or sever which don’t have important file.</p><p>Coincidentally, my windows was running a sever. Finally, I decided to reinstall my system. And I was reflecting the whole accident why it would happen. And the answer is <strong>back up system</strong> at regular intervals.</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> experience </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> reflection </tag>
+            
+            <tag> system </tag>
+            
+            <tag> window </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>the process of my windows repairing</title>
       <link href="/2025/01/04/the-process-of-my-windows-repairing/"/>
       <url>/2025/01/04/the-process-of-my-windows-repairing/</url>
