@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-01-18T15:33:16.748Z</updated>
+  <updated>2025-01-18T15:52:27.875Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="http://example.com/2025/01/18/pay_attention_when_using_gsap_scrollTrigger/"/>
     <id>http://example.com/2025/01/18/pay_attention_when_using_gsap_scrollTrigger/</id>
     <published>2025-01-18T15:33:16.748Z</published>
-    <updated>2025-01-18T15:33:16.748Z</updated>
+    <updated>2025-01-18T15:52:27.875Z</updated>
     
-    <content type="html"><![CDATA[<p>I run into a problem during I use gsap scrollTrigger library. When I scroll the screen, the target element is work and horizontal scroll to right. But the thing is the following element is also scroll up during the target element is scrolling to right. I fall in to meditation. The following element is suppose to scroll up after the crosswise scroll is finish.</p><p>Over some hours, I find the reason. The father box of the target element is <code>flex</code> and set a <code>align-items</code> or <code>justify-content</code>. After I erase these codes, the process is work.</p>]]></content>
+    <content type="html"><![CDATA[<p>I run into a problem during I use gsap scrollTrigger library. When I scroll the screen, the target element is work and horizontal scroll to right. But the thing is the following element is also scroll up during the target element is scrolling to right. I fall in to meditation. The following element is suppose to scroll up after the crosswise scroll is finish.</p><p>Over some hours, I find the reason. The father box of the target element is <code>flex</code> and set a <code>align-items</code> or <code>justify-content</code>. And the target element’s display cannot be <code>flex</code>. In sum up, both target’s father and target cannot be a <code>flex</code> box. After I erase these codes, the process is work.</p>]]></content>
     
     
       
