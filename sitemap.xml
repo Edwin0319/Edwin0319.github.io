@@ -2,6 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://example.com/2025/01/18/pay_attention_when_using_gsap_scrollTrigger/</loc>
+    
+    <lastmod>2025-01-18</lastmod>
+    
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  
+  <url>
     <loc>http://example.com/2025/01/18/setting_children_box_width/</loc>
     
     <lastmod>2025-01-18</lastmod>
