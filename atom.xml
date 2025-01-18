@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-01-08T10:44:54.764Z</updated>
+  <updated>2025-01-18T05:23:36.901Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,34 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>setting children box width</title>
+    <link href="http://example.com/2025/01/18/setting_children_box_width/"/>
+    <id>http://example.com/2025/01/18/setting_children_box_width/</id>
+    <published>2025-01-18T05:23:36.901Z</published>
+    <updated>2025-01-18T05:23:36.901Z</updated>
+    
+    <content type="html"><![CDATA[<p>If the father level set the property of flex, the children level box will has the default property like <code>flex: 0 1 0</code>, corresponding to the following property <code>flex-shrink: 0</code>, <code>flex-grow: 1</code>, <code>flex-basis: 0</code>. In that case, your width property is invalid. </p><p>If you want to set the fix width, setting children property to <code>flex: 0 0 YOUR_WIDTH</code>(the flex of the father level’s property must set to <code>flex-direction: row;</code>), but the property of width is also invalid.</p><p>Or setting children property to <code>flex: 0 0 auto</code>. Then the property of width is work.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;If the father level set the property of flex, the children level box will has the default property like &lt;code&gt;flex: 0 1 0&lt;/code&gt;, corresp</summary>
+      
+    
+    
+    
+    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    
+    
+    <category term="helping" scheme="http://example.com/tags/helping/"/>
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="website" scheme="http://example.com/tags/website/"/>
+    
+  </entry>
   
   <entry>
     <title>back up system at regular intervals</title>
@@ -495,27 +523,6 @@
     <updated>2024-10-25T15:15:13.146Z</updated>
     
     <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="c286fe435f14aadcdbea1aee37622787517151d9b0a74de330e14b08388cdbc9">dcbb9f7aad60423f5649a1885dea973862559d391ebbb01281e5c89925e069cfa230f6dd278d8ff80851cd23ec13855c06b6f4052ce737e31641d6e735499d6030d4a15645aa430ea6a2b6dee9c2f92b106e3c5be8e97d123052405dc80354b8c43648be175353fd50db03ce956eb67ca34f793c1fa67711af655793e8b9fa123e6f18838f7104807ec9a36af8915ac261aabfcf31efea22b4c8dc29e8ea758f820dfd9accd7d453fec49763db871e50385500dd0eddbf7edcbccadaf051d47ed5b9912c16b002d2b946cd6a87a97adbf6f44b61712fe5ef59c44f5d0ea4cc08ab6153abf2b22cfd8799c5664f8e62dda94352506f4aab6bb3635db433e688504ee7bbd3799769b867d4a4c7f7f5587a48eca308aa07f50894d5b354a0fefc022137f2e95f97302980dbf4f1f7ffebe0c93d8283a7eda10376594f81d6bf52bfaa34c230c78146bf8976fcb798405f25bd5871f656f910b969ec4d811f0cc14aa9c16aea08acaa024553fc9d3375cf624cc3bd85b99ff2f8a76f1bc2c4807763ef3353d2e7e0645492162768d2d7ff1e3d9891f7e8ef498b7fd1c3d91bab59b6ac5e3980bf56716b3681697b6f59bb417f1490c03332cedee64d4208c0a9a53381fec5e2e45fb80e16ae9193f8406b9507585f01f7307bb2fe7d2ee3863d84286b5d63e10b229af7626cc16a87dff7a0c82c543af8169073632133f2af6a0c4fc61f63274c13733380a1c673d88a5388a8c4a701688d7a9178f79ec17b8bef89c2bba992482cb02fd373294ff99fac50fa2f325e4637cd268bcbf39ef9b83bfce9ad839f410542a72f72fac0408e506c6d77630cd2492dd4e7d86146d1526ade160645014a01de8455bed44a2b32b35b707369780eb6982beae58c44b17f297ac063cf5897432afb0bf4adb156492852a4e30a0e6d3d5b681ab9f70b1028cfbd4d01d1e2b6e4202c3fb5b4f45fb9beb00a0247dc2c58f96cda53d3bcd8934749020fc4263b4a921d35235ae57dec6144ec43009bedc40e7a8d5cf1c84fc822a7a3360057b931fbbc90dde236e2ac71b04acd7b2aa1b375b629e3821c179e38d11b3b8cd0c1db8f1c0106d8d93a5055f8f823f1ca4ffcb29d02d5ae96df811f0e21169039cc661bf8a49cf35b10e0fcb3</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Brian help me prepare interview</title>
-    <link href="http://example.com/2024/05/24/Brian-help-me-prepare-interview/"/>
-    <id>http://example.com/2024/05/24/Brian-help-me-prepare-interview/</id>
-    <published>2024-05-23T22:35:56.928Z</published>
-    <updated>2024-10-25T15:14:40.103Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="72618ff6f5d96566dc6508b9c28ca5faa6885d4aa5f534e15ec9181a03da1127">dcbb9f7aad60423f5649a1885dea973859c1b46a7fcc7b6c7a5fe127499c65950b985fc42edacfff6d4ec6c06ca2cbeac470426953f1b07aaefb376ab5d7da088559207daafac8b619fe775d7ddb56831298cbbf0e04c5e829b16372e659b5683e6fe220625fa58d68a6bce044685d08d37775c014c3f69de882ce627ed646cb9fee5d3ed69ff0850f632e20d32a0db5593ebb80bc96c638fe2f1bdc0acb0c538de076d52ced3deaa4972a67ea467d853497c354d6e0dfaa77b32230cb9cc19d888a965290878aa4d0347271a673b016fb79b5ac2aaf4f9dad21809757349f0d1c37b58cf158f1dacf71a7c6e9e6f02e8357d6645e546837b70158b44b204dc970df8ac883633e2c96b8f31422a7eb78943a271a9291cf11045bc49d0d0aec5e84bd50ad578d1cc1c83e4af908116c7cd5e3061d23b7a19881cfb05a65170bf81d100be20ce3c9402b426b3f7ce479bc61df14f450fa9af2c295d89696a65a6f8802d65854cb9119501c2f07ab4c8201f5f5b69f66240103df9cdc8f7e20bf3504fe65d87bddc099f61f0361a5e0b001adaacf725d30b13821af25c6c13bd4ed66ed192c60232abfc7e081a1ffa5fc50394aada3fcc8b515b7211a7f6387dea0e03a5fa3dd173f08a2c27cdd2216c1ff7ea1346d0404fe551b6a75b505953afced2921cca466e95eec5da044937f2e6f1f17c4df6372401ab026aa0b7b6ad10f4358acc0c12005f00751255985b74e7b7f4080220327de45282c1c4b2466c4b6cc7f2d98e47121d67caf0f72d1145614b083b06b55030d9774c3d0c08319632f77862995aa9705d85be3d0fc0a135264df053cc1a52cd9de6f9ad8eb45b7bb3694828e5d6f890dc9b013552779ba07c4edb9e8875c28efe8d8929dab579e702432a8726a2f899cb6d1ad0319d74ee56b5b71a4170d4e8c74c1b772bedae4a9162d2de64d9dd7ae74e6a7e9c9c51cd33ab31daebb832513275b0018815983a74ae85b1d2e9e8817a2a84cf770a033b35eb630b14cb25542c8202d3832407eea4439ba5d45225cb186bf6286456982791073b3f2c042863b285abee66fbb0eca71662f9d3b2ee43ea5ff36f2c63af79d74c7218d1550db181366ef9227a0aea20094907989d3ef1cea72eec18c433bc1875a7dc347fd5beae13beb57f62bcfc4e875b8019f5caae0b4b422cbad7620a89847af58a3899435f76a9c8938a11e5db6af9ffd8c170a2145dc3731c970baaefea468dd703c5907d27e2df83be9fd9f7ec1ae168423bb89b1967627fbca54ec6f880052cd4fee2cd0f0a7cb6dcaafbd0ba93409fb4726eb142b20f79b9c966cf0dbf6f289f56395136a89cea8f765dd1e8aa8ed96726cb950827b7655c6988577ec21af4ed1edd2460517517e44b7d9d3cc752388bf3945b5c0d6c71c159d71fcad2efd61445202e0fd4b78d3a2e16215d93f3bb29803e12f2021bb504c9433fd1f1cf17b85bfdf48ef5b30a052644541</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
     
     
     <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>

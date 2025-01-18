@@ -186,6 +186,75 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/18/setting_children_box_width/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/see.jpg">
+      <meta itemprop="name" content="Edwin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/01/18/setting_children_box_width/" class="post-title-link" itemprop="url">setting children box width</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-01-18 13:23:36" itemprop="dateCreated datePublished" datetime="2025-01-18T13:23:36+08:00">2025-01-18</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>If the father level set the property of flex, the children level box will has the default property like <code>flex: 0 1 0</code>, corresponding to the following property <code>flex-shrink: 0</code>, <code>flex-grow: 1</code>, <code>flex-basis: 0</code>. In that case, your width property is invalid. </p>
+<p>If you want to set the fix width, setting children property to <code>flex: 0 0 YOUR_WIDTH</code>(the flex of the father level’s property must set to <code>flex-direction: row;</code>), but the property of width is also invalid.</p>
+<p>Or setting children property to <code>flex: 0 0 auto</code>. Then the property of width is work.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2025/01/08/back-up-system-at-regular-intervals/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -898,84 +967,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/10/13/Build_paddleocr_environment/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/see.jpg">
-      <meta itemprop="name" content="Edwin Huang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Edwin's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/10/13/Build_paddleocr_environment/" class="post-title-link" itemprop="url">Build_paddleocr_environment</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-10-13 00:28:34" itemprop="dateCreated datePublished" datetime="2024-10-13T00:28:34+08:00">2024-10-13</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-28 21:42:12" itemprop="dateModified" datetime="2024-10-28T21:42:12+08:00">2024-10-28</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/experience/" itemprop="url" rel="index"><span itemprop="name">experience</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>whenever I want to build a new environment on python, it must disturb me a long time. Just now, I want to learn OCR suddenly, because I want to write a code which can automatically do the MCQ on website. I ever watch the course at bilibili, but it is not entire. I consider I need to learn how to read the official document and use the product. </p>
-<p><a target="_blank" rel="noopener" href="https://paddlepaddle.github.io/PaddleOCR/latest/ppocr/overview.html">paddleocr</a>, I find that I can’t casual install or uninstall anything, like numpy, when I copy the code in terminal, it maybe install the suitable numpy automatically. If I reinstall it, it will get wrong.</p>
-<blockquote>
-<p>If you have something wrong, maybe rebuild the environment is the best method.</p>
-</blockquote>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1046,7 +1037,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">38</span>
+          <span class="site-state-item-count">39</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
