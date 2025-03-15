@@ -1309,4 +1309,26 @@
         <tag>website</tag>
       </tags>
   </entry>
+  <entry>
+    <title>some problem during setting MC server</title>
+    <url>/2025/03/16/some_problem_during_setting_MC_server/</url>
+    <content><![CDATA[<p>I want to set a Minecraft server. But it always run into error.</p>
+<h1 id="First"><a href="#First" class="headerlink" title="First"></a><strong>First</strong></h1><p>Is the environmental problem. Every different mc version demand different JDK. The <code>.bat</code> file contain <strong>java</strong> need to change the address of corresponding java version.</p>
+<h1 id="Second"><a href="#Second" class="headerlink" title="Second"></a><strong>Second</strong></h1><p>That start file is <code>.bat</code>, not <code>.jar</code>. Before I aware it, it spend me several hours. (If not exist <code>.bat</code>, you can creat a one and write down </p>
+<figure class="highlight bat"><table><tr><td class="code"><pre><span class="line">&quot;java address&quot; -Xmx8G -Xms500M -jar forge-.....jar </span><br><span class="line"><span class="built_in">pause</span></span><br></pre></td></tr></table></figure>
+
+<p>)</p>
+<h1 id="Third"><a href="#Third" class="headerlink" title="Third"></a><strong>Third</strong></h1><p>Click the <code>.bat</code> file and run into error, system will record the problem to txt. And I send to deepseek to search how to solve. Dramatically, deepseek find the correct reason is that my forge version is incorrect. But I don’t trust and border to change.</p>
+]]></content>
+      <categories>
+        <category>experience</category>
+      </categories>
+      <tags>
+        <tag>reflection</tag>
+        <tag>problem</tag>
+        <tag>java</tag>
+        <tag>mc</tag>
+        <tag>server</tag>
+      </tags>
+  </entry>
 </search>
