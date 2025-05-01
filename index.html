@@ -209,8 +209,9 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2025-05-01 14:23:04" itemprop="dateCreated datePublished" datetime="2025-05-01T14:23:04+08:00">2025-05-01</time>
+              <time title="创建时间：2025-05-01 14:23:04 / 修改时间：15:11:04" itemprop="dateCreated datePublished" datetime="2025-05-01T14:23:04+08:00">2025-05-01</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -234,10 +235,10 @@
 
       
           <p>building python environment are literally troublesome. It take me several hours. And I find that the best approach to build environment is to follow the offical document.<br>I downloaded pytorch and the bash code below.</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">conda create -n ENV_NAME python=3.8</span><br><span class="line"></span><br><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118</span><br><span class="line"></span><br><span class="line">conda install nvidia/label/cuda-11.8.0::cuda-toolkit</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">conda create -n ai_env python=3.9 cudatoolkit=11.8 cudnn=8.2 -c conda-forge</span><br><span class="line"></span><br><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118</span><br></pre></td></tr></table></figure>
 <p> reference:</p>
 <blockquote>
-<p><a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">pytorch download</a><br><a target="_blank" rel="noopener" href="https://anaconda.org/nvidia/cuda-toolkit">cuda download</a></p>
+<p><a target="_blank" rel="noopener" href="https://pytorch.org/get-started/locally/">pytorch download</a></p>
 </blockquote>
 
       
