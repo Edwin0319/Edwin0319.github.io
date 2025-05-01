@@ -1259,7 +1259,7 @@
         <tag>reflection</tag>
         <tag>problem</tag>
         <tag>system</tag>
-        <tag>window</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1274,7 +1274,7 @@
       <tags>
         <tag>reflection</tag>
         <tag>system</tag>
-        <tag>window</tag>
+        <tag>windows</tag>
       </tags>
   </entry>
   <entry>
@@ -1329,6 +1329,26 @@
         <tag>java</tag>
         <tag>mc</tag>
         <tag>server</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>pytorch environment</title>
+    <url>/2025/05/01/pytorch-environment/</url>
+    <content><![CDATA[<p>building python environment are literally troublesome. It take me several hours. And I find that the best approach to build environment is to follow the offical document.<br>I downloaded pytorch and the bash code below.</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">conda create -n ENV_NAME python=3.8</span><br><span class="line"></span><br><span class="line">pip3 install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118</span><br><span class="line"></span><br><span class="line">conda install nvidia/label/cuda-11.8.0::cuda-toolkit</span><br></pre></td></tr></table></figure>
+<p> reference:</p>
+<blockquote>
+<p><a href="https://pytorch.org/get-started/locally/">pytorch download</a><br><a href="https://anaconda.org/nvidia/cuda-toolkit">cuda download</a></p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>tutorial</category>
+      </categories>
+      <tags>
+        <tag>helping</tag>
+        <tag>conda</tag>
+        <tag>windows</tag>
+        <tag>environment</tag>
       </tags>
   </entry>
 </search>
