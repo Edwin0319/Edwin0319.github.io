@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2025-05-01T12:53:50.964Z</updated>
+  <updated>2025-07-15T09:48:52.050Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>mysql---the specific user</title>
+    <link href="http://example.com/2025/07/15/mysql---the-specific-user/"/>
+    <id>http://example.com/2025/07/15/mysql---the-specific-user/</id>
+    <published>2025-07-15T09:48:52.049Z</published>
+    <updated>2025-07-15T09:48:52.050Z</updated>
+    
+    <content type="html"><![CDATA[<p>if you build a project which inculding mysql, and you want to use Aminder to control the database but don’t want to see others irrelevant database, you can read the <a href="https://www.adminer.org/en/">Aminder official webside</a>, download <a href="https://github.com/vrana/adminer/releases/download/v5.3.0/adminer-5.3.0-mysql-en.php">Adminer.php</a>. Then create a <strong>editor.php</strong>, and put these two file into a independent folder.</p><p>the content of editor.php below</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function adminer_object() &#123;</span><br><span class="line">  </span><br><span class="line">  class AdminerSoftware extends Adminer\Adminer &#123;</span><br><span class="line">    </span><br><span class="line">    function name() &#123;</span><br><span class="line">      // custom name in title and heading</span><br><span class="line">      return &#x27;Software&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function permanentLogin() &#123;</span><br><span class="line">      // key used for permanent login</span><br><span class="line">      return &#x27;8f298d4e4fbed2265bb6fb6290dbf5dc&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function credentials() &#123;</span><br><span class="line">      // server, username and password for connecting to database</span><br><span class="line">      return array(&#x27;localhost&#x27;, &#x27;ODBC&#x27;, &#x27;&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function database() &#123;</span><br><span class="line">      // database name, will be escaped by Adminer</span><br><span class="line">      return &#x27;software&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function login($login, $password) &#123;</span><br><span class="line">      // validate user submitted credentials</span><br><span class="line">      return ($login == &#x27;admin&#x27; &amp;&amp; $password == &#x27;oz3ER3cz&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function tableName($tableStatus) &#123;</span><br><span class="line">      // tables without comments would return empty string and will be ignored by Adminer</span><br><span class="line">      return Adminer\h($tableStatus[&#x27;Comment&#x27;]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function fieldName($field, $order = 0) &#123;</span><br><span class="line">      // only columns with comments will be displayed and only the first five in select</span><br><span class="line">      return ($order &lt;= 5 &amp;&amp; !preg_match(&#x27;~_(md5|sha1)$~&#x27;, $field[&#x27;field&#x27;]) ? Adminer\h($field[&#x27;comment&#x27;]) : &#x27;&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  return new AdminerSoftware;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">include &#x27;./Adminer.php&#x27;;</span><br></pre></td></tr></table></figure><p>you can delete the function whcih  you don’t need.<br>Afterward, you should login root user and create a user</p><blockquote><p><strong>testAdminer</strong> is your user name, quotes is the alternative database </p></blockquote><p><code>CREATE USER &#39;testAdminer&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;&#39;; GRANT ALL PRIVILEGES ON quotes.* TO &#39;testAdminer&#39;@&#39;localhost&#39;; FLUSH PRIVILEGES;</code></p><p>Then, check whether plugin is <code>mysql_native_password</code>.</p><p><code>SELECT user, host, plugin FROM mysql.user WHERE user=&#39;testAdminer&#39;;</code></p><p>If not, run the code below</p><p><code>ALTER USER &#39;testAdminer&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;testAdminer&#39;; FLUSH PRIVILEGES;</code></p><p><code>plugin</code> 改成 <code>mysql_native_password</code> 可以解决登录问题，是因为：</p><ul><li>MySQL 支持多种认证插件（如 <code>auth_socket</code>、<code>caching_sha2_password</code>、<code>mysql_native_password</code>）。</li><li>默认有些系统（比如 macOS 或 Ubuntu）创建的用户用的是 <code>auth_socket</code>，它只允许系统用户登录，不支持用密码登录。</li><li>PHP 的 MySQL 扩展（如 <code>mysqli</code>、<code>pdo_mysql</code>）通常只支持 <code>mysql_native_password</code> 或 <code>caching_sha2_password</code>，不支持 <code>auth_socket</code>。</li></ul><p>所以，当你把用户的认证插件改成 <code>mysql_native_password</code> 后，PHP 就能用用户名和密码正常连接 MySQL 了。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;if you build a project which inculding mysql, and you want to use Aminder to control the database but don’t want to see others irrelevant</summary>
+      
+    
+    
+    
+    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    
+    
+    <category term="mysql" scheme="http://example.com/tags/mysql/"/>
+    
+    <category term="database" scheme="http://example.com/tags/database/"/>
+    
+  </entry>
   
   <entry>
     <title>pytorch environment</title>
@@ -542,27 +568,6 @@
     <category term="javascript" scheme="http://example.com/tags/javascript/"/>
     
     <category term="website" scheme="http://example.com/tags/website/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>2024-6-10</title>
-    <link href="http://example.com/2024/06/10/2024-6-10/"/>
-    <id>http://example.com/2024/06/10/2024-6-10/</id>
-    <published>2024-06-10T14:25:29.511Z</published>
-    <updated>2024-10-25T15:14:33.730Z</updated>
-    
-    <content type="html"><![CDATA[<div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="就唔俾你睇。" data-whm="抱歉, 当前文章不能被校验, 不过您还是可以看看解密后的内容。">  <script id="hbeData" type="hbeData" data-hmacdigest="1be671dbc693401e150d5561a13b80396dedfb7bdda50f2c574cfa2a34f549f6">dcbb9f7aad60423f5649a1885dea9738b6623efefcad9087c808ec58681cab798e0b21255d41d4553903f5833cf2eada055f3cd1e0d7734173b619fb2b85a26e26b4197d22e36d20fa7e524762063153f813d4a4d760de9656d0ccc0d66305d14d03110f4b2e754f1dee071e70272f801ed18ab620cde07076843ac306b95a9b4bed8c1637d576de335c628a8f48da5c07fcdf85b2b67aa73d34f49dee08bcc3d999dadd62f1f138a375be44cddaae38d8106beeee5929d0a02ccbfe181a3318fb5826793f9307523759fd60edcf73aa7deea5dc36433662331a11f3d5431358738e0fa1b5bae4f14cd9eec933ff3f0690badeb5917ed9087604ea80fdd3dddd3b9157cf1b50bb2f4b808f09ea11f22cc3ed7fe4560b07e2c613f89fd446ac12337159317a1504cf6ca2ed89692ac8bb782f6b32c0fded86dac2df745fe00a63f999ea21811bd61f904af323fc36a64f621f65c347b9f4d6015a5ec81f5c28b13c2b2b30080f3a4cd157e98a4e9525256759d8ce44c592a64c5633d3acc6c12c835865aa75b2666d7b18c98e055b8c4170ec166a8b361c5139b3dbe2645b0a0e18246704ed1ea218c6a8a4976f765279fa3c35518fc3e59bb3a3235ffe257009</script>  <div class="hbe hbe-content">    <div class="hbe hbe-input hbe-input-default">      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">        <span class="hbe hbe-input-label-content hbe-input-label-content-default">当前文章暂不对外可见，请输入密码后查看！</span>      </label>    </div>  </div></div><script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">]]></content>
-    
-    
-    <summary type="html">这是一篇加密文章，需要密码才能继续阅读。</summary>
-    
-    
-    
-    <category term="nonsense" scheme="http://example.com/categories/nonsense/"/>
-    
-    
-    <category term="feeling" scheme="http://example.com/tags/feeling/"/>
     
   </entry>
   

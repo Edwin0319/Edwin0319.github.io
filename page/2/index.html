@@ -186,6 +186,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/09/set_percentage_in_css/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/see.jpg">
+      <meta itemprop="name" content="Edwin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/11/09/set_percentage_in_css/" class="post-title-link" itemprop="url">set percentage in css</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-11-09 12:05:11" itemprop="dateCreated datePublished" datetime="2024-11-09T12:05:11+08:00">2024-11-09</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-12-22 20:10:26" itemprop="dateModified" datetime="2024-12-22T20:10:26+08:00">2024-12-22</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>If you want to set a percentage width or height, you must sure the parent nood have set a fix width or height, min-width and min-height are not the kind of fix. normally, you can set a min-width and width to make a responsive website. This approach like flex-grow flex-shrink flex-base, flex-grow can automatically adjust, flex-base is set a base size.</p>
+<p><code>flex-basis</code> is a CSS property used in a flex container to define the initial size of a flex item before any extra space is distributed based on <code>flex-grow</code> or <code>flex-shrink</code> properties. Think of <code>flex-basis</code> as a starting point for the width (in a row layout) or height (in a column layout) of the flex item.</p>
+<blockquote>
+<p>GPT said</p>
+</blockquote>
+<p>Your <code>color-bar</code> div isn’t taking up the full 60% height as expected due to a few potential issues. Here’s how to troubleshoot and fix this:</p>
+<ol>
+<li><p><strong><code>section-one</code> height constraints</strong>: Since <code>section-one</code> is defined to have a minimum height (<code>min-height: 90vh</code>), the <code>color-bar</code> div’s height of 60% is relative to the <code>.section-one</code> container, which can make the layout behave unexpectedly based on screen height.</p>
+</li>
+<li><p><strong>Parent container height</strong>: Because <code>.section-one</code> only has a <code>min-height</code>, its height can change if the content inside it grows, making <code>color-bar</code>‘s height unpredictable.</p>
+</li>
+<li><p><strong>Testing with <code>height</code> directly</strong>: To see the desired effect of <code>color-bar</code> taking up 60% of the viewport height, try setting its height explicitly as <code>height: 60vh;</code> (viewport height). Alternatively, ensure <code>.section-one</code> has a fixed height rather than just <code>min-height</code>.</p>
+</li>
+</ol>
+<p>Here’s the modified code with <code>60vh</code> applied to <code>color-bar</code>:</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;color-bar&quot;</span> <span class="attr">style</span>=<span class="string">&quot;height: 60vh;&quot;</span>&gt;</span></span><br><span class="line">    hi</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>Or set the height of <code>.section-one</code> to a fixed height, for example, <code>90vh</code>, to make the <code>60%</code> height work as intended:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.section-one</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">90vh</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>This should help you see the <code>color-bar</code> at the expected height. Let me know if this works for you!</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/02/delate-function-js/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -932,87 +1026,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/06/10/2024-6-10/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/see.jpg">
-      <meta itemprop="name" content="Edwin Huang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Edwin's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/06/10/2024-6-10/" class="post-title-link" itemprop="url">2024-6-10</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-06-10 22:25:29" itemprop="dateCreated datePublished" datetime="2024-06-10T22:25:29+08:00">2024-06-10</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-25 23:14:33" itemprop="dateModified" datetime="2024-10-25T23:14:33+08:00">2024-10-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nonsense/" itemprop="url" rel="index"><span itemprop="name">nonsense</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          这是一篇加密文章，需要密码才能继续阅读。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/06/10/2024-6-10/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1083,7 +1096,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1096,7 +1109,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>

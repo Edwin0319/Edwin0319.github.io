@@ -1,3 +1,4 @@
+http://example.com/2025/07/15/mysql---the-specific-user/
 http://example.com/2025/05/01/pytorch-environment/
 http://example.com/2025/01/04/the-process-of-my-windows-repairing/
 http://example.com/2025/01/08/back-up-system-at-regular-intervals/
@@ -74,6 +75,8 @@ http://example.com/tags/mc/
 http://example.com/tags/server/
 http://example.com/tags/windows/
 http://example.com/tags/environment/
+http://example.com/tags/mysql/
+http://example.com/tags/database/
 http://example.com/categories/%E6%95%99%E7%A8%8B/
 http://example.com/categories/nonsense/
 http://example.com/categories/tutorial/

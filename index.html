@@ -186,6 +186,91 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2025/07/15/mysql---the-specific-user/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/see.jpg">
+      <meta itemprop="name" content="Edwin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2025/07/15/mysql---the-specific-user/" class="post-title-link" itemprop="url">mysql---the specific user</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2025-07-15 17:48:52" itemprop="dateCreated datePublished" datetime="2025-07-15T17:48:52+08:00">2025-07-15</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>if you build a project which inculding mysql, and you want to use Aminder to control the database but don’t want to see others irrelevant database, you can read the <a target="_blank" rel="noopener" href="https://www.adminer.org/en/">Aminder official webside</a>, download <a target="_blank" rel="noopener" href="https://github.com/vrana/adminer/releases/download/v5.3.0/adminer-5.3.0-mysql-en.php">Adminer.php</a>. Then create a <strong>editor.php</strong>, and put these two file into a independent folder.</p>
+<p>the content of editor.php below</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br></pre></td><td class="code"><pre><span class="line">&lt;?php</span><br><span class="line">function adminer_object() &#123;</span><br><span class="line">  </span><br><span class="line">  class AdminerSoftware extends Adminer\Adminer &#123;</span><br><span class="line">    </span><br><span class="line">    function name() &#123;</span><br><span class="line">      // custom name in title and heading</span><br><span class="line">      return &#x27;Software&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function permanentLogin() &#123;</span><br><span class="line">      // key used for permanent login</span><br><span class="line">      return &#x27;8f298d4e4fbed2265bb6fb6290dbf5dc&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function credentials() &#123;</span><br><span class="line">      // server, username and password for connecting to database</span><br><span class="line">      return array(&#x27;localhost&#x27;, &#x27;ODBC&#x27;, &#x27;&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function database() &#123;</span><br><span class="line">      // database name, will be escaped by Adminer</span><br><span class="line">      return &#x27;software&#x27;;</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function login($login, $password) &#123;</span><br><span class="line">      // validate user submitted credentials</span><br><span class="line">      return ($login == &#x27;admin&#x27; &amp;&amp; $password == &#x27;oz3ER3cz&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function tableName($tableStatus) &#123;</span><br><span class="line">      // tables without comments would return empty string and will be ignored by Adminer</span><br><span class="line">      return Adminer\h($tableStatus[&#x27;Comment&#x27;]);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">    function fieldName($field, $order = 0) &#123;</span><br><span class="line">      // only columns with comments will be displayed and only the first five in select</span><br><span class="line">      return ($order &lt;= 5 &amp;&amp; !preg_match(&#x27;~_(md5|sha1)$~&#x27;, $field[&#x27;field&#x27;]) ? Adminer\h($field[&#x27;comment&#x27;]) : &#x27;&#x27;);</span><br><span class="line">    &#125;</span><br><span class="line">    </span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  return new AdminerSoftware;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">include &#x27;./Adminer.php&#x27;;</span><br></pre></td></tr></table></figure>
+<p>you can delete the function whcih  you don’t need.<br>Afterward, you should login root user and create a user</p>
+<blockquote>
+<p><strong>testAdminer</strong> is your user name, quotes is the alternative database </p>
+</blockquote>
+<p><code>CREATE USER &#39;testAdminer&#39;@&#39;localhost&#39; IDENTIFIED BY &#39;&#39;; GRANT ALL PRIVILEGES ON quotes.* TO &#39;testAdminer&#39;@&#39;localhost&#39;; FLUSH PRIVILEGES;</code></p>
+<p>Then, check whether plugin is <code>mysql_native_password</code>.</p>
+<p><code>SELECT user, host, plugin FROM mysql.user WHERE user=&#39;testAdminer&#39;;</code></p>
+<p>If not, run the code below</p>
+<p><code>ALTER USER &#39;testAdminer&#39;@&#39;localhost&#39; IDENTIFIED WITH mysql_native_password BY &#39;testAdminer&#39;; FLUSH PRIVILEGES;</code></p>
+<p><code>plugin</code> 改成 <code>mysql_native_password</code> 可以解决登录问题，是因为：</p>
+<ul>
+<li>MySQL 支持多种认证插件（如 <code>auth_socket</code>、<code>caching_sha2_password</code>、<code>mysql_native_password</code>）。</li>
+<li>默认有些系统（比如 macOS 或 Ubuntu）创建的用户用的是 <code>auth_socket</code>，它只允许系统用户登录，不支持用密码登录。</li>
+<li>PHP 的 MySQL 扩展（如 <code>mysqli</code>、<code>pdo_mysql</code>）通常只支持 <code>mysql_native_password</code> 或 <code>caching_sha2_password</code>，不支持 <code>auth_socket</code>。</li>
+</ul>
+<p>所以，当你把用户的认证插件改成 <code>mysql_native_password</code> 后，PHP 就能用用户名和密码正常连接 MySQL 了。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2025/05/01/pytorch-environment/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -857,100 +942,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/11/09/set_percentage_in_css/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/see.jpg">
-      <meta itemprop="name" content="Edwin Huang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Edwin's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/11/09/set_percentage_in_css/" class="post-title-link" itemprop="url">set percentage in css</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-11-09 12:05:11" itemprop="dateCreated datePublished" datetime="2024-11-09T12:05:11+08:00">2024-11-09</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-12-22 20:10:26" itemprop="dateModified" datetime="2024-12-22T20:10:26+08:00">2024-12-22</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>If you want to set a percentage width or height, you must sure the parent nood have set a fix width or height, min-width and min-height are not the kind of fix. normally, you can set a min-width and width to make a responsive website. This approach like flex-grow flex-shrink flex-base, flex-grow can automatically adjust, flex-base is set a base size.</p>
-<p><code>flex-basis</code> is a CSS property used in a flex container to define the initial size of a flex item before any extra space is distributed based on <code>flex-grow</code> or <code>flex-shrink</code> properties. Think of <code>flex-basis</code> as a starting point for the width (in a row layout) or height (in a column layout) of the flex item.</p>
-<blockquote>
-<p>GPT said</p>
-</blockquote>
-<p>Your <code>color-bar</code> div isn’t taking up the full 60% height as expected due to a few potential issues. Here’s how to troubleshoot and fix this:</p>
-<ol>
-<li><p><strong><code>section-one</code> height constraints</strong>: Since <code>section-one</code> is defined to have a minimum height (<code>min-height: 90vh</code>), the <code>color-bar</code> div’s height of 60% is relative to the <code>.section-one</code> container, which can make the layout behave unexpectedly based on screen height.</p>
-</li>
-<li><p><strong>Parent container height</strong>: Because <code>.section-one</code> only has a <code>min-height</code>, its height can change if the content inside it grows, making <code>color-bar</code>‘s height unpredictable.</p>
-</li>
-<li><p><strong>Testing with <code>height</code> directly</strong>: To see the desired effect of <code>color-bar</code> taking up 60% of the viewport height, try setting its height explicitly as <code>height: 60vh;</code> (viewport height). Alternatively, ensure <code>.section-one</code> has a fixed height rather than just <code>min-height</code>.</p>
-</li>
-</ol>
-<p>Here’s the modified code with <code>60vh</code> applied to <code>color-bar</code>:</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">&quot;color-bar&quot;</span> <span class="attr">style</span>=<span class="string">&quot;height: 60vh;&quot;</span>&gt;</span></span><br><span class="line">    hi</span><br><span class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>Or set the height of <code>.section-one</code> to a fixed height, for example, <code>90vh</code>, to make the <code>60%</code> height work as intended:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.section-one</span> &#123;</span><br><span class="line">    <span class="attribute">height</span>: <span class="number">90vh</span>;</span><br><span class="line">    <span class="attribute">display</span>: flex;</span><br><span class="line">    <span class="attribute">flex-direction</span>: column;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>;</span><br><span class="line">    <span class="attribute">justify-content</span>: space-between;</span><br><span class="line">    <span class="attribute">position</span>: relative;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>This should help you see the <code>color-bar</code> at the expected height. Let me know if this works for you!</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1021,7 +1012,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">42</span>
+          <span class="site-state-item-count">43</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1034,7 +1025,7 @@
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">31</span>
+        <span class="site-state-item-count">33</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
