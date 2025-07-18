@@ -228,9 +228,9 @@
     <link href="http://example.com/2024/12/24/the_maximum_box/"/>
     <id>http://example.com/2024/12/24/the_maximum_box/</id>
     <published>2024-12-24T07:12:52.950Z</published>
-    <updated>2024-12-24T08:13:19.103Z</updated>
+    <updated>2025-07-18T15:30:38.938Z</updated>
     
-    <content type="html"><![CDATA[<p>Flex would change the state of element. Width would be set to 100%.</p><p>Whatever the <code>flex-direction</code> is row or column.</p><p>I often meditate on that thing why the box would occupy the whole width without setting, even <code>span</code>.</p><p>content can beyond the border. And border also can beyond the screen.</p>]]></content>
+    <content type="html"><![CDATA[<p>Flex would change the state of element. Width would be set to 100%.</p><p>Whatever the <code>flex-direction</code> is row or column.</p><p>I often meditate on that thing why the box would occupy the whole width without setting, even <code>span</code>.</p><p>Unless the element is the flex children, it wouldn’t set width to 100% by default.</p><p>content can beyond the border. And border also can beyond the screen.</p>]]></content>
     
     
       
