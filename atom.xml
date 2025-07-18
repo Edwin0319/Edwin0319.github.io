@@ -43,6 +43,32 @@
   </entry>
   
   <entry>
+    <title>flex-grow flex-shrink flex-basis</title>
+    <link href="http://example.com/2025/06/22/flex-grow-shrink/"/>
+    <id>http://example.com/2025/06/22/flex-grow-shrink/</id>
+    <published>2025-06-22T13:15:40.825Z</published>
+    <updated>2025-07-18T15:32:46.884Z</updated>
+    
+    <content type="html"><![CDATA[<p>If there are redundant space between children flex, they will grow the exact proportion according the value of their flex-grow. However, if their content width occupy the entire container width, their flex-grow would lose effectiveness no matter what proportion is, but their flex-shrink is work. Vice versa.</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;If there are redundant space between children flex, they will grow the exact proportion according the value of their flex-grow. However, </summary>
+      
+    
+    
+    
+    <category term="tutorial" scheme="http://example.com/categories/tutorial/"/>
+    
+    
+    <category term="css" scheme="http://example.com/tags/css/"/>
+    
+    <category term="website" scheme="http://example.com/tags/website/"/>
+    
+  </entry>
+  
+  <entry>
     <title>pytorch environment</title>
     <link href="http://example.com/2025/05/01/pytorch-environment/"/>
     <id>http://example.com/2025/05/01/pytorch-environment/</id>
@@ -526,36 +552,6 @@
       
     <summary type="html">&lt;p&gt;When I learn javascript and I wrote the dialogue&lt;/p&gt;
 &lt;figure class=&quot;highlight javascript&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=</summary>
-      
-    
-    
-    
-    <category term="discover" scheme="http://example.com/categories/discover/"/>
-    
-    
-    <category term="helping" scheme="http://example.com/tags/helping/"/>
-    
-    <category term="javascript" scheme="http://example.com/tags/javascript/"/>
-    
-    <category term="website" scheme="http://example.com/tags/website/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>just array can use forEach</title>
-    <link href="http://example.com/2024/07/18/just-array-can-use-forEach/"/>
-    <id>http://example.com/2024/07/18/just-array-can-use-forEach/</id>
-    <published>2024-07-18T15:37:18.048Z</published>
-    <updated>2024-12-24T08:08:40.003Z</updated>
-    
-    <content type="html"><![CDATA[<p>document is belong to HTMLElement.</p><p>arr is HTMLCollection, it can’t use <code>forEach</code>.</p><p>…Array is mean it can undress Array’s clothes</p><p>I have researched this code for one night. And finds above concepts, because my basic of javascript is poor. Just only roughly watch once.</p><p>I trying use allElements[0].innerText but I find it didn’t have pop a tip is innerText after allElements[0] so I reckon it didn’t have innerText API. But I wrong, just vscode doesn’t show it. allElements[0].inner is correct. Because allElements[0] and aa[0] is the same object.</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> arr = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;h1&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr);</span><br><span class="line"><span class="keyword">const</span> arr2 = [...<span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(<span class="string">&quot;h1&quot;</span>)];</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> arr, <span class="keyword">typeof</span> arr2);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(arr[<span class="number">0</span>], arr2[<span class="number">0</span>]);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> arr[<span class="number">0</span>], <span class="keyword">typeof</span> arr2[<span class="number">0</span>]);</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">getAllSpan</span>(<span class="params">tagName</span>)&#123;</span><br><span class="line">    <span class="comment">// const allElements = [...document.getElementsByTagName(tagName)];</span></span><br><span class="line">    <span class="keyword">const</span> allElements = <span class="variable language_">document</span>.<span class="title function_">getElementsByTagName</span>(tagName);</span><br><span class="line">    <span class="comment">// const aa = Array.from(allElements);</span></span><br><span class="line">    <span class="keyword">const</span> aa = [...allElements];</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(allElements, aa)</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(allElements[<span class="number">0</span>], aa[<span class="number">0</span>]);</span><br><span class="line">    <span class="keyword">let</span> count = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">setInterval</span>(<span class="function">()=&gt;</span>&#123;</span><br><span class="line">        <span class="comment">// aa.forEach(item=&gt;&#123;</span></span><br><span class="line">        <span class="comment">//     item.innerText = count</span></span><br><span class="line">        <span class="comment">//     console.log(typeof item, item);</span></span><br><span class="line">        <span class="comment">// &#125;)</span></span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; allElements.<span class="property">length</span>; i++)&#123;</span><br><span class="line">            allElements.<span class="title function_">item</span>(i).<span class="property">innerText</span> = count;</span><br><span class="line">            <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="keyword">typeof</span> allElements[i], allElements[i]);</span><br><span class="line">        &#125;</span><br><span class="line">        count++;</span><br><span class="line">    &#125;, <span class="number">1000</span>)</span><br><span class="line">&#125;</span><br><span class="line"><span class="title function_">getAllSpan</span>(<span class="string">&#x27;span&#x27;</span>)</span><br><span class="line"></span><br></pre></td></tr></table></figure>]]></content>
-    
-    
-      
-      
-    <summary type="html">&lt;p&gt;document is belong to HTMLElement.&lt;/p&gt;
-&lt;p&gt;arr is HTMLCollection, it can’t use &lt;code&gt;forEach&lt;/code&gt;.&lt;/p&gt;
-&lt;p&gt;…Array is mean it can undress </summary>
       
     
     
