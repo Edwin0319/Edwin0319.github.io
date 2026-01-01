@@ -186,6 +186,94 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/21/the-confuse-from-console.log/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/see.jpg">
+      <meta itemprop="name" content="Edwin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/07/21/the-confuse-from-console.log/" class="post-title-link" itemprop="url">the confuse from console.log</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-07-21 21:23:34" itemprop="dateCreated datePublished" datetime="2024-07-21T21:23:34+08:00">2024-07-21</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-12-24 16:08:31" itemprop="dateModified" datetime="2024-12-24T16:08:31+08:00">2024-12-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/discover/" itemprop="url" rel="index"><span itemprop="name">discover</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>When I learn javascript and I wrote the dialogue</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(div)</span><br><span class="line"><span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">div.<span class="title function_">appendChild</span>(text)</span><br></pre></td></tr></table></figure>
+<p>I find the browser output the second statue so I am curious why it happen.<br>Then, I asked GPT and it tell me</p>
+<hr>
+<p>The console may show a live reference to the object, not a snapshot of its state at the time console.log was called.</p>
+<hr>
+<p>After that, I understood the reason. But I wonder if I want to show the status at that time, what should I do. Then, he give me a answer</p>
+<hr>
+<p>If you want to capture the exact state of the div at the time of logging, you can log its outerHTML:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Before appending text node:&quot;</span>, div.<span class="property">outerHTML</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">div.<span class="title function_">appendChild</span>(text);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;After appending text node:&quot;</span>, div.<span class="property">outerHTML</span>);</span><br></pre></td></tr></table></figure>
+<p>This way, you’ll see:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Before</span> appending text <span class="attr">node</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="title class_">After</span> appending text <span class="attr">node</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+<p>This approach ensures that you log a snapshot of the div’s state at each point in time.</p>
+<hr>
+<p>So, if I want to show the static status I need to use outerHTML.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/18/just-array-can-use-forEach/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -910,87 +998,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/05/12/Have-a-dinner-with-the-team/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/see.jpg">
-      <meta itemprop="name" content="Edwin Huang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Edwin's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/05/12/Have-a-dinner-with-the-team/" class="post-title-link" itemprop="url">Have a dinner with the team</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-05-12 23:40:08" itemprop="dateCreated datePublished" datetime="2024-05-12T23:40:08+08:00">2024-05-12</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-10-25 23:14:54" itemprop="dateModified" datetime="2024-10-25T23:14:54+08:00">2024-10-25</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/nonsense/" itemprop="url" rel="index"><span itemprop="name">nonsense</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          这是一篇加密文章，需要密码才能继续阅读。
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2024/05/12/Have-a-dinner-with-the-team/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1061,7 +1068,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1122,7 +1129,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2025</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>

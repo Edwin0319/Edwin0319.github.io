@@ -186,6 +186,93 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/23/References_between_js/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/see.jpg">
+      <meta itemprop="name" content="Edwin Huang">
+      <meta itemprop="description" content="">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Edwin's blog">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          
+            <a href="/2024/12/23/References_between_js/" class="post-title-link" itemprop="url">References between js</a>
+        </h2>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+
+              <time title="创建时间：2024-12-23 17:32:51" itemprop="dateCreated datePublished" datetime="2024-12-23T17:32:51+08:00">2024-12-23</time>
+            </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2024-12-24 16:07:47" itemprop="dateModified" datetime="2024-12-24T16:07:47+08:00">2024-12-24</time>
+              </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/tutorial/" itemprop="url" rel="index"><span itemprop="name">tutorial</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <p>If module is referenced by index.html, all js below that module can use the function without referenced module, even needn’t import and module.js needn’t export.</p>
+<p>If module.js doesn’t be referenced by index.html, other js can only import module.js function and which also need to export.</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">// index.html</span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="keyword">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">&quot;en&quot;</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">&quot;UTF-8&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">http-equiv</span>=<span class="string">&quot;X-UA-Compatible&quot;</span> <span class="attr">content</span>=<span class="string">&quot;IE=edge&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">&quot;viewport&quot;</span> <span class="attr">content</span>=<span class="string">&quot;width=device-width, initial-scale=1.0&quot;</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">title</span>&gt;</span>Document<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./moduleC.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;./main.js&quot;</span> <span class="attr">type</span>=<span class="string">&quot;module&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// main.js</span></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;main1&#x27;</span>)</span><br><span class="line"><span class="keyword">import</span> &#123;a&#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleA.js&#x27;</span></span><br><span class="line"><span class="keyword">import</span> &#123;moduleB&#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleB.js&#x27;</span></span><br><span class="line"><span class="title function_">a</span>()</span><br><span class="line"><span class="title function_">moduleB</span>()</span><br><span class="line"><span class="title function_">moduleC</span>()</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;main2&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleA.js</span></span><br><span class="line"><span class="keyword">import</span> &#123; moduleB &#125; <span class="keyword">from</span> <span class="string">&#x27;./moduleB.js&#x27;</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">var</span> a = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="title function_">moduleB</span>()</span><br><span class="line">    <span class="title function_">moduleC</span>()</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;aaa&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleB.js</span></span><br><span class="line"><span class="keyword">export</span> <span class="keyword">let</span> moduleB = <span class="keyword">function</span>(<span class="params"></span>)&#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;moduleB&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;bbb&#x27;</span>)</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// moduleC.js</span></span><br><span class="line"><span class="keyword">function</span> <span class="title function_">moduleC</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;moduleC&#x27;</span>);</span><br><span class="line">&#125;</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;ccc&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// output</span><br><span class="line">ccc</span><br><span class="line">bbb</span><br><span class="line">aaa</span><br><span class="line">moduleB</span><br><span class="line">moduleC</span><br><span class="line">moduleB</span><br><span class="line">moduleC</span><br></pre></td></tr></table></figure>
+
+<p>Because moduleC.js is upper than main.js, so <code>ccc</code> first. And I guess all code should waiting the module loaded then run. First, import moduleA in faster than moduleB in main.js, and moduleB is referenced by moduleA. So it will output <code>bbb</code> first, then <code>aaa</code>. And moduleB.js has been referenced, so it wouldn’t occur again even main.js refer it.</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+      
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://example.com/2024/12/23/HTMLDocument.style_detail/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -296,7 +383,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-12-22 20:10:26" itemprop="dateModified" datetime="2024-12-22T20:10:26+08:00">2024-12-22</time>
+                <time title="修改时间：2025-07-27 15:10:04" itemprop="dateModified" datetime="2025-07-27T15:10:04+08:00">2025-07-27</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -321,6 +408,8 @@
       
           <p>If you want to set a percentage width or height, you must sure the parent nood have set a fix width or height, min-width and min-height are not the kind of fix. normally, you can set a min-width and width to make a responsive website. This approach like flex-grow flex-shrink flex-base, flex-grow can automatically adjust, flex-base is set a base size.</p>
 <p><code>flex-basis</code> is a CSS property used in a flex container to define the initial size of a flex item before any extra space is distributed based on <code>flex-grow</code> or <code>flex-shrink</code> properties. Think of <code>flex-basis</code> as a starting point for the width (in a row layout) or height (in a column layout) of the flex item.</p>
+<p> <strong>PS:</strong> If father flex-direction is <strong>row</strong>, the children can’t set width. Conversely, If the flex-direction is <strong>column</strong>, the height parameter of children will invalid. You only can set the flex-base to modify your main-axis sizing.</p>
+<p>And the cross-axis sizing is default 100% without setting align-items.</p>
 <blockquote>
 <p>GPT said</p>
 </blockquote>
@@ -937,94 +1026,6 @@
   
   
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://example.com/2024/07/21/the-confuse-from-console.log/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/see.jpg">
-      <meta itemprop="name" content="Edwin Huang">
-      <meta itemprop="description" content="">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Edwin's blog">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2024/07/21/the-confuse-from-console.log/" class="post-title-link" itemprop="url">the confuse from console.log</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-
-              <time title="创建时间：2024-07-21 21:23:34" itemprop="dateCreated datePublished" datetime="2024-07-21T21:23:34+08:00">2024-07-21</time>
-            </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="far fa-calendar-check"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2024-12-24 16:08:31" itemprop="dateModified" datetime="2024-12-24T16:08:31+08:00">2024-12-24</time>
-              </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/discover/" itemprop="url" rel="index"><span itemprop="name">discover</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>When I learn javascript and I wrote the dialogue</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>)</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(div)</span><br><span class="line"><span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">div.<span class="title function_">appendChild</span>(text)</span><br></pre></td></tr></table></figure>
-<p>I find the browser output the second statue so I am curious why it happen.<br>Then, I asked GPT and it tell me</p>
-<hr>
-<p>The console may show a live reference to the object, not a snapshot of its state at the time console.log was called.</p>
-<hr>
-<p>After that, I understood the reason. But I wonder if I want to show the status at that time, what should I do. Then, he give me a answer</p>
-<hr>
-<p>If you want to capture the exact state of the div at the time of logging, you can log its outerHTML:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">const</span> div = <span class="variable language_">document</span>.<span class="title function_">createElement</span>(<span class="string">&quot;div&quot;</span>);</span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;Before appending text node:&quot;</span>, div.<span class="property">outerHTML</span>);</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> text = <span class="variable language_">document</span>.<span class="title function_">createTextNode</span>(<span class="string">&quot;Hello&quot;</span>);</span><br><span class="line">div.<span class="title function_">appendChild</span>(text);</span><br><span class="line"></span><br><span class="line"><span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&quot;After appending text node:&quot;</span>, div.<span class="property">outerHTML</span>);</span><br></pre></td></tr></table></figure>
-<p>This way, you’ll see:</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="title class_">Before</span> appending text <span class="attr">node</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br><span class="line"><span class="title class_">After</span> appending text <span class="attr">node</span>: <span class="language-xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-<p>This approach ensures that you log a snapshot of the div’s state at each point in time.</p>
-<hr>
-<p>So, if I want to show the static status I need to use outerHTML.</p>
-
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
 
   
   <nav class="pagination">
@@ -1095,7 +1096,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
           <a href="/archives">
-          <span class="site-state-item-count">44</span>
+          <span class="site-state-item-count">45</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -1156,7 +1157,7 @@
 <div class="copyright">
   
   &copy; 
-  <span itemprop="copyrightYear">2025</span>
+  <span itemprop="copyrightYear">2026</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
