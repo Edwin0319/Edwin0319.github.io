@@ -1,3 +1,4 @@
+http://example.com/2026/03/16/World-Skill-First-Competition-Module_A-my-process/
 http://example.com/2026/01/01/greedy-snake/
 http://example.com/2024/11/09/set_percentage_in_css/
 http://example.com/2025/06/22/flex-grow-shrink/
@@ -79,6 +80,7 @@ http://example.com/tags/windows/
 http://example.com/tags/environment/
 http://example.com/tags/mysql/
 http://example.com/tags/database/
+http://example.com/tags/nextjs/
 http://example.com/categories/%E6%95%99%E7%A8%8B/
 http://example.com/categories/nonsense/
 http://example.com/categories/tutorial/
